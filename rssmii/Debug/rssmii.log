@@ -1,0 +1,12 @@
+﻿Der Buildvorgang wurde am 30.12.2010 10:10:24 gestartet.
+     1>Projekt "C:\rssmii\trunk\rssmii\rssmii.vcxproj" auf Knoten "2", build Ziel(e).
+     1>Build:
+         make
+         main.cpp
+         linking ... rssmii.elf
+         output ... rssmii.dol
+     1>Die Erstellung des Projekts "C:\rssmii\trunk\rssmii\rssmii.vcxproj" ist abgeschlossen, build Ziel(e).
+
+Das Erstellen war erfolgreich.
+
+Verstrichene Zeit 00:00:03.70

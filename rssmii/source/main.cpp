@@ -24,9 +24,11 @@ int ijobs;
 void AddJobs()
 {
 	int which;
-	u64 homebrewtitleid = 0x0001000848424D4CLL;//TitleID for wiibrew+hackmii mail: 00010008-HBML. This is only an ID used for WC24, it's not a real NAND title.
-	//u64 homebrewtitleid = 0x0001000846454544LL; //TitleID for RSS-Feed mail: 00010008-FEED. 
-	printf("Initializing WC24...\n");
+	//u64 homebrewtitleid = 0x0001000848424D4CLL;//TitleID for wiibrew+hackmii mail: 00010008-HBML. This is only an ID used for WC24, it's not a real NAND title.
+	u64 homebrewtitleid = 0x0001000846454544LL; //TitleID for RSS-Feed mail: 00010008-FEED. 
+	if (LANG_GER) printf("WC24 initialisieren...");	
+	else printf("Initializing WC24...\n");
+
 	s32 retval = WC24_Init();
 	if(retval<0)
 	{
@@ -63,7 +65,7 @@ void AddJobs()
 			//Will now compose url:
 			memset(jobs[i].final_url, 0, 512);
 			snprintf(jobs[i].final_url, 511, "http://diskstation.selfip.net/yawm/stable/rss_displayer.php?feedurl=%s&title=%s", jobs[i].url, jobs[i].name);
-			s32 retval = WC24_CreateRecord(&myrec, &myent, (u32)homebrewtitleid, homebrewtitleid, 0x4842, WC24_TYPE_MSGBOARD, WC24_RECORD_FLAGS_DEFAULT, WC24_FLAGS_HB, which, 0x5a0, 0, jobs[i].final_url, NULL);
+			s32 retval = WC24_CreateRecord(&myrec, &myent, (u32)homebrewtitleid, homebrewtitleid, /*0x4842*/0x4645, WC24_TYPE_MSGBOARD, WC24_RECORD_FLAGS_DEFAULT, WC24_FLAGS_HB, which, 0x5a0, 0, jobs[i].final_url, NULL);
 			if (retval<0)
 			{
 				printf("WC24_CreateRecord ergab %d\n", retval);
@@ -86,7 +88,7 @@ void AddJobs()
 			//Will now compose url:
 			memset(jobs[i].final_url, 0, 512);
 			snprintf(jobs[i].final_url, 511, "http://diskstation.selfip.net/yawm/stable/rss_displayer.php?feedurl=%s&title=%s", jobs[i].url, jobs[i].name);
-			s32 retval = WC24_CreateRecord(&myrec, &myent, (u32)homebrewtitleid, homebrewtitleid, 0x4842, WC24_TYPE_MSGBOARD, WC24_RECORD_FLAGS_DEFAULT, WC24_FLAGS_HB, which, 0x5a0, 0, jobs[i].final_url, NULL);
+			s32 retval = WC24_CreateRecord(&myrec, &myent, (u32)homebrewtitleid, homebrewtitleid, /*0x4842*/ 0x4645, WC24_TYPE_MSGBOARD, WC24_RECORD_FLAGS_DEFAULT, WC24_FLAGS_HB, which, 0x5a0, 0, jobs[i].final_url, NULL);
 			if (retval<0)
 			{
 				printf("WC24_CreateRecord returned %d\n", retval);
@@ -324,7 +326,10 @@ int main(int argc, char **argv) {
 
 	AddJobs();
 
-	printf("\n\nDone.");
+	//printf("\n\nDone.");
+	if (LANG_GER) printf("\nMit HOME zurueck zum Loader.");
+	else printf("\nGet back to the Loader with the HOME-Button.");
+
 	while (1)
 	{
 		WPAD_ScanPads();
