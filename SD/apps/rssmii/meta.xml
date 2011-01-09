@@ -2,7 +2,7 @@
 <app version="1">
   <name>rssmii</name>
   <coder>main()</coder>
-  <version>1.0.0</version>
+  <version>1.1</version>
   <release_date>20101230000000</release_date>
   <short_description>Subscribe to RSS-Feeds!</short_description>
   <long_description>English:
