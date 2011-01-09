@@ -64,7 +64,7 @@ void AddJobs()
 			printf("Record&entry erstellen...\n");
 			//Will now compose url:
 			memset(jobs[i].final_url, 0, 512);
-			snprintf(jobs[i].final_url, 511, "http://diskstation.selfip.net/yawm/stable/rss_displayer.php?feedurl=%s&title=%s", jobs[i].url, jobs[i].name);
+			snprintf(jobs[i].final_url, 511, "http://api.rssmii.diskstation.selfip.net:8000/1.1/rss_displayer.php?feedurl=%s&title=%s", jobs[i].url, jobs[i].name);
 			s32 retval = WC24_CreateRecord(&myrec, &myent, (u32)homebrewtitleid, homebrewtitleid, /*0x4842*/0x4645, WC24_TYPE_MSGBOARD, WC24_RECORD_FLAGS_DEFAULT, WC24_FLAGS_HB, which, 0x5a0, 0, jobs[i].final_url, NULL);
 			if (retval<0)
 			{
@@ -87,7 +87,7 @@ void AddJobs()
 			printf("Creating record&entry...\n");
 			//Will now compose url:
 			memset(jobs[i].final_url, 0, 512);
-			snprintf(jobs[i].final_url, 511, "http://diskstation.selfip.net/yawm/stable/rss_displayer.php?feedurl=%s&title=%s", jobs[i].url, jobs[i].name);
+			snprintf(jobs[i].final_url, 511, "http://api.rssmii.diskstation.selfip.net:8000/1.1/rss_displayer.php?feedurl=%s&title=%s", jobs[i].url, jobs[i].name);
 			s32 retval = WC24_CreateRecord(&myrec, &myent, (u32)homebrewtitleid, homebrewtitleid, /*0x4842*/ 0x4645, WC24_TYPE_MSGBOARD, WC24_RECORD_FLAGS_DEFAULT, WC24_FLAGS_HB, which, 0x5a0, 0, jobs[i].final_url, NULL);
 			if (retval<0)
 			{
@@ -177,14 +177,14 @@ int load_feeds()
 		rewind (fp);
 
 		if (settings_size > 0) {
-			tree = mxmlLoadFile(NULL, fp, MXML_NO_CALLBACK);
+			tree = mxmlLoadFile(NULL, fp, MXML_OPAQUE_CALLBACK);
 			fclose(fp);
 			rss = mxmlFindElement(tree, tree, "rss", NULL, NULL, MXML_DESCEND);
 			if (rss == NULL) return -103;
 
 			for (node = mxmlFindElement(rss, rss, "feed", NULL, NULL, MXML_DESCEND); node != NULL; node = mxmlFindElement(node, rss, "feed", NULL, NULL, MXML_DESCEND))
 			{
-				const char * feedurl = mxmlElementGetAttr(node, "url");
+				const char * feedurl = node->child->value.opaque;
 				if (feedurl)
 				{
 					const char * sender = mxmlElementGetAttr(node, "name");
