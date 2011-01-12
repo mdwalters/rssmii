@@ -7260,7 +7260,7 @@ Linker script and memory map
                 0x80059b60                PROVIDE (_etext, .)
                 0x80059b60                PROVIDE (etext, .)
 
-.rodata         0x80059b60     0x8c3c
+.rodata         0x80059b60     0x8c1c
  *(.rodata)
  .rodata        0x80059b60        0x8 c:/devkitPro/libogc/lib/wii\libfat.a(directory.o)
  .rodata        0x80059b68       0x32 c:/devkitPro/libogc/lib/wii\libwiiuse.a(ir.o)
@@ -7276,530 +7276,530 @@ Linker script and memory map
  *(.rodata.*)
  .rodata.cst4   0x8005b82c        0xc main.o
  .rodata.str1.4
-                0x8005b838      0x5d6 main.o
-                                0x5da (size before relaxing)
- *fill*         0x8005be0e        0x2 00
+                0x8005b838      0x5ca main.o
+                                0x5ce (size before relaxing)
+ *fill*         0x8005be02        0x2 00
  .rodata.dotab_fat
-                0x8005be10       0x5c c:/devkitPro/libogc/lib/wii\libfat.a(libfat.o)
+                0x8005be04       0x5c c:/devkitPro/libogc/lib/wii\libfat.a(libfat.o)
  .rodata.str1.4
-                0x8005be6c       0x10 c:/devkitPro/libogc/lib/wii\libfat.a(libfat.o)
+                0x8005be60       0x10 c:/devkitPro/libogc/lib/wii\libfat.a(libfat.o)
  .rodata.str1.4
-                0x8005be7c        0xa c:/devkitPro/libogc/lib/wii\libfat.a(partition.o)
+                0x8005be70        0xa c:/devkitPro/libogc/lib/wii\libfat.a(partition.o)
                                  0x10 (size before relaxing)
- *fill*         0x8005be86        0x2 00
+ *fill*         0x8005be7a        0x2 00
  .rodata.FAT_SIG
-                0x8005be88        0x3 c:/devkitPro/libogc/lib/wii\libfat.a(partition.o)
- *fill*         0x8005be8b        0x1 00
+                0x8005be7c        0x3 c:/devkitPro/libogc/lib/wii\libfat.a(partition.o)
+ *fill*         0x8005be7f        0x1 00
  .rodata.LFN_offset_table
-                0x8005be8c       0x34 c:/devkitPro/libogc/lib/wii\libfat.a(directory.o)
+                0x8005be80       0x34 c:/devkitPro/libogc/lib/wii\libfat.a(directory.o)
  .rodata.ILLEGAL_ALIAS_CHARACTERS
-                0x8005bec0       0x12 c:/devkitPro/libogc/lib/wii\libfat.a(directory.o)
+                0x8005beb4       0x12 c:/devkitPro/libogc/lib/wii\libfat.a(directory.o)
  .rodata.str1.4
                 0x00000000        0xa c:/devkitPro/libogc/lib/wii\libfat.a(directory.o)
                                   0x7 (size before relaxing)
- *fill*         0x8005bed2        0x2 00
+ *fill*         0x8005bec6        0x2 00
  .rodata.ILLEGAL_LFN_CHARACTERS
-                0x8005bed4        0xa c:/devkitPro/libogc/lib/wii\libfat.a(directory.o)
- *fill*         0x8005bede        0x2 00
+                0x8005bec8        0xa c:/devkitPro/libogc/lib/wii\libfat.a(directory.o)
+ *fill*         0x8005bed2        0x2 00
  .rodata._FAT_disc_interfaces
-                0x8005bee0       0x28 c:/devkitPro/libogc/lib/wii\libfat.a(disc.o)
-                0x8005bee0                _FAT_disc_interfaces
+                0x8005bed4       0x28 c:/devkitPro/libogc/lib/wii\libfat.a(disc.o)
+                0x8005bed4                _FAT_disc_interfaces
  .rodata.str1.4
-                0x8005bf08       0x16 c:/devkitPro/libogc/lib/wii\libfat.a(disc.o)
- *fill*         0x8005bf1e        0x2 00
+                0x8005befc       0x16 c:/devkitPro/libogc/lib/wii\libfat.a(disc.o)
+ *fill*         0x8005bf12        0x2 00
  .rodata.str1.4
-                0x8005bf20       0x3c c:/devkitPro/libogc/lib/wii\libwc24.a(kd.o)
+                0x8005bf14       0x3c c:/devkitPro/libogc/lib/wii\libwc24.a(kd.o)
  .rodata.str1.4
-                0x8005bf5c       0xd9 c:/devkitPro/libogc/lib/wii\libwc24.a(wc24.o)
- *fill*         0x8005c035        0x3 00
+                0x8005bf50       0xd9 c:/devkitPro/libogc/lib/wii\libwc24.a(wc24.o)
+ *fill*         0x8005c029        0x3 00
  .rodata.str1.4
-                0x8005c038       0x94 c:/devkitPro/libogc/lib/wii\libwc24.a(wc24mail.o)
+                0x8005c02c       0x94 c:/devkitPro/libogc/lib/wii\libwc24.a(wc24mail.o)
  .rodata.__wpad_eventCB
-                0x8005c0cc       0x28 c:/devkitPro/libogc/lib/wii\libwiiuse.a(wpad.o)
- .rodata.cst4   0x8005c0f4       0x10 c:/devkitPro/libogc/lib/wii\libwiiuse.a(wpad.o)
- .rodata.cst4   0x8005c104       0x20 c:/devkitPro/libogc/lib/wii\libwiiuse.a(dynamics.o)
+                0x8005c0c0       0x28 c:/devkitPro/libogc/lib/wii\libwiiuse.a(wpad.o)
+ .rodata.cst4   0x8005c0e8       0x10 c:/devkitPro/libogc/lib/wii\libwiiuse.a(wpad.o)
+ .rodata.cst4   0x8005c0f8       0x20 c:/devkitPro/libogc/lib/wii\libwiiuse.a(dynamics.o)
                                  0x28 (size before relaxing)
  .rodata.wiiuse_disable_expansion
-                0x8005c124       0x14 c:/devkitPro/libogc/lib/wii\libwiiuse.a(io.o)
- .rodata.cst4   0x8005c138       0x48 c:/devkitPro/libogc/lib/wii\libwiiuse.a(ir.o)
+                0x8005c118       0x14 c:/devkitPro/libogc/lib/wii\libwiiuse.a(io.o)
+ .rodata.cst4   0x8005c12c       0x48 c:/devkitPro/libogc/lib/wii\libwiiuse.a(ir.o)
                                  0x64 (size before relaxing)
  .rodata.str1.1
-                0x8005c180       0x3c c:/devkitPro/libogc/lib/wii\libwiiuse.a(ir.o)
- .rodata.cst4   0x8005c1bc        0x4 c:/devkitPro/libogc/lib/wii\libwiiuse.a(wiiuse.o)
+                0x8005c174       0x3c c:/devkitPro/libogc/lib/wii\libwiiuse.a(ir.o)
+ .rodata.cst4   0x8005c1b0        0x4 c:/devkitPro/libogc/lib/wii\libwiiuse.a(wiiuse.o)
  .rodata.handle_expansion
-                0x8005c1c0       0x14 c:/devkitPro/libogc/lib/wii\libwiiuse.a(events.o)
+                0x8005c1b4       0x14 c:/devkitPro/libogc/lib/wii\libwiiuse.a(events.o)
  .rodata.parse_event
-                0x8005c1d4       0x60 c:/devkitPro/libogc/lib/wii\libwiiuse.a(events.o)
+                0x8005c1c8       0x60 c:/devkitPro/libogc/lib/wii\libwiiuse.a(events.o)
  .rodata.str1.1
-                0x8005c234       0x39 c:/devkitPro/libogc/lib/wii\libwiiuse.a(events.o)
+                0x8005c228       0x39 c:/devkitPro/libogc/lib/wii\libwiiuse.a(events.o)
  .rodata.str1.1
-                0x8005c26d       0x68 c:/devkitPro/libogc/lib/wii\libbte.a(bte.o)
+                0x8005c261       0x68 c:/devkitPro/libogc/lib/wii\libbte.a(bte.o)
                                  0x69 (size before relaxing)
- *fill*         0x8005c2d5        0x3 00
+ *fill*         0x8005c2c9        0x3 00
  .rodata.hci_event_handler
-                0x8005c2d8       0x60 c:/devkitPro/libogc/lib/wii\libbte.a(hci.o)
+                0x8005c2cc       0x60 c:/devkitPro/libogc/lib/wii\libbte.a(hci.o)
  .rodata.str1.1
-                0x8005c338       0x26 c:/devkitPro/libogc/lib/wii\libbte.a(hci.o)
- *fill*         0x8005c35e        0x2 00
+                0x8005c32c       0x26 c:/devkitPro/libogc/lib/wii\libbte.a(hci.o)
+ *fill*         0x8005c352        0x2 00
  .rodata.l2cap_process_sig
-                0x8005c360       0x24 c:/devkitPro/libogc/lib/wii\libbte.a(l2cap.o)
+                0x8005c354       0x24 c:/devkitPro/libogc/lib/wii\libbte.a(l2cap.o)
  .rodata.str1.1
-                0x8005c384       0x3c c:/devkitPro/libogc/lib/wii\libmxml.a(mxml-attr.o)
- .rodata.cst4   0x8005c3c0       0x18 c:/devkitPro/libogc/lib/wii\libmxml.a(mxml-file.o)
+                0x8005c378       0x3c c:/devkitPro/libogc/lib/wii\libmxml.a(mxml-attr.o)
+ .rodata.cst4   0x8005c3b4       0x18 c:/devkitPro/libogc/lib/wii\libmxml.a(mxml-file.o)
  .rodata.str1.1
-                0x8005c3d8      0x54a c:/devkitPro/libogc/lib/wii\libmxml.a(mxml-file.o)
+                0x8005c3cc      0x54a c:/devkitPro/libogc/lib/wii\libmxml.a(mxml-file.o)
                                 0x54e (size before relaxing)
  .rodata.str1.1
-                0x8005c922       0x35 c:/devkitPro/libogc/lib/wii\libmxml.a(mxml-node.o)
+                0x8005c916       0x35 c:/devkitPro/libogc/lib/wii\libmxml.a(mxml-node.o)
  .rodata.str1.1
-                0x8005c957        0xa c:/devkitPro/libogc/lib/wii\libmxml.a(mxml-private.o)
+                0x8005c94b        0xa c:/devkitPro/libogc/lib/wii\libmxml.a(mxml-private.o)
  .rodata.str1.1
-                0x8005c961      0x580 c:/devkitPro/libogc/lib/wii\libmxml.a(mxml-entity.o)
+                0x8005c955      0x580 c:/devkitPro/libogc/lib/wii\libmxml.a(mxml-entity.o)
                                 0x5c4 (size before relaxing)
- *fill*         0x8005cee1        0x3 00
+ *fill*         0x8005ced5        0x3 00
  .rodata.__console_write
-                0x8005cee4       0x18 c:/devkitPro/libogc/lib/wii\libogc.a(console.o)
+                0x8005ced8       0x18 c:/devkitPro/libogc/lib/wii\libogc.a(console.o)
  .rodata.color_table
-                0x8005cefc       0x40 c:/devkitPro/libogc/lib/wii\libogc.a(console.o)
-                0x8005cefc                color_table
+                0x8005cef0       0x40 c:/devkitPro/libogc/lib/wii\libogc.a(console.o)
+                0x8005cef0                color_table
  .rodata.dotab_stdout
-                0x8005cf3c       0x64 c:/devkitPro/libogc/lib/wii\libogc.a(console.o)
-                0x8005cf3c                dotab_stdout
+                0x8005cf30       0x64 c:/devkitPro/libogc/lib/wii\libogc.a(console.o)
+                0x8005cf30                dotab_stdout
  .rodata.str1.1
-                0x8005cfa0        0x7 c:/devkitPro/libogc/lib/wii\libogc.a(console.o)
- *fill*         0x8005cfa7        0x1 00
+                0x8005cf94        0x7 c:/devkitPro/libogc/lib/wii\libogc.a(console.o)
+ *fill*         0x8005cf9b        0x1 00
  .rodata._irqPrio
-                0x8005cfa8       0x30 c:/devkitPro/libogc/lib/wii\libogc.a(irq.o)
+                0x8005cf9c       0x30 c:/devkitPro/libogc/lib/wii\libogc.a(irq.o)
  .rodata.CSWTCH.116
-                0x8005cfd8       0x58 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
+                0x8005cfcc       0x58 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
  .rodata.C.72.9741
-                0x8005d030       0x21 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
- *fill*         0x8005d051        0x1 00
+                0x8005d024       0x21 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
+ *fill*         0x8005d045        0x1 00
  .rodata.video_timing
-                0x8005d052      0x17c c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
- *fill*         0x8005d1ce        0x2 00
+                0x8005d046      0x17c c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
+ *fill*         0x8005d1c2        0x2 00
  .rodata.SYS_ResetSystem
-                0x8005d1d0       0x1c c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
+                0x8005d1c4       0x1c c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
  .rodata.str1.1
-                0x8005d1ec       0x62 c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
- *fill*         0x8005d24e        0x2 00
+                0x8005d1e0       0x62 c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
+ *fill*         0x8005d242        0x2 00
  .rodata.__ios_ioctlvformat_parse
-                0x8005d250       0x40 c:/devkitPro/libogc/lib/wii\libogc.a(ipc.o)
+                0x8005d244       0x40 c:/devkitPro/libogc/lib/wii\libogc.a(ipc.o)
  .rodata.str1.1
                 0x00000000       0x62 c:/devkitPro/libogc/lib/wii\libogc.a(newlibc.o)
                                   0x2 (size before relaxing)
  .rodata.dotab_es
-                0x8005d290       0x64 c:/devkitPro/libogc/lib/wii\libogc.a(es.o)
+                0x8005d284       0x64 c:/devkitPro/libogc/lib/wii\libogc.a(es.o)
  .rodata.str1.1
-                0x8005d2f4       0x52 c:/devkitPro/libogc/lib/wii\libogc.a(es.o)
+                0x8005d2e8       0x52 c:/devkitPro/libogc/lib/wii\libogc.a(es.o)
                                  0x70 (size before relaxing)
- *fill*         0x8005d346       0x1a 00
+ *fill*         0x8005d33a        0x6 00
  .rodata.__oh0_path
-                0x8005d360        0xd c:/devkitPro/libogc/lib/wii\libogc.a(usb.o)
- *fill*         0x8005d36d       0x13 00
+                0x8005d340        0xd c:/devkitPro/libogc/lib/wii\libogc.a(usb.o)
+ *fill*         0x8005d34d       0x13 00
  .rodata.__ven_path
-                0x8005d380        0xd c:/devkitPro/libogc/lib/wii\libogc.a(usb.o)
+                0x8005d360        0xd c:/devkitPro/libogc/lib/wii\libogc.a(usb.o)
  .rodata.str1.1
-                0x8005d38d       0x2c c:/devkitPro/libogc/lib/wii\libogc.a(usb.o)
- *fill*         0x8005d3b9        0x7 00
+                0x8005d36d       0x2c c:/devkitPro/libogc/lib/wii\libogc.a(usb.o)
+ *fill*         0x8005d399        0x7 00
  .rodata.__hid_path
-                0x8005d3c0        0xd c:/devkitPro/libogc/lib/wii\libogc.a(usb.o)
- *fill*         0x8005d3cd        0x3 00
+                0x8005d3a0        0xd c:/devkitPro/libogc/lib/wii\libogc.a(usb.o)
+ *fill*         0x8005d3ad        0x3 00
  .rodata.__io_gcsda
-                0x8005d3d0       0x20 c:/devkitPro/libogc/lib/wii\libogc.a(gcsd.o)
-                0x8005d3d0                __io_gcsda
+                0x8005d3b0       0x20 c:/devkitPro/libogc/lib/wii\libogc.a(gcsd.o)
+                0x8005d3b0                __io_gcsda
  .rodata.__io_gcsdb
-                0x8005d3f0       0x20 c:/devkitPro/libogc/lib/wii\libogc.a(gcsd.o)
-                0x8005d3f0                __io_gcsdb
+                0x8005d3d0       0x20 c:/devkitPro/libogc/lib/wii\libogc.a(gcsd.o)
+                0x8005d3d0                __io_gcsdb
  .rodata.__io_wiisd
-                0x8005d410       0x20 c:/devkitPro/libogc/lib/wii\libogc.a(wiisd.o)
-                0x8005d410                __io_wiisd
+                0x8005d3f0       0x20 c:/devkitPro/libogc/lib/wii\libogc.a(wiisd.o)
+                0x8005d3f0                __io_wiisd
  .rodata.CONF_GetLength
-                0x8005d430       0x1c c:/devkitPro/libogc/lib/wii\libogc.a(conf.o)
+                0x8005d410       0x1c c:/devkitPro/libogc/lib/wii\libogc.a(conf.o)
  .rodata.CONF_Get
-                0x8005d44c       0x1c c:/devkitPro/libogc/lib/wii\libogc.a(conf.o)
- *fill*         0x8005d468       0x18 00
+                0x8005d42c       0x1c c:/devkitPro/libogc/lib/wii\libogc.a(conf.o)
+ *fill*         0x8005d448       0x18 00
  .rodata.__conf_file
-                0x8005d480       0x15 c:/devkitPro/libogc/lib/wii\libogc.a(conf.o)
+                0x8005d460       0x15 c:/devkitPro/libogc/lib/wii\libogc.a(conf.o)
  .rodata.str1.1
-                0x8005d495       0xeb c:/devkitPro/libogc/lib/wii\libogc.a(conf.o)
+                0x8005d475       0xeb c:/devkitPro/libogc/lib/wii\libogc.a(conf.o)
                                  0xf2 (size before relaxing)
  .rodata.__conf_txt_file
-                0x8005d580       0x2a c:/devkitPro/libogc/lib/wii\libogc.a(conf.o)
+                0x8005d560       0x2a c:/devkitPro/libogc/lib/wii\libogc.a(conf.o)
  .rodata.str1.1
-                0x8005d5aa      0x2d3 c:/devkitPro/libogc/lib/wii\libogc.a(exception.o)
+                0x8005d58a      0x2d3 c:/devkitPro/libogc/lib/wii\libogc.a(exception.o)
                                 0x2d6 (size before relaxing)
- *fill*         0x8005d87d        0x3 00
+ *fill*         0x8005d85d        0x3 00
  .rodata.exception_location
-                0x8005d880       0x3c c:/devkitPro/libogc/lib/wii\libogc.a(exception.o)
+                0x8005d860       0x3c c:/devkitPro/libogc/lib/wii\libogc.a(exception.o)
  .rodata.exception_name
-                0x8005d8bc       0x3c c:/devkitPro/libogc/lib/wii\libogc.a(exception.o)
+                0x8005d89c       0x3c c:/devkitPro/libogc/lib/wii\libogc.a(exception.o)
  .rodata.str1.1
-                0x8005d8f8       0x51 c:/devkitPro/libogc/lib/wii\libogc.a(kprintf.o)
- *fill*         0x8005d949        0x3 00
+                0x8005d8d8       0x51 c:/devkitPro/libogc/lib/wii\libogc.a(kprintf.o)
+ *fill*         0x8005d929        0x3 00
  .rodata._ZL28read_encoded_value_with_basehjPKhPj
-                0x8005d94c       0x34 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_personality.o)
+                0x8005d92c       0x34 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_personality.o)
  .rodata._ZTVSt9bad_alloc
-                0x8005d980       0x14 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(new_handler.o)
-                0x8005d980                vtable for std::bad_alloc
+                0x8005d960       0x14 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(new_handler.o)
+                0x8005d960                vtable for std::bad_alloc
  .rodata._ZTSSt9bad_alloc
-                0x8005d994        0xd c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(new_handler.o)
-                0x8005d994                typeinfo name for std::bad_alloc
- *fill*         0x8005d9a1        0x3 00
+                0x8005d974        0xd c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(new_handler.o)
+                0x8005d974                typeinfo name for std::bad_alloc
+ *fill*         0x8005d981        0x3 00
  .rodata._ZTISt9bad_alloc
-                0x8005d9a4        0xc c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(new_handler.o)
-                0x8005d9a4                typeinfo for std::bad_alloc
+                0x8005d984        0xc c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(new_handler.o)
+                0x8005d984                typeinfo for std::bad_alloc
  .rodata.str1.4
-                0x8005d9b0        0xf c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(new_handler.o)
- *fill*         0x8005d9bf        0x1 00
+                0x8005d990        0xf c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(new_handler.o)
+ *fill*         0x8005d99f        0x1 00
  .rodata._ZTVN10__cxxabiv120__si_class_type_infoE
-                0x8005d9c0       0x2c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(si_class_type_info.o)
-                0x8005d9c0                vtable for __cxxabiv1::__si_class_type_info
+                0x8005d9a0       0x2c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(si_class_type_info.o)
+                0x8005d9a0                vtable for __cxxabiv1::__si_class_type_info
  .rodata._ZTSN10__cxxabiv120__si_class_type_infoE
-                0x8005d9ec       0x25 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(si_class_type_info.o)
-                0x8005d9ec                typeinfo name for __cxxabiv1::__si_class_type_info
- *fill*         0x8005da11        0x3 00
+                0x8005d9cc       0x25 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(si_class_type_info.o)
+                0x8005d9cc                typeinfo name for __cxxabiv1::__si_class_type_info
+ *fill*         0x8005d9f1        0x3 00
  .rodata._ZTIN10__cxxabiv120__si_class_type_infoE
-                0x8005da14        0xc c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(si_class_type_info.o)
-                0x8005da14                typeinfo for __cxxabiv1::__si_class_type_info
+                0x8005d9f4        0xc c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(si_class_type_info.o)
+                0x8005d9f4                typeinfo for __cxxabiv1::__si_class_type_info
  .rodata._ZTVSt9type_info
-                0x8005da20       0x20 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(tinfo.o)
-                0x8005da20                vtable for std::type_info
+                0x8005da00       0x20 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(tinfo.o)
+                0x8005da00                vtable for std::type_info
  .rodata._ZTSSt9type_info
-                0x8005da40        0xd c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(tinfo.o)
-                0x8005da40                typeinfo name for std::type_info
- *fill*         0x8005da4d        0x3 00
+                0x8005da20        0xd c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(tinfo.o)
+                0x8005da20                typeinfo name for std::type_info
+ *fill*         0x8005da2d        0x3 00
  .rodata.str1.4
-                0x8005da50       0x94 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(vterminate.o)
- *fill*         0x8005dae4        0x4 00
+                0x8005da30       0x94 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(vterminate.o)
+ *fill*         0x8005dac4        0x4 00
  .rodata._ZTVN10__cxxabiv117__class_type_infoE
-                0x8005dae8       0x2c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(class_type_info.o)
-                0x8005dae8                vtable for __cxxabiv1::__class_type_info
+                0x8005dac8       0x2c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(class_type_info.o)
+                0x8005dac8                vtable for __cxxabiv1::__class_type_info
  .rodata._ZTSN10__cxxabiv117__class_type_infoE
-                0x8005db14       0x22 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(class_type_info.o)
-                0x8005db14                typeinfo name for __cxxabiv1::__class_type_info
- *fill*         0x8005db36        0x2 00
+                0x8005daf4       0x22 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(class_type_info.o)
+                0x8005daf4                typeinfo name for __cxxabiv1::__class_type_info
+ *fill*         0x8005db16        0x2 00
  .rodata._ZTIN10__cxxabiv117__class_type_infoE
-                0x8005db38        0xc c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(class_type_info.o)
-                0x8005db38                typeinfo for __cxxabiv1::__class_type_info
+                0x8005db18        0xc c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(class_type_info.o)
+                0x8005db18                typeinfo for __cxxabiv1::__class_type_info
  .rodata.str1.4
-                0x8005db44      0x6d3 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(cp-demangle.o)
+                0x8005db24      0x6d3 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(cp-demangle.o)
                                 0x70f (size before relaxing)
- *fill*         0x8005e217        0x1 00
+ *fill*         0x8005e1f7        0x1 00
  .rodata._ZTVSt13bad_exception
-                0x8005e218       0x14 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_exception.o)
-                0x8005e218                vtable for std::bad_exception
- *fill*         0x8005e22c        0x4 00
+                0x8005e1f8       0x14 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_exception.o)
+                0x8005e1f8                vtable for std::bad_exception
+ *fill*         0x8005e20c        0x4 00
  .rodata._ZTVSt9exception
-                0x8005e230       0x14 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_exception.o)
-                0x8005e230                vtable for std::exception
+                0x8005e210       0x14 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_exception.o)
+                0x8005e210                vtable for std::exception
  .rodata._ZTSN10__cxxabiv119__foreign_exceptionE
-                0x8005e244       0x24 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_exception.o)
-                0x8005e244                typeinfo name for __cxxabiv1::__foreign_exception
+                0x8005e224       0x24 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_exception.o)
+                0x8005e224                typeinfo name for __cxxabiv1::__foreign_exception
  .rodata._ZTSN10__cxxabiv115__forced_unwindE
-                0x8005e268       0x20 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_exception.o)
-                0x8005e268                typeinfo name for __cxxabiv1::__forced_unwind
+                0x8005e248       0x20 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_exception.o)
+                0x8005e248                typeinfo name for __cxxabiv1::__forced_unwind
  .rodata._ZTSSt13bad_exception
-                0x8005e288       0x12 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_exception.o)
-                0x8005e288                typeinfo name for std::bad_exception
- *fill*         0x8005e29a        0x2 00
+                0x8005e268       0x12 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_exception.o)
+                0x8005e268                typeinfo name for std::bad_exception
+ *fill*         0x8005e27a        0x2 00
  .rodata._ZTISt13bad_exception
-                0x8005e29c        0xc c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_exception.o)
-                0x8005e29c                typeinfo for std::bad_exception
+                0x8005e27c        0xc c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_exception.o)
+                0x8005e27c                typeinfo for std::bad_exception
  .rodata._ZTSSt9exception
-                0x8005e2a8        0xd c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_exception.o)
-                0x8005e2a8                typeinfo name for std::exception
- *fill*         0x8005e2b5        0x3 00
+                0x8005e288        0xd c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_exception.o)
+                0x8005e288                typeinfo name for std::exception
+ *fill*         0x8005e295        0x3 00
  .rodata.str1.4
-                0x8005e2b8       0x23 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_exception.o)
- *fill*         0x8005e2db        0x5 00
- .rodata.cst8   0x8005e2e0        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-s_atan2.o)
+                0x8005e298       0x23 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_exception.o)
+ *fill*         0x8005e2bb        0x5 00
+ .rodata.cst8   0x8005e2c0        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-s_atan2.o)
  .rodata.cst4   0x00000000        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-s_atangent.o)
- .rodata.cst8   0x8005e2e8       0x68 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-s_atangent.o)
+ .rodata.cst8   0x8005e2c8       0x68 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-s_atangent.o)
                                  0x70 (size before relaxing)
- .rodata.a      0x8005e350       0x20 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-s_atangent.o)
+ .rodata.a      0x8005e330       0x20 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-s_atangent.o)
  .rodata.cst8   0x00000000        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-s_fabs.o)
  .rodata.cst8   0x00000000        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-s_numtest.o)
  .rodata.cst4   0x00000000        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-s_sine.o)
- .rodata.cst8   0x8005e370       0x48 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-s_sine.o)
+ .rodata.cst8   0x8005e350       0x48 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-s_sine.o)
                                  0x60 (size before relaxing)
  .rodata.cst4   0x00000000        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-s_sqrt.o)
- .rodata.cst8   0x8005e3b8       0x18 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-s_sqrt.o)
+ .rodata.cst8   0x8005e398       0x18 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-s_sqrt.o)
                                  0x20 (size before relaxing)
- .rodata.cst4   0x8005e3d0        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-sf_atan.o)
+ .rodata.cst4   0x8005e3b0        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-sf_atan.o)
                                   0x8 (size before relaxing)
  .rodata.cst4   0x00000000        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-sf_atan2.o)
- .rodata.cst4   0x8005e3d4       0x18 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-sf_atangent.o)
+ .rodata.cst4   0x8005e3b4       0x18 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-sf_atangent.o)
                                  0x28 (size before relaxing)
  .rodata.cst8   0x00000000        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-sf_atangent.o)
- .rodata.a      0x8005e3ec       0x10 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-sf_atangent.o)
+ .rodata.a      0x8005e3cc       0x10 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-sf_atangent.o)
  .rodata.cst4   0x00000000        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-sf_fabs.o)
  .rodata.cst4   0x00000000        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-sf_numtest.o)
- .rodata.cst4   0x8005e3fc       0x18 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-sf_sine.o)
+ .rodata.cst4   0x8005e3dc       0x18 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-sf_sine.o)
                                  0x28 (size before relaxing)
  .rodata.cst8   0x00000000        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-sf_sine.o)
  .rodata.cst4   0x00000000        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-sf_sqrt.o)
  .rodata.cst8   0x00000000       0x18 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-sf_sqrt.o)
  .rodata.cst4   0x00000000        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-sf_ldexp.o)
  .rodata.str1.4
-                0x8005e414        0xf c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libsysbase.a(abort.o)
- *fill*         0x8005e423        0x1 00
+                0x8005e3f4        0xf c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libsysbase.a(abort.o)
+ *fill*         0x8005e403        0x1 00
  .rodata.str1.4
-                0x8005e424        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libsysbase.a(iosupport.o)
+                0x8005e404        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libsysbase.a(iosupport.o)
  .rodata._ctype_
-                0x8005e42c      0x101 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-ctype_.o)
-                0x8005e42c                _ctype_
- *fill*         0x8005e52d        0x3 00
+                0x8005e40c      0x101 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-ctype_.o)
+                0x8005e40c                _ctype_
+ *fill*         0x8005e50d        0x3 00
  .rodata.str1.4
-                0x8005e530        0x2 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-impure.o)
- *fill*         0x8005e532        0x2 00
- .rodata.lconv  0x8005e534       0x38 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-locale.o)
+                0x8005e510        0x2 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-impure.o)
+ *fill*         0x8005e512        0x2 00
+ .rodata.lconv  0x8005e514       0x38 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-locale.o)
  .rodata.str1.4
-                0x8005e56c       0xe0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-locale.o)
+                0x8005e54c       0xe0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-locale.o)
                                  0xf0 (size before relaxing)
  .rodata.str1.4
                 0x00000000        0x1 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-mbrtowc.o)
  .rodata._DAYS_BEFORE_MONTH
-                0x8005e64c       0x30 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-mktime.o)
+                0x8005e62c       0x30 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-mktime.o)
  .rodata.DAYS_IN_MONTH
-                0x8005e67c       0x30 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-mktime.o)
+                0x8005e65c       0x30 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-mktime.o)
  .rodata.mon_lengths
-                0x8005e6ac       0x60 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-mktm_r.o)
+                0x8005e68c       0x60 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-mktm_r.o)
  .rodata.year_lengths
-                0x8005e70c        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-mktm_r.o)
+                0x8005e6ec        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-mktm_r.o)
  .rodata.str1.4
                 0x00000000        0x2 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-puts.o)
  .rodata._strtod_r
-                0x8005e714       0xd4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-strtod.o)
- .rodata.cst4   0x8005e7e8        0xc c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-strtod.o)
+                0x8005e6f4       0xd4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-strtod.o)
+ .rodata.cst4   0x8005e7c8        0xc c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-strtod.o)
                                  0x20 (size before relaxing)
- *fill*         0x8005e7f4        0x4 00
- .rodata.cst8   0x8005e7f8       0x20 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-strtod.o)
+ *fill*         0x8005e7d4        0x4 00
+ .rodata.cst8   0x8005e7d8       0x20 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-strtod.o)
                                  0x28 (size before relaxing)
  .rodata.str1.4
-                0x8005e818        0xa c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-strtod.o)
+                0x8005e7f8        0xa c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-strtod.o)
                                   0xf (size before relaxing)
- *fill*         0x8005e822        0x6 00
+ *fill*         0x8005e802        0x6 00
  .rodata.tinytens
-                0x8005e828       0x28 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-strtod.o)
+                0x8005e808       0x28 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-strtod.o)
  .rodata._svfprintf_r
-                0x8005e850      0x164 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-svfprintf.o)
+                0x8005e830      0x164 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-svfprintf.o)
  .rodata.zeroes.4027
-                0x8005e9b4       0x10 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-svfprintf.o)
+                0x8005e994       0x10 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-svfprintf.o)
  .rodata.cst8   0x00000000        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-svfprintf.o)
  .rodata.blanks.4026
-                0x8005e9c4       0x10 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-svfprintf.o)
+                0x8005e9a4       0x10 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-svfprintf.o)
  .rodata.str1.4
-                0x8005e9d4       0x42 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-svfprintf.o)
- *fill*         0x8005ea16        0x2 00
+                0x8005e9b4       0x42 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-svfprintf.o)
+ *fill*         0x8005e9f6        0x2 00
  .rodata.towlower
-                0x8005ea18      0x150 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-towlower.o)
+                0x8005e9f8      0x150 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-towlower.o)
  .rodata.CSWTCH.2
-                0x8005eb68      0x1c0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-towlower.o)
+                0x8005eb48      0x1c0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-towlower.o)
  .rodata.towupper
-                0x8005ed28       0xa8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-towupper.o)
+                0x8005ed08       0xa8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-towupper.o)
  .rodata.CSWTCH.2
-                0x8005edd0      0x210 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-towupper.o)
+                0x8005edb0      0x210 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-towupper.o)
  .rodata._vfprintf_r
-                0x8005efe0      0x164 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-vfprintf.o)
+                0x8005efc0      0x164 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-vfprintf.o)
  .rodata.zeroes.4042
-                0x8005f144       0x10 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-vfprintf.o)
+                0x8005f124       0x10 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-vfprintf.o)
  .rodata.cst8   0x00000000        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-vfprintf.o)
  .rodata.str1.4
                 0x00000000       0x42 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-vfprintf.o)
  .rodata.blanks.4041
-                0x8005f154       0x10 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-vfprintf.o)
- .rodata.cst4   0x8005f164        0xc c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-dtoa.o)
+                0x8005f134       0x10 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-vfprintf.o)
+ .rodata.cst4   0x8005f144        0xc c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-dtoa.o)
                                  0x20 (size before relaxing)
- .rodata.cst8   0x8005f170       0x18 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-dtoa.o)
+ .rodata.cst8   0x8005f150       0x18 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-dtoa.o)
                                  0x20 (size before relaxing)
  .rodata.str1.4
-                0x8005f188       0x10 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-dtoa.o)
+                0x8005f168       0x10 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-dtoa.o)
                                  0x12 (size before relaxing)
  .rodata.str1.4
-                0x8005f198       0x1c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-gdtoa-gethex.o)
+                0x8005f178       0x1c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-gdtoa-gethex.o)
                                  0x1b (size before relaxing)
  .rodata.__jp2uc
-                0x8005f1b4       0x20 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-jp2uc.o)
- .rodata.a1     0x8005f1d4       0xbc c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-jp2uc.o)
- .rodata.a2     0x8005f290       0xbc c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-jp2uc.o)
- .rodata.a3     0x8005f34c       0x5b c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-jp2uc.o)
- *fill*         0x8005f3a7        0x1 00
- .rodata.a6     0x8005f3a8       0x70 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-jp2uc.o)
- .rodata.a7     0x8005f418       0xa2 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-jp2uc.o)
- .rodata.a8     0x8005f4ba       0x40 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-jp2uc.o)
+                0x8005f194       0x20 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-jp2uc.o)
+ .rodata.a1     0x8005f1b4       0xbc c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-jp2uc.o)
+ .rodata.a2     0x8005f270       0xbc c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-jp2uc.o)
+ .rodata.a3     0x8005f32c       0x5b c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-jp2uc.o)
+ *fill*         0x8005f387        0x1 00
+ .rodata.a6     0x8005f388       0x70 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-jp2uc.o)
+ .rodata.a7     0x8005f3f8       0xa2 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-jp2uc.o)
+ .rodata.a8     0x8005f49a       0x40 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-jp2uc.o)
  .rodata.str1.4
                 0x00000000       0x12 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-jp2uc.o)
- .rodata.b02cf  0x8005f4fa     0x172a c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-jp2uc.o)
- .rodata.d02f4  0x80060c24     0x1a7c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-jp2uc.o)
+ .rodata.b02cf  0x8005f4da     0x172a c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-jp2uc.o)
+ .rodata.d02f4  0x80060c04     0x1a7c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-jp2uc.o)
  .rodata.__mprec_tens
-                0x800626a0       0xc8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-mprec.o)
-                0x800626a0                __mprec_tens
+                0x80062680       0xc8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-mprec.o)
+                0x80062680                __mprec_tens
  .rodata.__mprec_bigtens
-                0x80062768       0x28 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-mprec.o)
-                0x80062768                __mprec_bigtens
+                0x80062748       0x28 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-mprec.o)
+                0x80062748                __mprec_bigtens
  .rodata.p05.2454
-                0x80062790        0xc c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-mprec.o)
+                0x80062770        0xc c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-mprec.o)
  *(.gnu.linkonce.r.*)
 
-.eh_frame_hdr   0x8006279c      0x3cc
- .eh_frame_hdr  0x8006279c      0x3cc main.o
+.eh_frame_hdr   0x8006277c      0x3cc
+ .eh_frame_hdr  0x8006277c      0x3cc main.o
 
 .gcc_except_table._Znaj
-                0x80062b68       0x16
+                0x80062b48       0x16
  .gcc_except_table._Znaj
-                0x80062b68       0x16 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(new_opv.o)
+                0x80062b48       0x16 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(new_opv.o)
 
 .gcc_except_table.__gxx_personality_v0
-                0x80062b80       0x18
+                0x80062b60       0x18
  .gcc_except_table.__gxx_personality_v0
-                0x80062b80       0x18 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_personality.o)
+                0x80062b60       0x18 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_personality.o)
 
 .gcc_except_table.__cxa_call_unexpected
-                0x80062b98       0x20
+                0x80062b78       0x20
  .gcc_except_table.__cxa_call_unexpected
-                0x80062b98       0x20 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_personality.o)
+                0x80062b78       0x20 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_personality.o)
 
 .gcc_except_table._ZN10__cxxabiv111__terminateEPFvvE
-                0x80062bb8       0x1d
+                0x80062b98       0x1d
  .gcc_except_table._ZN10__cxxabiv111__terminateEPFvvE
-                0x80062bb8       0x1d c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_terminate.o)
+                0x80062b98       0x1d c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_terminate.o)
 
 .gcc_except_table._Znwj
-                0x80062bd8       0x1a
+                0x80062bb8       0x1a
  .gcc_except_table._Znwj
-                0x80062bd8       0x1a c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(new_op.o)
+                0x80062bb8       0x1a c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(new_op.o)
 
 .gcc_except_table._ZN9__gnu_cxx27__verbose_terminate_handlerEv
-                0x80062bf4       0x38
+                0x80062bd4       0x38
  .gcc_except_table._ZN9__gnu_cxx27__verbose_terminate_handlerEv
-                0x80062bf4       0x38 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(vterminate.o)
+                0x80062bd4       0x38 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(vterminate.o)
 
 .rodata1
  *(.rodata1)
 
-.sdata2         0x80062c2c       0x24
+.sdata2         0x80062c0c       0x24
  *(.sdata2)
- .sdata2        0x80062c2c        0x0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/ecrti.o
-                0x80062c2c                _SDA2_BASE_
-                0x80062c2c                __SDATA2_START__
+ .sdata2        0x80062c0c        0x0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/ecrti.o
+                0x80062c0c                _SDA2_BASE_
+                0x80062c0c                __SDATA2_START__
  *(.sdata2.*)
  .sdata2.__wiiuse_speaker_defconf
-                0x80062c2c        0x7 c:/devkitPro/libogc/lib/wii\libwiiuse.a(speaker.o)
- *fill*         0x80062c33        0x1 00
+                0x80062c0c        0x7 c:/devkitPro/libogc/lib/wii\libwiiuse.a(speaker.o)
+ *fill*         0x80062c13        0x1 00
  .sdata2.C.2.10480
-                0x80062c34        0x3 c:/devkitPro/libogc/lib/wii\libbte.a(bte.o)
- *fill*         0x80062c37        0x1 00
+                0x80062c14        0x3 c:/devkitPro/libogc/lib/wii\libbte.a(bte.o)
+ *fill*         0x80062c17        0x1 00
  .sdata2.C.1.10344
-                0x80062c38        0x3 c:/devkitPro/libogc/lib/wii\libbte.a(bte.o)
- *fill*         0x80062c3b        0x1 00
+                0x80062c18        0x3 c:/devkitPro/libogc/lib/wii\libbte.a(bte.o)
+ *fill*         0x80062c1b        0x1 00
  .sdata2.C.0.10286
-                0x80062c3c        0x3 c:/devkitPro/libogc/lib/wii\libbte.a(bte.o)
- *fill*         0x80062c3f        0x1 00
+                0x80062c1c        0x3 c:/devkitPro/libogc/lib/wii\libbte.a(bte.o)
+ *fill*         0x80062c1f        0x1 00
  .sdata2.pfCallbackOUT
-                0x80062c40        0x8 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_io.o)
+                0x80062c20        0x8 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_io.o)
  .sdata2.pfCallbackIN
-                0x80062c48        0x8 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_io.o)
+                0x80062c28        0x8 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_io.o)
  *(.gnu.linkonce.s2.*)
 
-.sbss2          0x80062c50        0x0
+.sbss2          0x80062c30        0x0
  *(.sbss2)
- .sbss2         0x80062c50        0x0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/ecrtn.o
+ .sbss2         0x80062c30        0x0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/ecrtn.o
  *(.sbss2.*)
  *(.gnu.linkonce.sb2.*)
-                0x80062c50                . = ALIGN (0x4)
-                0x80062c50                PROVIDE (__preinit_array_start, .)
+                0x80062c30                . = ALIGN (0x4)
+                0x80062c30                PROVIDE (__preinit_array_start, .)
 
 .preinit_array
  *(.preinit_array)
-                0x80062c50                PROVIDE (__preinit_array_end, .)
-                0x80062c50                PROVIDE (__init_array_start, .)
+                0x80062c30                PROVIDE (__preinit_array_end, .)
+                0x80062c30                PROVIDE (__init_array_start, .)
 
 .init_array
  *(.init_array)
-                0x80062c50                PROVIDE (__init_array_end, .)
-                0x80062c50                PROVIDE (__fini_array_start, .)
+                0x80062c30                PROVIDE (__init_array_end, .)
+                0x80062c30                PROVIDE (__fini_array_start, .)
 
 .fini_array
  *(.fini_array)
-                0x80062c50                PROVIDE (__fini_array_end, .)
+                0x80062c30                PROVIDE (__fini_array_end, .)
 
-.data           0x80062c60     0x2360
+.data           0x80062c40     0x2360
  *(.data)
- .data          0x80062c60      0x1a4 c:/devkitPro/libogc/lib/wii\libmxml.a(mxml-private.o)
- .data          0x80062e04       0x10 c:/devkitPro/libogc/lib/wii\libogc.a(system_asm.o)
- .data          0x80062e14        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1\libgcc.a(eabi.o)
- .data          0x80062e18       0x44 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libsysbase.a(iosupport.o)
-                0x80062e1c                devoptab_list
- .data          0x80062e5c      0x400 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libsysbase.a(chdir.o)
+ .data          0x80062c40      0x1a4 c:/devkitPro/libogc/lib/wii\libmxml.a(mxml-private.o)
+ .data          0x80062de4       0x10 c:/devkitPro/libogc/lib/wii\libogc.a(system_asm.o)
+ .data          0x80062df4        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1\libgcc.a(eabi.o)
+ .data          0x80062df8       0x44 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libsysbase.a(iosupport.o)
+                0x80062dfc                devoptab_list
+ .data          0x80062e3c      0x400 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libsysbase.a(chdir.o)
  *(.data.*)
  .data.__wpad_resetinfo
-                0x8006325c       0x10 c:/devkitPro/libogc/lib/wii\libwiiuse.a(wpad.o)
+                0x8006323c       0x10 c:/devkitPro/libogc/lib/wii\libwiiuse.a(wpad.o)
  .data.bte_patch0
-                0x8006326c       0xb8 c:/devkitPro/libogc/lib/wii\libbte.a(bte.o)
+                0x8006324c       0xb8 c:/devkitPro/libogc/lib/wii\libbte.a(bte.o)
  .data.bte_patch1
-                0x80063324       0x5c c:/devkitPro/libogc/lib/wii\libbte.a(bte.o)
+                0x80063304       0x5c c:/devkitPro/libogc/lib/wii\libbte.a(bte.o)
  .data.TVPal528IntDf
-                0x80063380       0x3c c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
-                0x80063380                TVPal528IntDf
+                0x80063360       0x3c c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
+                0x80063360                TVPal528IntDf
  .data.TVEurgb60Hz480IntDf
-                0x800633bc       0x3c c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
-                0x800633bc                TVEurgb60Hz480IntDf
+                0x8006339c       0x3c c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
+                0x8006339c                TVEurgb60Hz480IntDf
  .data.TVNtsc480IntDf
-                0x800633f8       0x3c c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
-                0x800633f8                TVNtsc480IntDf
+                0x800633d8       0x3c c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
+                0x800633d8                TVNtsc480IntDf
  .data.TVMpal480IntDf
-                0x80063434       0x3c c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
-                0x80063434                TVMpal480IntDf
+                0x80063414       0x3c c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
+                0x80063414                TVMpal480IntDf
  .data.TVNtsc480Prog
-                0x80063470       0x3c c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
-                0x80063470                TVNtsc480Prog
+                0x80063450       0x3c c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
+                0x80063450                TVNtsc480Prog
  .data._dsp_initcode
-                0x800634ac       0x80 c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
- .data.xy       0x8006352c       0x60 c:/devkitPro/libogc/lib/wii\libogc.a(si.o)
- .data.sicntrl  0x8006358c       0x14 c:/devkitPro/libogc/lib/wii\libogc.a(si.o)
- .data.si_type  0x800635a0       0x10 c:/devkitPro/libogc/lib/wii\libogc.a(si.o)
+                0x8006348c       0x80 c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
+ .data.xy       0x8006350c       0x60 c:/devkitPro/libogc/lib/wii\libogc.a(si.o)
+ .data.sicntrl  0x8006356c       0x14 c:/devkitPro/libogc/lib/wii\libogc.a(si.o)
+ .data.si_type  0x80063580       0x10 c:/devkitPro/libogc/lib/wii\libogc.a(si.o)
  .data.console_font_8x16
-                0x800635b0     0x1000 c:/devkitPro/libogc/lib/wii\libogc.a(console_font_8x16.o)
-                0x800635b0                console_font_8x16
- *fill*         0x800645b0       0x10 00
+                0x80063590     0x1000 c:/devkitPro/libogc/lib/wii\libogc.a(console_font_8x16.o)
+                0x80063590                console_font_8x16
+ *fill*         0x80064590       0x10 00
  .data.__stm_imm_fs
+                0x800645a0       0x13 c:/devkitPro/libogc/lib/wii\libogc.a(stm.o)
+ *fill*         0x800645b3        0xd 00
+ .data.__stm_eh_fs
                 0x800645c0       0x13 c:/devkitPro/libogc/lib/wii\libogc.a(stm.o)
  *fill*         0x800645d3        0xd 00
- .data.__stm_eh_fs
-                0x800645e0       0x13 c:/devkitPro/libogc/lib/wii\libogc.a(stm.o)
- *fill*         0x800645f3        0xd 00
- .data._sd0_fs  0x80064600       0x10 c:/devkitPro/libogc/lib/wii\libogc.a(wiisd.o)
+ .data._sd0_fs  0x800645e0       0x10 c:/devkitPro/libogc/lib/wii\libogc.a(wiisd.o)
  .data.__io_usbstorage
-                0x80064610       0x20 c:/devkitPro/libogc/lib/wii\libogc.a(usbstorage.o)
-                0x80064610                __io_usbstorage
- *fill*         0x80064630       0x10 00
+                0x800645f0       0x20 c:/devkitPro/libogc/lib/wii\libogc.a(usbstorage.o)
+                0x800645f0                __io_usbstorage
+ *fill*         0x80064610       0x10 00
  .data.__stateflags
-                0x80064640       0x28 c:/devkitPro/libogc/lib/wii\libogc.a(wiilaunch.o)
- *fill*         0x80064668       0x18 00
+                0x80064620       0x28 c:/devkitPro/libogc/lib/wii\libogc.a(wiilaunch.o)
+ *fill*         0x80064648       0x18 00
  .data.__nandbootinfo
-                0x80064680       0x1a c:/devkitPro/libogc/lib/wii\libogc.a(wiilaunch.o)
- *fill*         0x8006469a        0x2 00
+                0x80064660       0x1a c:/devkitPro/libogc/lib/wii\libogc.a(wiilaunch.o)
+ *fill*         0x8006467a        0x2 00
  .data.pad_resetinfo
-                0x8006469c       0x10 c:/devkitPro/libogc/lib/wii\libogc.a(pad.o)
- *fill*         0x800646ac       0x14 00
- .data.__kd_fs  0x800646c0       0x14 c:/devkitPro/libogc/lib/wii\libogc.a(network_wii.o)
- *fill*         0x800646d4        0x4 00
+                0x8006467c       0x10 c:/devkitPro/libogc/lib/wii\libogc.a(pad.o)
+ *fill*         0x8006468c       0x14 00
+ .data.__kd_fs  0x800646a0       0x14 c:/devkitPro/libogc/lib/wii\libogc.a(network_wii.o)
+ *fill*         0x800646b4        0x4 00
  .data.impure_data
-                0x800646d8      0x440 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-impure.o)
+                0x800646b8      0x440 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-impure.o)
  .data.lc_ctype_charset
-                0x80064b18       0x20 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-locale.o)
+                0x80064af8       0x20 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-locale.o)
  .data.__malloc_av_
-                0x80064b38      0x408 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-mallocr.o)
-                0x80064b38                __malloc_av_
+                0x80064b18      0x408 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-mallocr.o)
+                0x80064b18                __malloc_av_
  .data.fpinan.2450
-                0x80064f40       0x14 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-strtod.o)
+                0x80064f20       0x14 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-strtod.o)
  .data.fpi.2414
-                0x80064f54       0x14 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-strtod.o)
- .data.tzinfo   0x80064f68       0x40 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-gettzinfo.o)
+                0x80064f34       0x14 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-strtod.o)
+ .data.tzinfo   0x80064f48       0x40 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-gettzinfo.o)
  *(.gnu.linkonce.d.*)
-                0x80064fc0                . = ALIGN (0x20)
- *fill*         0x80064fa8       0x18 00
+                0x80064fa0                . = ALIGN (0x20)
+ *fill*         0x80064f88       0x18 00
 
 .data1
  *(.data1)
@@ -7811,66 +7811,66 @@ Linker script and memory map
  *(.tbss .tbss.* .gnu.linkonce.tb.*)
  *(.tcommon)
 
-.eh_frame       0x80064fc0     0x1578
+.eh_frame       0x80064fa0     0x1578
  *(.eh_frame)
- .eh_frame      0x80064fc0        0x0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/ecrti.o
-                0x80064fc0                __EH_FRAME_BEGIN__
- .eh_frame      0x80064fc0        0x0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/crtbegin.o
- .eh_frame      0x80064fc0      0x134 main.o
- .eh_frame      0x800650f4       0x40 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(new_opv.o)
- .eh_frame      0x80065134      0x1ac c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_personality.o)
+ .eh_frame      0x80064fa0        0x0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/ecrti.o
+                0x80064fa0                __EH_FRAME_BEGIN__
+ .eh_frame      0x80064fa0        0x0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/crtbegin.o
+ .eh_frame      0x80064fa0      0x134 main.o
+ .eh_frame      0x800650d4       0x40 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(new_opv.o)
+ .eh_frame      0x80065114      0x1ac c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_personality.o)
                                 0x1dc (size before relaxing)
- .eh_frame      0x800652e0       0x64 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_terminate.o)
+ .eh_frame      0x800652c0       0x64 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_terminate.o)
                                  0xbc (size before relaxing)
- .eh_frame      0x80065344       0x5c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_throw.o)
+ .eh_frame      0x80065324       0x5c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_throw.o)
                                  0x70 (size before relaxing)
- .eh_frame      0x800653a0       0x54 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(new_handler.o)
+ .eh_frame      0x80065380       0x54 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(new_handler.o)
                                  0x7c (size before relaxing)
- .eh_frame      0x800653f4       0x2c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(new_op.o)
+ .eh_frame      0x800653d4       0x2c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(new_op.o)
                                  0x48 (size before relaxing)
- .eh_frame      0x80065420       0xd8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(si_class_type_info.o)
+ .eh_frame      0x80065400       0xd8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(si_class_type_info.o)
                                  0xec (size before relaxing)
- .eh_frame      0x800654f8       0x88 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(tinfo.o)
+ .eh_frame      0x800654d8       0x88 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(tinfo.o)
                                  0x9c (size before relaxing)
- .eh_frame      0x80065580       0x24 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(vterminate.o)
+ .eh_frame      0x80065560       0x24 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(vterminate.o)
                                  0x40 (size before relaxing)
- .eh_frame      0x800655a4      0x108 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(class_type_info.o)
+ .eh_frame      0x80065584      0x108 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(class_type_info.o)
                                 0x11c (size before relaxing)
- .eh_frame      0x800656ac       0x1c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(del_op.o)
+ .eh_frame      0x8006568c       0x1c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(del_op.o)
                                  0x30 (size before relaxing)
- .eh_frame      0x800656c8       0x60 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_alloc.o)
+ .eh_frame      0x800656a8       0x60 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_alloc.o)
                                  0xbc (size before relaxing)
- .eh_frame      0x80065728       0x20 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_call.o)
+ .eh_frame      0x80065708       0x20 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_call.o)
                                  0x34 (size before relaxing)
- .eh_frame      0x80065748       0x50 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_catch.o)
+ .eh_frame      0x80065728       0x50 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_catch.o)
                                  0x94 (size before relaxing)
- .eh_frame      0x80065798       0x88 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_exception.o)
+ .eh_frame      0x80065778       0x88 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_exception.o)
                                  0xfc (size before relaxing)
- .eh_frame      0x80065820       0x28 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_globals.o)
+ .eh_frame      0x80065800       0x28 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_globals.o)
                                  0x3c (size before relaxing)
- .eh_frame      0x80065848       0x20 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_type.o)
+ .eh_frame      0x80065828       0x20 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_type.o)
                                  0x34 (size before relaxing)
- .eh_frame      0x80065868        0x0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(pure.o)
+ .eh_frame      0x80065848        0x0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(pure.o)
                                  0x2c (size before relaxing)
- .eh_frame      0x80065868       0x34 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1\libgcc.a(_udivdi3.o)
+ .eh_frame      0x80065848       0x34 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1\libgcc.a(_udivdi3.o)
                                  0x48 (size before relaxing)
- .eh_frame      0x8006589c       0x34 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1\libgcc.a(_umoddi3.o)
+ .eh_frame      0x8006587c       0x34 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1\libgcc.a(_umoddi3.o)
                                  0x48 (size before relaxing)
- .eh_frame      0x800658d0       0x14 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1\libgcc.a(crtsavfpr.o)
+ .eh_frame      0x800658b0       0x14 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1\libgcc.a(crtsavfpr.o)
                                  0x28 (size before relaxing)
- .eh_frame      0x800658e4       0x14 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1\libgcc.a(crtsavgpr.o)
+ .eh_frame      0x800658c4       0x14 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1\libgcc.a(crtsavgpr.o)
                                  0x28 (size before relaxing)
- .eh_frame      0x800658f8       0x14 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1\libgcc.a(crtresgpr.o)
+ .eh_frame      0x800658d8       0x14 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1\libgcc.a(crtresgpr.o)
                                  0x28 (size before relaxing)
- .eh_frame      0x8006590c       0x7c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1\libgcc.a(crtresxfpr.o)
- .eh_frame      0x80065988       0x7c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1\libgcc.a(crtresxgpr.o)
- .eh_frame      0x80065a04      0x728 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1\libgcc.a(unwind-dw2.o)
+ .eh_frame      0x800658ec       0x7c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1\libgcc.a(crtresxfpr.o)
+ .eh_frame      0x80065968       0x7c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1\libgcc.a(crtresxgpr.o)
+ .eh_frame      0x800659e4      0x728 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1\libgcc.a(unwind-dw2.o)
                                 0x73c (size before relaxing)
- .eh_frame      0x8006612c      0x404 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1\libgcc.a(unwind-dw2-fde.o)
+ .eh_frame      0x8006610c      0x404 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1\libgcc.a(unwind-dw2-fde.o)
                                 0x418 (size before relaxing)
- .eh_frame      0x80066530        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/crtend.o
- .eh_frame      0x80066534        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/ecrtn.o
-                0x80066534                __EH_FRAME_END__
+ .eh_frame      0x80066510        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/crtend.o
+ .eh_frame      0x80066514        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/ecrtn.o
+                0x80066514                __EH_FRAME_END__
 
 .gcc_except_table
  *(.gcc_except_table)
@@ -7881,829 +7881,829 @@ Linker script and memory map
 .got1
  *(.got1)
 
-.got2           0x80066538       0x20
+.got2           0x80066518       0x20
  *(.got2)
- .got2          0x80066538        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib/crtmain.o
- .got2          0x8006653c       0x1c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1\libgcc.a(eabi.o)
+ .got2          0x80066518        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib/crtmain.o
+ .got2          0x8006651c       0x1c c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1\libgcc.a(eabi.o)
 
 .dynamic
  *(.dynamic)
 
-.ctors          0x80066558       0x28
+.ctors          0x80066538       0x28
  *crtbegin.o(.ctors)
- .ctors         0x80066558        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/crtbegin.o
+ .ctors         0x80066538        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/crtbegin.o
  *(EXCLUDE_FILE(*crtend.o) .ctors)
- .ctors         0x8006655c        0x0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/ecrti.o
-                0x8006655c                __CTOR_LIST__
- .ctors         0x8006655c        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_alloc.o)
- .ctors         0x80066560        0x0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/ecrtn.o
-                0x80066560                __CTOR_END__
+ .ctors         0x8006653c        0x0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/ecrti.o
+                0x8006653c                __CTOR_LIST__
+ .ctors         0x8006653c        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_alloc.o)
+ .ctors         0x80066540        0x0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/ecrtn.o
+                0x80066540                __CTOR_END__
  *(SORT(.ctors.*))
  *(.ctors)
- .ctors         0x80066560        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/crtend.o
-                0x80066580                . = ALIGN (0x20)
- *fill*         0x80066564       0x1c 00
+ .ctors         0x80066540        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/crtend.o
+                0x80066560                . = ALIGN (0x20)
+ *fill*         0x80066544       0x1c 00
 
-.dtors          0x80066580       0x20
+.dtors          0x80066560       0x20
  *crtbegin.o(.dtors)
- .dtors         0x80066580        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/crtbegin.o
+ .dtors         0x80066560        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/crtbegin.o
  *(EXCLUDE_FILE(*crtend.o) .dtors)
- .dtors         0x80066584        0x0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/ecrti.o
-                0x80066584                __DTOR_LIST__
- .dtors         0x80066584        0x0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/ecrtn.o
+ .dtors         0x80066564        0x0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/ecrti.o
+                0x80066564                __DTOR_LIST__
+ .dtors         0x80066564        0x0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/ecrtn.o
  *(SORT(.dtors.*))
  *(.dtors)
- .dtors         0x80066584        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/crtend.o
-                0x80066584                __DTOR_END__
-                0x800665a0                . = ALIGN (0x20)
- *fill*         0x80066588       0x18 00
+ .dtors         0x80066564        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/crtend.o
+                0x80066564                __DTOR_END__
+                0x80066580                . = ALIGN (0x20)
+ *fill*         0x80066568       0x18 00
 
-.jcr            0x800665a0        0x4
+.jcr            0x80066580        0x4
  *(.jcr)
- .jcr           0x800665a0        0x0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/crtbegin.o
- .jcr           0x800665a0        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/crtend.o
+ .jcr           0x80066580        0x0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/crtbegin.o
+ .jcr           0x80066580        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/crtend.o
 
 .got
  *(.got.plt)
  *(.got)
 
-.sdata          0x800665c0      0x1a0
+.sdata          0x800665a0      0x1a0
  *(.sdata)
- .sdata         0x800665c0        0x0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/ecrti.o
-                0x800665c0                __SDATA_START__
-                0x800665c0                _SDA_BASE_
- .sdata         0x800665c0        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(ogc_crt0.o)
-                0x800665c0                __system_argv
- .sdata         0x800665c4        0xb c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libsysbase.a(chdir.o)
-                0x800665c4                DIRECTORY_SEPARATOR
-                0x800665c8                DIRECTORY_THIS
-                0x800665cc                DIRECTORY_PARENT
- *fill*         0x800665cf        0x1 00
- .sdata         0x800665d0        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-impure.o)
-                0x800665d0                _impure_ptr
-                0x800665d4                _global_impure_ptr
+ .sdata         0x800665a0        0x0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/ecrti.o
+                0x800665a0                __SDATA_START__
+                0x800665a0                _SDA_BASE_
+ .sdata         0x800665a0        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(ogc_crt0.o)
+                0x800665a0                __system_argv
+ .sdata         0x800665a4        0xb c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libsysbase.a(chdir.o)
+                0x800665a4                DIRECTORY_SEPARATOR
+                0x800665a8                DIRECTORY_THIS
+                0x800665ac                DIRECTORY_PARENT
+ *fill*         0x800665af        0x1 00
+ .sdata         0x800665b0        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-impure.o)
+                0x800665b0                _impure_ptr
+                0x800665b4                _global_impure_ptr
  *(.sdata.*)
  .sdata.wc24_titleid
-                0x800665d8        0x8 c:/devkitPro/libogc/lib/wii\libwc24.a(wc24.o)
-                0x800665d8                wc24_titleid
+                0x800665b8        0x8 c:/devkitPro/libogc/lib/wii\libwc24.a(wc24.o)
+                0x800665b8                wc24_titleid
  .sdata.wc24mail_flmaxentries
-                0x800665e0        0x4 c:/devkitPro/libogc/lib/wii\libwc24.a(wc24mail.o)
-                0x800665e0                wc24mail_flmaxentries
+                0x800665c0        0x4 c:/devkitPro/libogc/lib/wii\libwc24.a(wc24mail.o)
+                0x800665c0                wc24mail_flmaxentries
  .sdata.__wpad_idletimeout
-                0x800665e4        0x4 c:/devkitPro/libogc/lib/wii\libwiiuse.a(wpad.o)
+                0x800665c4        0x4 c:/devkitPro/libogc/lib/wii\libwiiuse.a(wpad.o)
  .sdata.__wpad_powcb
-                0x800665e8        0x4 c:/devkitPro/libogc/lib/wii\libwiiuse.a(wpad.o)
+                0x800665c8        0x4 c:/devkitPro/libogc/lib/wii\libwiiuse.a(wpad.o)
  .sdata.__wiiuse_speaker_vol
-                0x800665ec        0x1 c:/devkitPro/libogc/lib/wii\libwiiuse.a(speaker.o)
- *fill*         0x800665ed        0x3 00
+                0x800665cc        0x1 c:/devkitPro/libogc/lib/wii\libwiiuse.a(speaker.o)
+ *fill*         0x800665cd        0x3 00
  .sdata.bte_ctrl_reqs
-                0x800665f0        0x8 c:/devkitPro/libogc/lib/wii\libbte.a(bte.o)
+                0x800665d0        0x8 c:/devkitPro/libogc/lib/wii\libbte.a(bte.o)
  .sdata.bte_pcbs
-                0x800665f8        0x8 c:/devkitPro/libogc/lib/wii\libbte.a(bte.o)
+                0x800665d8        0x8 c:/devkitPro/libogc/lib/wii\libbte.a(bte.o)
  .sdata.hci_inq_results
-                0x80066600        0x8 c:/devkitPro/libogc/lib/wii\libbte.a(hci.o)
+                0x800665e0        0x8 c:/devkitPro/libogc/lib/wii\libbte.a(hci.o)
  .sdata.hci_pcbs
-                0x80066608        0x8 c:/devkitPro/libogc/lib/wii\libbte.a(hci.o)
+                0x800665e8        0x8 c:/devkitPro/libogc/lib/wii\libbte.a(hci.o)
  .sdata.hci_links
-                0x80066610        0x8 c:/devkitPro/libogc/lib/wii\libbte.a(hci.o)
+                0x800665f0        0x8 c:/devkitPro/libogc/lib/wii\libbte.a(hci.o)
  .sdata.hci_link_key_results
-                0x80066618        0x8 c:/devkitPro/libogc/lib/wii\libbte.a(hci.o)
+                0x800665f8        0x8 c:/devkitPro/libogc/lib/wii\libbte.a(hci.o)
  .sdata.l2cap_segs
-                0x80066620        0x8 c:/devkitPro/libogc/lib/wii\libbte.a(l2cap.o)
+                0x80066600        0x8 c:/devkitPro/libogc/lib/wii\libbte.a(l2cap.o)
  .sdata.l2cap_listenpcbs
-                0x80066628        0x8 c:/devkitPro/libogc/lib/wii\libbte.a(l2cap.o)
+                0x80066608        0x8 c:/devkitPro/libogc/lib/wii\libbte.a(l2cap.o)
  .sdata.l2cap_sigs
-                0x80066630        0x8 c:/devkitPro/libogc/lib/wii\libbte.a(l2cap.o)
+                0x80066610        0x8 c:/devkitPro/libogc/lib/wii\libbte.a(l2cap.o)
  .sdata.l2cap_pcbs
-                0x80066638        0x8 c:/devkitPro/libogc/lib/wii\libbte.a(l2cap.o)
+                0x80066618        0x8 c:/devkitPro/libogc/lib/wii\libbte.a(l2cap.o)
  .sdata.pool_pbufs
-                0x80066640        0x8 c:/devkitPro/libogc/lib/wii\libbte.a(btpbuf.o)
+                0x80066620        0x8 c:/devkitPro/libogc/lib/wii\libbte.a(btpbuf.o)
  .sdata.rom_pbufs
-                0x80066648        0x8 c:/devkitPro/libogc/lib/wii\libbte.a(btpbuf.o)
+                0x80066628        0x8 c:/devkitPro/libogc/lib/wii\libbte.a(btpbuf.o)
  .sdata.__wait4hci
-                0x80066650        0x4 c:/devkitPro/libogc/lib/wii\libbte.a(physbusif.o)
+                0x80066630        0x4 c:/devkitPro/libogc/lib/wii\libbte.a(physbusif.o)
  .sdata.__ntd_usb_fd
-                0x80066654        0x4 c:/devkitPro/libogc/lib/wii\libbte.a(physbusif.o)
+                0x80066634        0x4 c:/devkitPro/libogc/lib/wii\libbte.a(physbusif.o)
  .sdata.__gecko_status
-                0x80066658        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(console.o)
+                0x80066638        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(console.o)
  .sdata.oldTvStatus
-                0x8006665c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
+                0x8006663c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
  .sdata.oldDtvStatus
-                0x80066660        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
+                0x80066640        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
  .sdata.i2cIdentFlag
-                0x80066664        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
+                0x80066644        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
  .sdata.__argvArena1Lo
-                0x80066668        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
-                0x80066668                __argvArena1Lo
+                0x80066648        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
+                0x80066648                __argvArena1Lo
  .sdata._ipc_seed
-                0x8006666c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(ipc.o)
+                0x8006664c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(ipc.o)
  .sdata._ipc_hid
-                0x80066670        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(ipc.o)
+                0x80066650        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(ipc.o)
  .sdata._ipc_mailboxack
-                0x80066674        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(ipc.o)
+                0x80066654        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(ipc.o)
  .sdata.MALLOC_MEM2
-                0x80066678        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(sbrk.o)
-                0x80066678                MALLOC_MEM2
+                0x80066658        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(sbrk.o)
+                0x80066658                MALLOC_MEM2
  .sdata.__stm_imm_fd
-                0x8006667c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(stm.o)
+                0x8006665c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(stm.o)
  .sdata.__stm_eh_fd
-                0x80066680        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(stm.o)
+                0x80066660        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(stm.o)
  .sdata.__es_fd
-                0x80066684        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(es.o)
- *fill*         0x80066688       0x18 00
+                0x80066664        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(es.o)
+ *fill*         0x80066668       0x18 00
  .sdata.__es_fs
-                0x800666a0        0x8 c:/devkitPro/libogc/lib/wii\libogc.a(es.o)
+                0x80066680        0x8 c:/devkitPro/libogc/lib/wii\libogc.a(es.o)
  .sdata.__es_hid
-                0x800666a8        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(es.o)
- .sdata._fs_fd  0x800666ac        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(isfs.o)
- .sdata.hId     0x800666b0        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(isfs.o)
- *fill*         0x800666b4        0xc 00
+                0x80066688        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(es.o)
+ .sdata._fs_fd  0x8006668c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(isfs.o)
+ .sdata.hId     0x80066690        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(isfs.o)
+ *fill*         0x80066694        0xc 00
  .sdata._dev_fs
-                0x800666c0        0x8 c:/devkitPro/libogc/lib/wii\libogc.a(isfs.o)
- .sdata.hId     0x800666c8        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(usb.o)
- .sdata.hId     0x800666cc        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(wiisd.o)
+                0x800666a0        0x8 c:/devkitPro/libogc/lib/wii\libogc.a(isfs.o)
+ .sdata.hId     0x800666a8        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(usb.o)
+ .sdata.hId     0x800666ac        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(wiisd.o)
  .sdata.__sd0_fd
-                0x800666d0        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(wiisd.o)
+                0x800666b0        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(wiisd.o)
  .sdata.usb2_mode
-                0x800666d4        0x1 c:/devkitPro/libogc/lib/wii\libogc.a(usbstorage.o)
- *fill*         0x800666d5        0x3 00
+                0x800666b4        0x1 c:/devkitPro/libogc/lib/wii\libogc.a(usbstorage.o)
+ *fill*         0x800666b5        0x3 00
  .sdata.usbtimeout
-                0x800666d8        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(usbstorage.o)
+                0x800666b8        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(usbstorage.o)
  .sdata.reload_timer
-                0x800666dc        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(exception.o)
+                0x800666bc        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(exception.o)
  .sdata.__pad_spec
-                0x800666e0        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(pad.o)
+                0x800666c0        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(pad.o)
  .sdata.__pad_resettingchan
-                0x800666e4        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(pad.o)
+                0x800666c4        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(pad.o)
  .sdata.__pad_cmdreadorigin
-                0x800666e8        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(pad.o)
+                0x800666c8        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(pad.o)
  .sdata.__pad_cmdcalibrate
-                0x800666ec        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(pad.o)
+                0x800666cc        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(pad.o)
  .sdata._ZN10__cxxabiv119__terminate_handlerE
-                0x800666f0        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_term_handler.o)
-                0x800666f0                __cxxabiv1::__terminate_handler
+                0x800666d0        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_term_handler.o)
+                0x800666d0                __cxxabiv1::__terminate_handler
  .sdata._ZN10__cxxabiv120__unexpected_handlerE
-                0x800666f4        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_unex_handler.o)
-                0x800666f4                __cxxabiv1::__unexpected_handler
+                0x800666d4        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_unex_handler.o)
+                0x800666d4                __cxxabiv1::__unexpected_handler
  .sdata._ZTISt9type_info
-                0x800666f8        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(tinfo.o)
-                0x800666f8                typeinfo for std::type_info
+                0x800666d8        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(tinfo.o)
+                0x800666d8                typeinfo for std::type_info
  .sdata._ZTIN10__cxxabiv119__foreign_exceptionE
-                0x80066700        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_exception.o)
-                0x80066700                typeinfo for __cxxabiv1::__foreign_exception
+                0x800666e0        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_exception.o)
+                0x800666e0                typeinfo for __cxxabiv1::__foreign_exception
  .sdata._ZTIN10__cxxabiv115__forced_unwindE
-                0x80066708        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_exception.o)
-                0x80066708                typeinfo for __cxxabiv1::__forced_unwind
+                0x800666e8        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_exception.o)
+                0x800666e8                typeinfo for __cxxabiv1::__forced_unwind
  .sdata._ZTISt9exception
-                0x80066710        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_exception.o)
-                0x80066710                typeinfo for std::exception
+                0x800666f0        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_exception.o)
+                0x800666f0                typeinfo for std::exception
  .sdata.z_rooteps
-                0x80066718        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-s_mathcnst.o)
-                0x80066718                z_rooteps
+                0x800666f8        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-s_mathcnst.o)
+                0x800666f8                z_rooteps
  .sdata.z_notanum
-                0x80066720        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-s_mathcnst.o)
-                0x80066720                z_notanum
+                0x80066700        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-s_mathcnst.o)
+                0x80066700                z_notanum
  .sdata.z_infinity
-                0x80066728        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-s_mathcnst.o)
-                0x80066728                z_infinity
+                0x80066708        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-s_mathcnst.o)
+                0x80066708                z_infinity
  .sdata.z_rooteps_f
-                0x80066730        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-s_mathcnst.o)
-                0x80066730                z_rooteps_f
+                0x80066710        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-s_mathcnst.o)
+                0x80066710                z_rooteps_f
  .sdata.z_infinity_f
-                0x80066734        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-s_mathcnst.o)
-                0x80066734                z_infinity_f
+                0x80066714        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-s_mathcnst.o)
+                0x80066714                z_infinity_f
  .sdata.z_notanum_f
-                0x80066738        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-s_mathcnst.o)
-                0x80066738                z_notanum_f
+                0x80066718        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libm.a(lib_a-s_mathcnst.o)
+                0x80066718                z_notanum_f
  .sdata.__ctype_ptr__
-                0x8006673c        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-ctype_.o)
-                0x8006673c                __ctype_ptr__
+                0x8006671c        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-ctype_.o)
+                0x8006671c                __ctype_ptr__
  .sdata.__mb_cur_max
-                0x80066740        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-locale.o)
-                0x80066740                __mb_cur_max
+                0x80066720        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-locale.o)
+                0x80066720                __mb_cur_max
  .sdata.__malloc_trim_threshold
-                0x80066744        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-mallocr.o)
-                0x80066744                __malloc_trim_threshold
+                0x80066724        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-mallocr.o)
+                0x80066724                __malloc_trim_threshold
  .sdata.__malloc_sbrk_base
-                0x80066748        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-mallocr.o)
-                0x80066748                __malloc_sbrk_base
+                0x80066728        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-mallocr.o)
+                0x80066728                __malloc_sbrk_base
  .sdata.__mbtowc
-                0x8006674c        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-mbtowc_r.o)
-                0x8006674c                __mbtowc
+                0x8006672c        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-mbtowc_r.o)
+                0x8006672c                __mbtowc
  .sdata.__wctomb
-                0x80066750        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-wctomb_r.o)
-                0x80066750                __wctomb
+                0x80066730        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-wctomb_r.o)
+                0x80066730                __wctomb
  *(.gnu.linkonce.s.*)
-                0x80066760                . = ALIGN (0x20)
- *fill*         0x80066754        0xc 00
-                0x80066760                _edata = .
-                0x80066760                PROVIDE (edata, .)
+                0x80066740                . = ALIGN (0x20)
+ *fill*         0x80066734        0xc 00
+                0x80066740                _edata = .
+                0x80066740                PROVIDE (edata, .)
 
-.sbss           0x80066760      0x300
-                0x80066760                __sbss_start = .
-                0x80066760                PROVIDE (__sbss_start, .)
-                0x80066760                PROVIDE (___sbss_start, .)
+.sbss           0x80066740      0x300
+                0x80066740                __sbss_start = .
+                0x80066740                PROVIDE (__sbss_start, .)
+                0x80066740                PROVIDE (___sbss_start, .)
  *(.dynsbss)
  *(.sbss)
  .sbss          0x00000000        0x0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/crtbegin.o
- .sbss          0x80066760        0x8 c:/devkitPro/libogc/lib/wii\libwc24.a(kd.o)
-                0x80066760                __kdreq_fd
-                0x80066764                __kdtime_fd
- .sbss          0x80066768        0x4 c:/devkitPro/libogc/lib/wii\libwc24.a(wc24.o)
-                0x80066768                NWC24DL_Header
- .sbss          0x8006676c        0xc c:/devkitPro/libogc/lib/wii\libwc24.a(wc24mail.o)
-                0x8006676c                wc24mail_nwc24fl_fc
-                0x80066770                wc24mail_nwc24msgcfg
-                0x80066774                wc24mail_nwc24fl_entries
- .sbss          0x80066778        0x5 c:/devkitPro/libogc/lib/wii\libbte.a(l2cap.o)
-                0x80066778                l2cap_active_pcbs
-                0x8006677c                sigid_nxt
- *fill*         0x8006677d        0x3 00
- .sbss          0x80066780        0x8 c:/devkitPro/libogc/lib/wii\libogc.a(lwp_threads.o)
-                0x80066780                _context_switch_want
-                0x80066784                _thread_dispatch_disable_level
- .sbss          0x80066788        0xc c:/devkitPro/libogc/lib/wii\libogc.a(lwp_watchdog.o)
-                0x80066788                _wd_sync_count
-                0x8006678c                _wd_sync_level
-                0x80066790                _wd_ticks_since_boot
- .sbss          0x80066794        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(sys_state.o)
-                0x80066794                _sys_state_curr
- .sbss          0x80066798        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(newlibc.o)
-                0x80066798                libc_reentrant
- .sbss          0x8006679c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(lwp_priority.o)
-                0x8006679c                _prio_major_bitmap
- .sbss          0x800667a0        0x0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/ecrtn.o
-                0x800667a0                __SBSS_END__
+ .sbss          0x80066740        0x8 c:/devkitPro/libogc/lib/wii\libwc24.a(kd.o)
+                0x80066740                __kdreq_fd
+                0x80066744                __kdtime_fd
+ .sbss          0x80066748        0x4 c:/devkitPro/libogc/lib/wii\libwc24.a(wc24.o)
+                0x80066748                NWC24DL_Header
+ .sbss          0x8006674c        0xc c:/devkitPro/libogc/lib/wii\libwc24.a(wc24mail.o)
+                0x8006674c                wc24mail_nwc24fl_fc
+                0x80066750                wc24mail_nwc24msgcfg
+                0x80066754                wc24mail_nwc24fl_entries
+ .sbss          0x80066758        0x5 c:/devkitPro/libogc/lib/wii\libbte.a(l2cap.o)
+                0x80066758                l2cap_active_pcbs
+                0x8006675c                sigid_nxt
+ *fill*         0x8006675d        0x3 00
+ .sbss          0x80066760        0x8 c:/devkitPro/libogc/lib/wii\libogc.a(lwp_threads.o)
+                0x80066760                _context_switch_want
+                0x80066764                _thread_dispatch_disable_level
+ .sbss          0x80066768        0xc c:/devkitPro/libogc/lib/wii\libogc.a(lwp_watchdog.o)
+                0x80066768                _wd_sync_count
+                0x8006676c                _wd_sync_level
+                0x80066770                _wd_ticks_since_boot
+ .sbss          0x80066774        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(sys_state.o)
+                0x80066774                _sys_state_curr
+ .sbss          0x80066778        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(newlibc.o)
+                0x80066778                libc_reentrant
+ .sbss          0x8006677c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(lwp_priority.o)
+                0x8006677c                _prio_major_bitmap
+ .sbss          0x80066780        0x0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/ecrtn.o
+                0x80066780                __SBSS_END__
  *(.sbss.*)
- .sbss.ijobs    0x800667a0        0x4 main.o
-                0x800667a0                ijobs
- .sbss.lang     0x800667a4        0x4 main.o
-                0x800667a4                lang
- .sbss.jobs     0x800667a8        0x4 main.o
-                0x800667a8                jobs
+ .sbss.ijobs    0x80066780        0x4 main.o
+                0x80066780                ijobs
+ .sbss.lang     0x80066784        0x4 main.o
+                0x80066784                lang
+ .sbss.jobs     0x80066788        0x4 main.o
+                0x80066788                jobs
  .sbss.nwc24dlbin_fd
-                0x800667ac        0x4 c:/devkitPro/libogc/lib/wii\libwc24.a(wc24.o)
-                0x800667ac                nwc24dlbin_fd
+                0x8006678c        0x4 c:/devkitPro/libogc/lib/wii\libwc24.a(wc24.o)
+                0x8006678c                nwc24dlbin_fd
  .sbss.wc24_did_init
-                0x800667b0        0x4 c:/devkitPro/libogc/lib/wii\libwc24.a(wc24.o)
-                0x800667b0                wc24_did_init
+                0x80066790        0x4 c:/devkitPro/libogc/lib/wii\libwc24.a(wc24.o)
+                0x80066790                wc24_did_init
  .sbss.wc24mail_nwc24fl_hdr
-                0x800667b4        0x4 c:/devkitPro/libogc/lib/wii\libwc24.a(wc24mail.o)
-                0x800667b4                wc24mail_nwc24fl_hdr
+                0x80066794        0x4 c:/devkitPro/libogc/lib/wii\libwc24.a(wc24mail.o)
+                0x80066794                wc24mail_nwc24fl_hdr
  .sbss.__wpads_used
-                0x800667b8        0x4 c:/devkitPro/libogc/lib/wii\libwiiuse.a(wpad.o)
- .sbss.__wpads  0x800667bc        0x4 c:/devkitPro/libogc/lib/wii\libwiiuse.a(wpad.o)
+                0x80066798        0x4 c:/devkitPro/libogc/lib/wii\libwiiuse.a(wpad.o)
+ .sbss.__wpads  0x8006679c        0x4 c:/devkitPro/libogc/lib/wii\libwiiuse.a(wpad.o)
  .sbss.__wpad_timer
-                0x800667c0        0x4 c:/devkitPro/libogc/lib/wii\libwiiuse.a(wpad.o)
+                0x800667a0        0x4 c:/devkitPro/libogc/lib/wii\libwiiuse.a(wpad.o)
  .sbss.__wpads_inited
-                0x800667c4        0x4 c:/devkitPro/libogc/lib/wii\libwiiuse.a(wpad.o)
+                0x800667a4        0x4 c:/devkitPro/libogc/lib/wii\libwiiuse.a(wpad.o)
  .sbss.__wpads_ponded
-                0x800667c8        0x4 c:/devkitPro/libogc/lib/wii\libwiiuse.a(wpad.o)
+                0x800667a8        0x4 c:/devkitPro/libogc/lib/wii\libwiiuse.a(wpad.o)
  .sbss.__wpads_active
-                0x800667cc        0x4 c:/devkitPro/libogc/lib/wii\libwiiuse.a(wpad.o)
+                0x800667ac        0x4 c:/devkitPro/libogc/lib/wii\libwiiuse.a(wpad.o)
  .sbss.__wpad_batcb
-                0x800667d0        0x4 c:/devkitPro/libogc/lib/wii\libwiiuse.a(wpad.o)
- .sbss.__wm     0x800667d4        0x4 c:/devkitPro/libogc/lib/wii\libwiiuse.a(wiiuse.o)
- .sbss.hci_dev  0x800667d8        0x4 c:/devkitPro/libogc/lib/wii\libbte.a(hci.o)
-                0x800667d8                hci_dev
+                0x800667b0        0x4 c:/devkitPro/libogc/lib/wii\libwiiuse.a(wpad.o)
+ .sbss.__wm     0x800667b4        0x4 c:/devkitPro/libogc/lib/wii\libwiiuse.a(wiiuse.o)
+ .sbss.hci_dev  0x800667b8        0x4 c:/devkitPro/libogc/lib/wii\libbte.a(hci.o)
+                0x800667b8                hci_dev
  .sbss.hci_active_links
-                0x800667dc        0x4 c:/devkitPro/libogc/lib/wii\libbte.a(hci.o)
-                0x800667dc                hci_active_links
+                0x800667bc        0x4 c:/devkitPro/libogc/lib/wii\libbte.a(hci.o)
+                0x800667bc                hci_active_links
  .sbss.hci_tmp_link
-                0x800667e0        0x4 c:/devkitPro/libogc/lib/wii\libbte.a(hci.o)
-                0x800667e0                hci_tmp_link
+                0x800667c0        0x4 c:/devkitPro/libogc/lib/wii\libbte.a(hci.o)
+                0x800667c0                hci_tmp_link
  .sbss.l2cap_listen_pcbs
-                0x800667e4        0x4 c:/devkitPro/libogc/lib/wii\libbte.a(l2cap.o)
-                0x800667e4                l2cap_listen_pcbs
+                0x800667c4        0x4 c:/devkitPro/libogc/lib/wii\libbte.a(l2cap.o)
+                0x800667c4                l2cap_listen_pcbs
  .sbss.l2cap_tmp_sig
-                0x800667e8        0x4 c:/devkitPro/libogc/lib/wii\libbte.a(l2cap.o)
-                0x800667e8                l2cap_tmp_sig
+                0x800667c8        0x4 c:/devkitPro/libogc/lib/wii\libbte.a(l2cap.o)
+                0x800667c8                l2cap_tmp_sig
  .sbss.l2cap_tmp_pcb
-                0x800667ec        0x4 c:/devkitPro/libogc/lib/wii\libbte.a(l2cap.o)
-                0x800667ec                l2cap_tmp_pcb
+                0x800667cc        0x4 c:/devkitPro/libogc/lib/wii\libbte.a(l2cap.o)
+                0x800667cc                l2cap_tmp_pcb
  .sbss.l2cap_disconnect_bb_cb
-                0x800667f0        0x4 c:/devkitPro/libogc/lib/wii\libbte.a(l2cap.o)
+                0x800667d0        0x4 c:/devkitPro/libogc/lib/wii\libbte.a(l2cap.o)
  .sbss.l2cap_tmp_inseg
-                0x800667f4        0x4 c:/devkitPro/libogc/lib/wii\libbte.a(l2cap.o)
-                0x800667f4                l2cap_tmp_inseg
+                0x800667d4        0x4 c:/devkitPro/libogc/lib/wii\libbte.a(l2cap.o)
+                0x800667d4                l2cap_tmp_inseg
  .sbss.l2cap_insegs
-                0x800667f8        0x4 c:/devkitPro/libogc/lib/wii\libbte.a(l2cap.o)
-                0x800667f8                l2cap_insegs
- .sbss.ram_end  0x800667fc        0x4 c:/devkitPro/libogc/lib/wii\libbte.a(btmemr.o)
+                0x800667d8        0x4 c:/devkitPro/libogc/lib/wii\libbte.a(l2cap.o)
+                0x800667d8                l2cap_insegs
+ .sbss.ram_end  0x800667dc        0x4 c:/devkitPro/libogc/lib/wii\libbte.a(btmemr.o)
  .sbss.ram_free
-                0x80066800        0x4 c:/devkitPro/libogc/lib/wii\libbte.a(btmemr.o)
- .sbss.aclbufs  0x80066804        0x8 c:/devkitPro/libogc/lib/wii\libbte.a(physbusif.o)
+                0x800667e0        0x4 c:/devkitPro/libogc/lib/wii\libbte.a(btmemr.o)
+ .sbss.aclbufs  0x800667e4        0x8 c:/devkitPro/libogc/lib/wii\libbte.a(physbusif.o)
  .sbss.ctrlbufs
-                0x8006680c        0x8 c:/devkitPro/libogc/lib/wii\libbte.a(physbusif.o)
+                0x800667ec        0x8 c:/devkitPro/libogc/lib/wii\libbte.a(physbusif.o)
  .sbss.__ntd_ohci
-                0x80066814        0x4 c:/devkitPro/libogc/lib/wii\libbte.a(physbusif.o)
+                0x800667f4        0x4 c:/devkitPro/libogc/lib/wii\libbte.a(physbusif.o)
  .sbss.__ntd_vid_pid_specified
-                0x80066818        0x4 c:/devkitPro/libogc/lib/wii\libbte.a(physbusif.o)
+                0x800667f8        0x4 c:/devkitPro/libogc/lib/wii\libbte.a(physbusif.o)
  .sbss.__ntd_pid
-                0x8006681c        0x2 c:/devkitPro/libogc/lib/wii\libbte.a(physbusif.o)
- *fill*         0x8006681e        0x2 00
+                0x800667fc        0x2 c:/devkitPro/libogc/lib/wii\libbte.a(physbusif.o)
+ *fill*         0x800667fe        0x2 00
  .sbss.__ntd_ohci_initflag
-                0x80066820        0x4 c:/devkitPro/libogc/lib/wii\libbte.a(physbusif.o)
+                0x80066800        0x4 c:/devkitPro/libogc/lib/wii\libbte.a(physbusif.o)
  .sbss.__ntd_vid
-                0x80066824        0x2 c:/devkitPro/libogc/lib/wii\libbte.a(physbusif.o)
- *fill*         0x80066826        0x2 00
+                0x80066804        0x2 c:/devkitPro/libogc/lib/wii\libbte.a(physbusif.o)
+ *fill*         0x80066806        0x2 00
  .sbss.curr_con
-                0x80066828        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(console.o)
+                0x80066808        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(console.o)
  .sbss.__gecko_safe
-                0x8006682c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(console.o)
+                0x8006680c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(console.o)
  .sbss.do_xfb_copy
-                0x80066830        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(console.o)
+                0x80066810        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(console.o)
  .sbss._thr_executing
-                0x80066834        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(lwp_threads.o)
-                0x80066834                _thr_executing
+                0x80066814        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(lwp_threads.o)
+                0x80066814                _thr_executing
  .sbss._lwp_exitfunc
-                0x80066838        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(lwp_threads.o)
+                0x80066818        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(lwp_threads.o)
  .sbss._thr_main
-                0x8006683c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(lwp_threads.o)
-                0x8006683c                _thr_main
+                0x8006681c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(lwp_threads.o)
+                0x8006681c                _thr_main
  .sbss.__lwp_thr_libc_reent
-                0x80066840        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(lwp_threads.o)
-                0x80066840                __lwp_thr_libc_reent
+                0x80066820        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(lwp_threads.o)
+                0x80066820                __lwp_thr_libc_reent
  .sbss._thr_heir
-                0x80066844        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(lwp_threads.o)
-                0x80066844                _thr_heir
+                0x80066824        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(lwp_threads.o)
+                0x80066824                _thr_heir
  .sbss._thr_allocated_fp
-                0x80066848        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(lwp_threads.o)
-                0x80066848                _thr_allocated_fp
+                0x80066828        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(lwp_threads.o)
+                0x80066828                _thr_allocated_fp
  .sbss._lwp_ticks_per_timeslice
-                0x8006684c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(lwp_threads.o)
-                0x8006684c                _lwp_ticks_per_timeslice
+                0x8006682c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(lwp_threads.o)
+                0x8006682c                _lwp_ticks_per_timeslice
  .sbss._thr_idle
-                0x80066850        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(lwp_threads.o)
-                0x80066850                _thr_idle
+                0x80066830        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(lwp_threads.o)
+                0x80066830                _thr_idle
  .sbss.__wkspace_heap_size
-                0x80066854        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(lwp_wkspace.o)
+                0x80066834        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(lwp_wkspace.o)
  .sbss.null_local_table
-                0x80066858        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(lwp_objmgr.o)
+                0x80066838        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(lwp_objmgr.o)
  .sbss._lwp_objmgr_memsize
-                0x8006685c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(lwp_objmgr.o)
+                0x8006683c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(lwp_objmgr.o)
  .sbss.spuriousIrq
-                0x80066860        0x8 c:/devkitPro/libogc/lib/wii\libogc.a(irq.o)
+                0x80066840        0x8 c:/devkitPro/libogc/lib/wii\libogc.a(irq.o)
  .sbss.prevIrqMask
-                0x80066868        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(irq.o)
+                0x80066848        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(irq.o)
  .sbss.currIrqMask
-                0x8006686c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(irq.o)
+                0x8006684c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(irq.o)
  .sbss.postRetraceCB
-                0x80066870        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
+                0x80066850        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
  .sbss.currentFb
-                0x80066874        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
+                0x80066854        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
  .sbss.currTiming
-                0x80066878        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
+                0x80066858        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
  .sbss.currTvMode
-                0x8006687c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
- .sbss.nextFb   0x80066880        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
+                0x8006685c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
+ .sbss.nextFb   0x80066860        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
  .sbss.encoderType
-                0x80066884        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
+                0x80066864        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
  .sbss.displayOffsetH
-                0x80066888        0x2 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
- *fill*         0x8006688a        0x2 00
+                0x80066868        0x2 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
+ *fill*         0x8006686a        0x2 00
  .sbss.changeMode
-                0x8006688c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
+                0x8006686c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
  .sbss.displayOffsetV
-                0x80066890        0x2 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
- *fill*         0x80066892        0x2 00
+                0x80066870        0x2 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
+ *fill*         0x80066872        0x2 00
  .sbss.flushFlag
-                0x80066894        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
+                0x80066874        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
  .sbss.preRetraceCB
-                0x80066898        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
+                0x80066878        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
  .sbss.video_queue
-                0x8006689c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
+                0x8006687c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
  .sbss.shdw_changeMode
-                0x800668a0        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
+                0x80066880        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
  .sbss.retraceCount
-                0x800668a4        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
- .sbss.changed  0x800668a8        0x8 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
- .sbss.fbSet    0x800668b0        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
+                0x80066884        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
+ .sbss.changed  0x80066888        0x8 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
+ .sbss.fbSet    0x80066890        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
  .sbss.vdacFlagRegion
-                0x800668b4        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
+                0x80066894        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
  .sbss.shdw_changed
-                0x800668b8        0x8 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
+                0x80066898        0x8 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
  .sbss.i2cIdentFirst
-                0x800668c0        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
+                0x800668a0        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
  .sbss.__sysarena1hi
-                0x800668c4        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
+                0x800668a4        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
  .sbss.__ipcbufferhi
-                0x800668c8        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
+                0x800668a8        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
  .sbss.__myArena1Lo
-                0x800668cc        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
-                0x800668cc                __myArena1Lo
+                0x800668ac        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
+                0x800668ac                __myArena1Lo
  .sbss.__sysarena2lo
-                0x800668d0        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
+                0x800668b0        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
  .sbss.system_initialized
-                0x800668d4        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
+                0x800668b4        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
  .sbss.__sysarena1lo
-                0x800668d8        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
+                0x800668b8        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
  .sbss.__sys_versionbuild
-                0x800668dc        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
+                0x800668bc        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
  .sbss.__ipcbufferlo
-                0x800668e0        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
+                0x800668c0        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
  .sbss.__sysarena2hi
-                0x800668e4        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
+                0x800668c4        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
  .sbss.__myArena1Hi
-                0x800668e8        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
-                0x800668e8                __myArena1Hi
+                0x800668c8        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
+                0x800668c8                __myArena1Hi
  .sbss.__sys_versiondate
-                0x800668ec        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
+                0x800668cc        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
  .sbss.__RSWCallback
-                0x800668f0        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
+                0x800668d0        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
  .sbss.__POWCallback
-                0x800668f4        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
+                0x800668d4        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
  .sbss.__sys_resetdown
-                0x800668f8        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
+                0x800668d8        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
  .sbss.__PADFixBits
-                0x800668fc        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(si.o)
-                0x800668fc                __PADFixBits
+                0x800668dc        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(si.o)
+                0x800668dc                __PADFixBits
  .sbss.cmdtypeandstatus$47
-                0x80066900        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(si.o)
+                0x800668e0        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(si.o)
  .sbss.sampling_rate
-                0x80066904        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(si.o)
+                0x800668e4        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(si.o)
  .sbss.cmdtypeandstatus$223
-                0x80066908        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(si.o)
+                0x800668e8        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(si.o)
  .sbss._ipc_currbufferhi
-                0x8006690c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(ipc.o)
+                0x800668ec        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(ipc.o)
  .sbss._ipc_spuriousresponsecnt
-                0x80066910        0x8 c:/devkitPro/libogc/lib/wii\libogc.a(ipc.o)
+                0x800668f0        0x8 c:/devkitPro/libogc/lib/wii\libogc.a(ipc.o)
  .sbss._ipc_relnchFl
-                0x80066918        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(ipc.o)
+                0x800668f8        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(ipc.o)
  .sbss.IPC_REQ_MAGIC
-                0x8006691c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(ipc.o)
+                0x800668fc        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(ipc.o)
  .sbss._ipc_clntinitialized
-                0x80066920        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(ipc.o)
+                0x80066900        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(ipc.o)
  .sbss._ipc_bufferlo
-                0x80066924        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(ipc.o)
+                0x80066904        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(ipc.o)
  .sbss._ipc_bufferhi
-                0x80066928        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(ipc.o)
+                0x80066908        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(ipc.o)
  .sbss._ipc_currbufferlo
-                0x8006692c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(ipc.o)
+                0x8006690c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(ipc.o)
  .sbss._ipc_relnchRpc
-                0x80066930        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(ipc.o)
+                0x80066910        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(ipc.o)
  .sbss._ipc_initialized
-                0x80066934        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(ipc.o)
+                0x80066914        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(ipc.o)
  .sbss.time_exi_wait
-                0x80066938        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(timesupp.o)
+                0x80066918        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(timesupp.o)
  .sbss.exi_wait_inited
-                0x8006693c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(timesupp.o)
+                0x8006691c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(timesupp.o)
  .sbss.wait_exi_queue
-                0x80066940        0x8 c:/devkitPro/libogc/lib/wii\libogc.a(usbgecko.o)
+                0x80066920        0x8 c:/devkitPro/libogc/lib/wii\libogc.a(usbgecko.o)
  .sbss.usbgecko_inited
-                0x80066948        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(usbgecko.o)
+                0x80066928        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(usbgecko.o)
  .sbss.mem2_start.2595
-                0x8006694c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(sbrk.o)
+                0x8006692c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(sbrk.o)
  .sbss.initialized
-                0x80066950        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(malloc_lock.o)
+                0x80066930        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(malloc_lock.o)
  .sbss.__stm_initialized
-                0x80066954        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(stm.o)
+                0x80066934        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(stm.o)
  .sbss.__stm_vdinuse
-                0x80066958        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(stm.o)
+                0x80066938        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(stm.o)
  .sbss.__stm_ehregistered
-                0x8006695c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(stm.o)
+                0x8006693c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(stm.o)
  .sbss.__stm_eventcb
-                0x80066960        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(stm.o)
-                0x80066960                __stm_eventcb
+                0x80066940        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(stm.o)
+                0x80066940                __stm_eventcb
  .sbss.__stm_ehclear
-                0x80066964        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(stm.o)
+                0x80066944        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(stm.o)
  .sbss._fs_initialized
-                0x80066968        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(isfs.o)
+                0x80066948        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(isfs.o)
  .sbss.ven_host
-                0x8006696c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(usb.o)
+                0x8006694c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(usb.o)
  .sbss.hid_host
-                0x80066970        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(usb.o)
+                0x80066950        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(usb.o)
  .sbss.__gcsd_init
-                0x80066974        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(gcsd.o)
+                0x80066954        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(gcsd.o)
  .sbss.__sd0_initialized
-                0x80066978        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(wiisd.o)
+                0x80066958        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(wiisd.o)
  .sbss.__sd0_sdhc
-                0x8006697c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(wiisd.o)
+                0x8006695c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(wiisd.o)
  .sbss.__sdio_initialized
-                0x80066980        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(wiisd.o)
+                0x80066960        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(wiisd.o)
  .sbss.__sd0_rca
-                0x80066984        0x2 c:/devkitPro/libogc/lib/wii\libogc.a(wiisd.o)
- *fill*         0x80066986        0x2 00
+                0x80066964        0x2 c:/devkitPro/libogc/lib/wii\libogc.a(wiisd.o)
+ *fill*         0x80066966        0x2 00
  .sbss.rw_buffer
-                0x80066988        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(wiisd.o)
+                0x80066968        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(wiisd.o)
  .sbss.__conf_inited
-                0x8006698c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(conf.o)
+                0x8006696c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(conf.o)
  .sbss.__usbstorage_waitq
-                0x80066990        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(usbstorage.o)
- *fill*         0x80066994        0x4 00
+                0x80066970        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(usbstorage.o)
+ *fill*         0x80066974        0x4 00
  .sbss.usb_last_used
-                0x80066998        0x8 c:/devkitPro/libogc/lib/wii\libogc.a(usbstorage.o)
+                0x80066978        0x8 c:/devkitPro/libogc/lib/wii\libogc.a(usbstorage.o)
  .sbss.__inited
-                0x800669a0        0x1 c:/devkitPro/libogc/lib/wii\libogc.a(usbstorage.o)
- *fill*         0x800669a1        0x1 00
- .sbss.__vid    0x800669a2        0x2 c:/devkitPro/libogc/lib/wii\libogc.a(usbstorage.o)
- .sbss.__pid    0x800669a4        0x2 c:/devkitPro/libogc/lib/wii\libogc.a(usbstorage.o)
- .sbss.__lun    0x800669a6        0x1 c:/devkitPro/libogc/lib/wii\libogc.a(usbstorage.o)
+                0x80066980        0x1 c:/devkitPro/libogc/lib/wii\libogc.a(usbstorage.o)
+ *fill*         0x80066981        0x1 00
+ .sbss.__vid    0x80066982        0x2 c:/devkitPro/libogc/lib/wii\libogc.a(usbstorage.o)
+ .sbss.__pid    0x80066984        0x2 c:/devkitPro/libogc/lib/wii\libogc.a(usbstorage.o)
+ .sbss.__lun    0x80066986        0x1 c:/devkitPro/libogc/lib/wii\libogc.a(usbstorage.o)
  .sbss.__mounted
-                0x800669a7        0x1 c:/devkitPro/libogc/lib/wii\libogc.a(usbstorage.o)
+                0x80066987        0x1 c:/devkitPro/libogc/lib/wii\libogc.a(usbstorage.o)
  .sbss.__initialized
-                0x800669a8        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(wiilaunch.o)
+                0x80066988        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(wiilaunch.o)
  .sbss.__pad_initialized
-                0x800669ac        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(pad.o)
+                0x8006698c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(pad.o)
  .sbss.__pad_makestatus
-                0x800669b0        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(pad.o)
+                0x80066990        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(pad.o)
  .sbss.__pad_resettingbits
-                0x800669b4        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(pad.o)
+                0x80066994        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(pad.o)
  .sbss.__pad_recalibratebits
-                0x800669b8        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(pad.o)
+                0x80066998        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(pad.o)
  .sbss.__pad_enabledbits
-                0x800669bc        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(pad.o)
+                0x8006699c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(pad.o)
  .sbss.__pad_pendingbits
-                0x800669c0        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(pad.o)
+                0x800669a0        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(pad.o)
  .sbss.__pad_checkingbits
-                0x800669c4        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(pad.o)
+                0x800669a4        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(pad.o)
  .sbss.__pad_waitingbits
-                0x800669c8        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(pad.o)
+                0x800669a8        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(pad.o)
  .sbss.__pad_samplingcallback
-                0x800669cc        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(pad.o)
+                0x800669ac        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(pad.o)
  .sbss.__pad_recalibrated$207
-                0x800669d0        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(pad.o)
+                0x800669b0        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(pad.o)
  .sbss.exi_id_serport1
-                0x800669d4        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(exi.o)
+                0x800669b4        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(exi.o)
  .sbss.breakPtCB
-                0x800669d8        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(gx.o)
+                0x800669b8        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(gx.o)
  .sbss._cpgplinked
-                0x800669dc        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(gx.o)
+                0x800669bc        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(gx.o)
  .sbss._gxgpfifoready
-                0x800669e0        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(gx.o)
+                0x800669c0        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(gx.o)
  .sbss._ioEXILock
-                0x800669e4        0x8 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_io.o)
+                0x800669c4        0x8 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_io.o)
  .sbss._ioCardFreq
-                0x800669ec        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_io.o)
+                0x800669cc        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_io.o)
  .sbss._initType
-                0x800669f0        0x8 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_io.o)
+                0x800669d0        0x8 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_io.o)
  .sbss._ioPageSize
-                0x800669f8        0x8 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_io.o)
- .sbss._ioFlag  0x80066a00        0x8 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_io.o)
+                0x800669d8        0x8 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_io.o)
+ .sbss._ioFlag  0x800669e0        0x8 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_io.o)
  .sbss._ioCardInserted
-                0x80066a08        0x2 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_io.o)
- *fill*         0x80066a0a        0x2 00
+                0x800669e8        0x2 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_io.o)
+ *fill*         0x800669ea        0x2 00
  .sbss._ioAddressingType
-                0x80066a0c        0x8 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_io.o)
+                0x800669ec        0x8 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_io.o)
  .sbss._ioError
-                0x80066a14        0x8 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_io.o)
+                0x800669f4        0x8 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_io.o)
  .sbss._ioClrFlag
-                0x80066a1c        0x1 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_io.o)
- *fill*         0x80066a1d        0x3 00
+                0x800669fc        0x1 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_io.o)
+ *fill*         0x800669fd        0x3 00
  .sbss._ioRetryCB
-                0x80066a20        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_io.o)
+                0x80066a00        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_io.o)
  .sbss._ioWPFlag
-                0x80066a24        0x1 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_io.o)
- *fill*         0x80066a25        0x3 00
+                0x80066a04        0x1 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_io.o)
+ *fill*         0x80066a05        0x3 00
  .sbss._ioRetryCnt
-                0x80066a28        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_io.o)
+                0x80066a08        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_io.o)
  .sbss.s_freepool
-                0x80066a2c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_buf.o)
+                0x80066a0c        0x4 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_buf.o)
  .sbss.__new_handler
-                0x80066a30        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(new_handler.o)
-                0x80066a30                __new_handler
+                0x80066a10        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(new_handler.o)
+                0x80066a10                __new_handler
  .sbss.__malloc_max_sbrked_mem
-                0x80066a34        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-mallocr.o)
-                0x80066a34                __malloc_max_sbrked_mem
+                0x80066a14        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-mallocr.o)
+                0x80066a14                __malloc_max_sbrked_mem
  .sbss.__malloc_top_pad
-                0x80066a38        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-mallocr.o)
-                0x80066a38                __malloc_top_pad
+                0x80066a18        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-mallocr.o)
+                0x80066a18                __malloc_top_pad
  .sbss.__malloc_max_total_mem
-                0x80066a3c        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-mallocr.o)
-                0x80066a3c                __malloc_max_total_mem
+                0x80066a1c        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-mallocr.o)
+                0x80066a1c                __malloc_max_total_mem
  .sbss._daylight
-                0x80066a40        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-tzvars.o)
-                0x80066a40                _daylight
+                0x80066a20        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-tzvars.o)
+                0x80066a20                _daylight
  *(.gnu.linkonce.sb.*)
  *(.scommon)
-                0x80066a44                PROVIDE (__sbss_end, .)
-                0x80066a44                PROVIDE (___sbss_end, .)
-                0x80066a60                . = ALIGN (0x20)
- *fill*         0x80066a44       0x1c 00
-                0x80066a60                __sbss_end = .
+                0x80066a24                PROVIDE (__sbss_end, .)
+                0x80066a24                PROVIDE (___sbss_end, .)
+                0x80066a40                . = ALIGN (0x20)
+ *fill*         0x80066a24       0x1c 00
+                0x80066a40                __sbss_end = .
 
-.bss            0x80066a60    0x76700
-                0x80066a60                __bss_start = .
-                0x80066a60                PROVIDE (__bss_start, .)
+.bss            0x80066a40    0x76700
+                0x80066a40                __bss_start = .
+                0x80066a40                PROVIDE (__bss_start, .)
  *(.dynbss)
  *(.bss)
- .bss           0x80066a60       0x20 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/crtbegin.o
- .bss           0x80066a80     0x4000 c:/devkitPro/libogc/lib/wii\libogc.a(ogc_crt0.o)
- .bss           0x8006aa80       0x92 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1\libgcc.a(unwind-dw2.o)
- *fill*         0x8006ab12        0x2 00
- .bss           0x8006ab14        0xc c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1\libgcc.a(unwind-dw2-fde.o)
- .bss           0x8006ab20       0x24 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libsysbase.a(syscall_support.o)
-                0x8006ab20                __syscalls
- .bss           0x8006ab44     0x1004 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libsysbase.a(handle_manager.o)
+ .bss           0x80066a40       0x20 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/crtbegin.o
+ .bss           0x80066a60     0x4000 c:/devkitPro/libogc/lib/wii\libogc.a(ogc_crt0.o)
+ .bss           0x8006aa60       0x92 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1\libgcc.a(unwind-dw2.o)
+ *fill*         0x8006aaf2        0x2 00
+ .bss           0x8006aaf4        0xc c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1\libgcc.a(unwind-dw2-fde.o)
+ .bss           0x8006ab00       0x24 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libsysbase.a(syscall_support.o)
+                0x8006ab00                __syscalls
+ .bss           0x8006ab24     0x1004 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libsysbase.a(handle_manager.o)
  *(.bss.*)
- .bss._ZL3xfb   0x8006bb48        0x4 main.o
+ .bss._ZL3xfb   0x8006bb28        0x4 main.o
  .bss._ZL5rmode
-                0x8006bb4c        0x4 main.o
- .bss.myent     0x8006bb50      0x200 main.o
-                0x8006bb50                myent
- .bss.myrec     0x8006bd50       0x10 main.o
-                0x8006bd50                myrec
- .bss.newone    0x8006bd60      0x400 main.o
-                0x8006bd60                newone
+                0x8006bb2c        0x4 main.o
+ .bss.myent     0x8006bb30      0x200 main.o
+                0x8006bb30                myent
+ .bss.myrec     0x8006bd30       0x10 main.o
+                0x8006bd30                myrec
+ .bss.newone    0x8006bd40      0x400 main.o
+                0x8006bd40                newone
  .bss.accessCounter
-                0x8006c160        0x4 c:/devkitPro/libogc/lib/wii\libfat.a(cache.o)
+                0x8006c140        0x4 c:/devkitPro/libogc/lib/wii\libfat.a(cache.o)
  .bss.__wpad_devs
-                0x8006c164      0x461 c:/devkitPro/libogc/lib/wii\libwiiuse.a(wpad.o)
- *fill*         0x8006c5c5        0x3 00
- .bss.__wpdcb   0x8006c5c8     0x7274 c:/devkitPro/libogc/lib/wii\libwiiuse.a(wpad.o)
+                0x8006c144      0x461 c:/devkitPro/libogc/lib/wii\libwiiuse.a(wpad.o)
+ *fill*         0x8006c5a5        0x3 00
+ .bss.__wpdcb   0x8006c5a8     0x7274 c:/devkitPro/libogc/lib/wii\libwiiuse.a(wpad.o)
  .bss.__wpads_listen
-                0x8007383c       0xc8 c:/devkitPro/libogc/lib/wii\libwiiuse.a(wpad.o)
+                0x8007381c       0xc8 c:/devkitPro/libogc/lib/wii\libwiiuse.a(wpad.o)
  .bss.__wpad_keys
-                0x80073904       0x6e c:/devkitPro/libogc/lib/wii\libwiiuse.a(wpad.o)
- *fill*         0x80073972        0x2 00
- .bss.wpaddata  0x80073974      0x6a4 c:/devkitPro/libogc/lib/wii\libwiiuse.a(wpad.o)
+                0x800738e4       0x6e c:/devkitPro/libogc/lib/wii\libwiiuse.a(wpad.o)
+ *fill*         0x80073952        0x2 00
+ .bss.wpaddata  0x80073954      0x6a4 c:/devkitPro/libogc/lib/wii\libwiiuse.a(wpad.o)
  .bss.__queue_buffer
-                0x80074018       0x14 c:/devkitPro/libogc/lib/wii\libwiiuse.a(io_wii.o)
- *fill*         0x8007402c        0x4 00
+                0x80073ff8       0x14 c:/devkitPro/libogc/lib/wii\libwiiuse.a(io_wii.o)
+ *fill*         0x8007400c        0x4 00
  .bss.ppc_stack
-                0x80074030     0x8000 c:/devkitPro/libogc/lib/wii\libbte.a(bte.o)
+                0x80074010     0x8000 c:/devkitPro/libogc/lib/wii\libbte.a(bte.o)
  .bss.memb_mem_bte_pcbs
-                0x8007c030      0x310 c:/devkitPro/libogc/lib/wii\libbte.a(bte.o)
+                0x8007c010      0x310 c:/devkitPro/libogc/lib/wii\libbte.a(bte.o)
  .bss.memb_mem_bte_ctrl_reqs
-                0x8007c340     0x1c00 c:/devkitPro/libogc/lib/wii\libbte.a(bte.o)
- .bss.btstate   0x8007df40       0x1c c:/devkitPro/libogc/lib/wii\libbte.a(bte.o)
+                0x8007c320     0x1c00 c:/devkitPro/libogc/lib/wii\libbte.a(bte.o)
+ .bss.btstate   0x8007df20       0x1c c:/devkitPro/libogc/lib/wii\libbte.a(bte.o)
  .bss.memb_mem_hci_inq_results
-                0x8007df5c     0x1800 c:/devkitPro/libogc/lib/wii\libbte.a(hci.o)
+                0x8007df3c     0x1800 c:/devkitPro/libogc/lib/wii\libbte.a(hci.o)
  .bss.memb_mem_hci_links
-                0x8007f75c       0xa8 c:/devkitPro/libogc/lib/wii\libbte.a(hci.o)
+                0x8007f73c       0xa8 c:/devkitPro/libogc/lib/wii\libbte.a(hci.o)
  .bss.memb_mem_hci_link_key_results
-                0x8007f804     0x2000 c:/devkitPro/libogc/lib/wii\libbte.a(hci.o)
+                0x8007f7e4     0x2000 c:/devkitPro/libogc/lib/wii\libbte.a(hci.o)
  .bss.memb_mem_hci_pcbs
-                0x80081804       0x5c c:/devkitPro/libogc/lib/wii\libbte.a(hci.o)
+                0x800817e4       0x5c c:/devkitPro/libogc/lib/wii\libbte.a(hci.o)
  .bss.memb_mem_l2cap_sigs
-                0x80081860       0xf0 c:/devkitPro/libogc/lib/wii\libbte.a(l2cap.o)
+                0x80081840       0xf0 c:/devkitPro/libogc/lib/wii\libbte.a(l2cap.o)
  .bss.memb_mem_l2cap_pcbs
-                0x80081950      0x498 c:/devkitPro/libogc/lib/wii\libbte.a(l2cap.o)
+                0x80081930      0x498 c:/devkitPro/libogc/lib/wii\libbte.a(l2cap.o)
  .bss.memb_mem_l2cap_listenpcbs
-                0x80081de8      0x230 c:/devkitPro/libogc/lib/wii\libbte.a(l2cap.o)
+                0x80081dc8      0x230 c:/devkitPro/libogc/lib/wii\libbte.a(l2cap.o)
  .bss.memb_mem_l2cap_segs
-                0x80082018      0x1c0 c:/devkitPro/libogc/lib/wii\libbte.a(l2cap.o)
+                0x80081ff8      0x1c0 c:/devkitPro/libogc/lib/wii\libbte.a(l2cap.o)
  .bss.ram_block
-                0x800821d8    0x10010 c:/devkitPro/libogc/lib/wii\libbte.a(btmemr.o)
+                0x800821b8    0x10010 c:/devkitPro/libogc/lib/wii\libbte.a(btmemr.o)
  .bss.memb_mem_rom_pbufs
-                0x800921e8      0x384 c:/devkitPro/libogc/lib/wii\libbte.a(btpbuf.o)
+                0x800921c8      0x384 c:/devkitPro/libogc/lib/wii\libbte.a(btpbuf.o)
  .bss.memb_mem_pool_pbufs
-                0x8009256c    0x32280 c:/devkitPro/libogc/lib/wii\libbte.a(btpbuf.o)
- *fill*         0x800c47ec        0x4 00
+                0x8009254c    0x32280 c:/devkitPro/libogc/lib/wii\libbte.a(btpbuf.o)
+ *fill*         0x800c47cc        0x4 00
  .bss.__ppc_btstack2
-                0x800c47f0     0x8000 c:/devkitPro/libogc/lib/wii\libbte.a(physbusif.o)
- .bss.__usbdev  0x800cc7f0       0x1c c:/devkitPro/libogc/lib/wii\libbte.a(physbusif.o)
- *fill*         0x800cc80c        0x4 00
+                0x800c47d0     0x8000 c:/devkitPro/libogc/lib/wii\libbte.a(physbusif.o)
+ .bss.__usbdev  0x800cc7d0       0x1c c:/devkitPro/libogc/lib/wii\libbte.a(physbusif.o)
+ *fill*         0x800cc7ec        0x4 00
  .bss.__ppc_btstack1
-                0x800cc810     0x8000 c:/devkitPro/libogc/lib/wii\libbte.a(physbusif.o)
- .bss.stdcon    0x800d4810       0x40 c:/devkitPro/libogc/lib/wii\libogc.a(console.o)
+                0x800cc7f0     0x8000 c:/devkitPro/libogc/lib/wii\libbte.a(physbusif.o)
+ .bss.stdcon    0x800d47f0       0x40 c:/devkitPro/libogc/lib/wii\libogc.a(console.o)
  .bss.g_IRQHandler
-                0x800d4850      0x100 c:/devkitPro/libogc/lib/wii\libogc.a(irq.o)
+                0x800d4830      0x100 c:/devkitPro/libogc/lib/wii\libogc.a(irq.o)
  .bss.shdw_regs
-                0x800d4950       0x78 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
- .bss.regs      0x800d49c8       0x78 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
- .bss.HorVer    0x800d4a40       0x58 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
+                0x800d4930       0x78 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
+ .bss.regs      0x800d49a8       0x78 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
+ .bss.HorVer    0x800d4a20       0x58 c:/devkitPro/libogc/lib/wii\libogc.a(video.o)
  .bss.sys_alarm_objects
-                0x800d4a98       0x28 c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
+                0x800d4a78       0x28 c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
  .bss.sys_reset_func_queue
-                0x800d4ac0        0xc c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
+                0x800d4aa0        0xc c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
  .bss.inputBufferValid
-                0x800d4acc       0x10 c:/devkitPro/libogc/lib/wii\libogc.a(si.o)
- *fill*         0x800d4adc        0x4 00
- .bss.xferTime  0x800d4ae0       0x20 c:/devkitPro/libogc/lib/wii\libogc.a(si.o)
+                0x800d4aac       0x10 c:/devkitPro/libogc/lib/wii\libogc.a(si.o)
+ *fill*         0x800d4abc        0x4 00
+ .bss.xferTime  0x800d4ac0       0x20 c:/devkitPro/libogc/lib/wii\libogc.a(si.o)
  .bss.typeCallback
-                0x800d4b00       0x40 c:/devkitPro/libogc/lib/wii\libogc.a(si.o)
- .bss.typeTime  0x800d4b40       0x20 c:/devkitPro/libogc/lib/wii\libogc.a(si.o)
+                0x800d4ae0       0x40 c:/devkitPro/libogc/lib/wii\libogc.a(si.o)
+ .bss.typeTime  0x800d4b20       0x20 c:/devkitPro/libogc/lib/wii\libogc.a(si.o)
  .bss.cmdfixdevice
-                0x800d4b60       0x10 c:/devkitPro/libogc/lib/wii\libogc.a(si.o)
- .bss.sipacket  0x800d4b70       0x80 c:/devkitPro/libogc/lib/wii\libogc.a(si.o)
+                0x800d4b40       0x10 c:/devkitPro/libogc/lib/wii\libogc.a(si.o)
+ .bss.sipacket  0x800d4b50       0x80 c:/devkitPro/libogc/lib/wii\libogc.a(si.o)
  .bss.inputBufferVCount
-                0x800d4bf0       0x10 c:/devkitPro/libogc/lib/wii\libogc.a(si.o)
- .bss.si_alarm  0x800d4c00       0x10 c:/devkitPro/libogc/lib/wii\libogc.a(si.o)
+                0x800d4bd0       0x10 c:/devkitPro/libogc/lib/wii\libogc.a(si.o)
+ .bss.si_alarm  0x800d4be0       0x10 c:/devkitPro/libogc/lib/wii\libogc.a(si.o)
  .bss.rdstHandlers
-                0x800d4c10       0x10 c:/devkitPro/libogc/lib/wii\libogc.a(si.o)
+                0x800d4bf0       0x10 c:/devkitPro/libogc/lib/wii\libogc.a(si.o)
  .bss.inputBuffer
-                0x800d4c20       0x20 c:/devkitPro/libogc/lib/wii\libogc.a(si.o)
+                0x800d4c00       0x20 c:/devkitPro/libogc/lib/wii\libogc.a(si.o)
  .bss._ipc_heaps
-                0x800d4c40      0x240 c:/devkitPro/libogc/lib/wii\libogc.a(ipc.o)
+                0x800d4c20      0x240 c:/devkitPro/libogc/lib/wii\libogc.a(ipc.o)
  .bss._ipc_responses
-                0x800d4e80       0x50 c:/devkitPro/libogc/lib/wii\libogc.a(ipc.o)
- .bss.mem_lock  0x800d4ed0       0x5c c:/devkitPro/libogc/lib/wii\libogc.a(malloc_lock.o)
- *fill*         0x800d4f2c       0x14 00
+                0x800d4e60       0x50 c:/devkitPro/libogc/lib/wii\libogc.a(ipc.o)
+ .bss.mem_lock  0x800d4eb0       0x5c c:/devkitPro/libogc/lib/wii\libogc.a(malloc_lock.o)
+ *fill*         0x800d4f0c       0x14 00
  .bss.__stm_ehbufin
-                0x800d4f40       0x20 c:/devkitPro/libogc/lib/wii\libogc.a(stm.o)
+                0x800d4f20       0x20 c:/devkitPro/libogc/lib/wii\libogc.a(stm.o)
  .bss.__stm_ehbufout
-                0x800d4f60       0x20 c:/devkitPro/libogc/lib/wii\libogc.a(stm.o)
+                0x800d4f40       0x20 c:/devkitPro/libogc/lib/wii\libogc.a(stm.o)
  .bss.__stm_immbufin
-                0x800d4f80       0x20 c:/devkitPro/libogc/lib/wii\libogc.a(stm.o)
+                0x800d4f60       0x20 c:/devkitPro/libogc/lib/wii\libogc.a(stm.o)
  .bss.__stm_immbufout
-                0x800d4fa0       0x20 c:/devkitPro/libogc/lib/wii\libogc.a(stm.o)
+                0x800d4f80       0x20 c:/devkitPro/libogc/lib/wii\libogc.a(stm.o)
  .bss.__sd0_cid
-                0x800d4fc0       0x10 c:/devkitPro/libogc/lib/wii\libogc.a(wiisd.o)
- *fill*         0x800d4fd0       0x10 00
+                0x800d4fa0       0x10 c:/devkitPro/libogc/lib/wii\libogc.a(wiisd.o)
+ *fill*         0x800d4fb0       0x10 00
  .bss.__conf_buffer
-                0x800d4fe0     0x4000 c:/devkitPro/libogc/lib/wii\libogc.a(conf.o)
+                0x800d4fc0     0x4000 c:/devkitPro/libogc/lib/wii\libogc.a(conf.o)
  .bss.__conf_txt_buffer
-                0x800d8fe0      0x101 c:/devkitPro/libogc/lib/wii\libogc.a(conf.o)
- *fill*         0x800d90e1        0x3 00
- .bss.__heap    0x800d90e4       0x1c c:/devkitPro/libogc/lib/wii\libogc.a(usbstorage.o)
- .bss.__usbfd   0x800d9100       0x30 c:/devkitPro/libogc/lib/wii\libogc.a(usbstorage.o)
- *fill*         0x800d9130       0x10 00
+                0x800d8fc0      0x101 c:/devkitPro/libogc/lib/wii\libogc.a(conf.o)
+ *fill*         0x800d90c1        0x3 00
+ .bss.__heap    0x800d90c4       0x1c c:/devkitPro/libogc/lib/wii\libogc.a(usbstorage.o)
+ .bss.__usbfd   0x800d90e0       0x30 c:/devkitPro/libogc/lib/wii\libogc.a(usbstorage.o)
+ *fill*         0x800d9110       0x10 00
  .bss.stateflags
-                0x800d9140       0x20 c:/devkitPro/libogc/lib/wii\libogc.a(wiilaunch.o)
- .bss.nandboot  0x800d9160     0x1020 c:/devkitPro/libogc/lib/wii\libogc.a(wiilaunch.o)
+                0x800d9120       0x20 c:/devkitPro/libogc/lib/wii\libogc.a(wiilaunch.o)
+ .bss.nandboot  0x800d9140     0x1020 c:/devkitPro/libogc/lib/wii\libogc.a(wiilaunch.o)
  .bss.__pad_type
-                0x800da180       0x10 c:/devkitPro/libogc/lib/wii\libogc.a(pad.o)
+                0x800da160       0x10 c:/devkitPro/libogc/lib/wii\libogc.a(pad.o)
  .bss.__pad_cmdprobedevice
-                0x800da190       0x10 c:/devkitPro/libogc/lib/wii\libogc.a(pad.o)
+                0x800da170       0x10 c:/devkitPro/libogc/lib/wii\libogc.a(pad.o)
  .bss.__pad_keys
-                0x800da1a0       0x40 c:/devkitPro/libogc/lib/wii\libogc.a(pad.o)
+                0x800da180       0x40 c:/devkitPro/libogc/lib/wii\libogc.a(pad.o)
  .bss.__pad_origin
-                0x800da1e0       0x30 c:/devkitPro/libogc/lib/wii\libogc.a(pad.o)
- .bss.eximap    0x800da210       0xc0 c:/devkitPro/libogc/lib/wii\libogc.a(exi.o)
- .bss.lckdevs   0x800da2d0      0x200 c:/devkitPro/libogc/lib/wii\libogc.a(exi.o)
+                0x800da1c0       0x30 c:/devkitPro/libogc/lib/wii\libogc.a(pad.o)
+ .bss.eximap    0x800da1f0       0xc0 c:/devkitPro/libogc/lib/wii\libogc.a(exi.o)
+ .bss.lckdevs   0x800da2b0      0x200 c:/devkitPro/libogc/lib/wii\libogc.a(exi.o)
  .bss._lckdev_queue
-                0x800da4d0        0xc c:/devkitPro/libogc/lib/wii\libogc.a(exi.o)
- *fill*         0x800da4dc        0x4 00
+                0x800da4b0        0xc c:/devkitPro/libogc/lib/wii\libogc.a(exi.o)
+ *fill*         0x800da4bc        0x4 00
  .bss.last_exi_idtime
-                0x800da4e0       0x18 c:/devkitPro/libogc/lib/wii\libogc.a(exi.o)
- .bss._cpufifo  0x800da4f8       0x80 c:/devkitPro/libogc/lib/wii\libogc.a(gx.o)
- .bss._gpfifo   0x800da578       0x80 c:/devkitPro/libogc/lib/wii\libogc.a(gx.o)
+                0x800da4c0       0x18 c:/devkitPro/libogc/lib/wii\libogc.a(exi.o)
+ .bss._cpufifo  0x800da4d8       0x80 c:/devkitPro/libogc/lib/wii\libogc.a(gx.o)
+ .bss._gpfifo   0x800da558       0x80 c:/devkitPro/libogc/lib/wii\libogc.a(gx.o)
  .bss._ioCrc16Table
-                0x800da5f8      0x200 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_io.o)
+                0x800da5d8      0x200 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_io.o)
  .bss._ioResponse
-                0x800da7f8      0x100 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_io.o)
+                0x800da7d8      0x100 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_io.o)
  .bss._ioCrc7Table
-                0x800da8f8      0x100 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_io.o)
- .bss.s_buf     0x800da9f8      0x618 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_buf.o)
+                0x800da8d8      0x100 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_io.o)
+ .bss.s_buf     0x800da9d8      0x618 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_buf.o)
  .bss._ZZN9__gnu_cxx27__verbose_terminate_handlerEvE11terminating
-                0x800db010        0x1 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(vterminate.o)
- *fill*         0x800db011        0x3 00
+                0x800daff0        0x1 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(vterminate.o)
+ *fill*         0x800daff1        0x3 00
  .bss._ZL14emergency_used
-                0x800db014        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_alloc.o)
- *fill*         0x800db018        0x8 00
+                0x800daff4        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_alloc.o)
+ *fill*         0x800daff8        0x8 00
  .bss._ZL16emergency_buffer
-                0x800db020      0x800 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_alloc.o)
+                0x800db000      0x800 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_alloc.o)
  .bss._ZL10eh_globals
-                0x800db820        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_globals.o)
+                0x800db800        0x8 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libstdc++.a(eh_globals.o)
  .bss.__sfp_lock
-                0x800db828        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-findfp.o)
+                0x800db808        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-findfp.o)
  .bss.__sinit_lock
-                0x800db82c        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-findfp.o)
+                0x800db80c        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-findfp.o)
  .bss.__malloc_current_mallinfo
-                0x800db830       0x28 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-mallocr.o)
-                0x800db830                __malloc_current_mallinfo
+                0x800db810       0x28 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-mallocr.o)
+                0x800db810                __malloc_current_mallinfo
  .bss.__tz_lock_object
-                0x800db858        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-tzlock.o)
+                0x800db838        0x4 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-tzlock.o)
  *(.gnu.linkonce.b.*)
  *(COMMON)
- COMMON         0x800db85c      0x100 c:/devkitPro/libogc/lib/wii\libwc24.a(wc24.o)
-                0x800db85c                wc24_nanddumpbasedir
- *fill*         0x800db95c        0x4 00
- COMMON         0x800db960      0xef8 c:/devkitPro/libogc/lib/wii\libogc.a(lwp_threads.o)
-                0x800db960                _lwp_thr_ready
-                0x800dc560                _lwp_wd_timeslice
-                0x800dc588                core_context
- COMMON         0x800dc858       0x50 c:/devkitPro/libogc/lib/wii\libogc.a(lwp.o)
-                0x800dc858                _lwp_thr_objects
-                0x800dc880                _lwp_tqueue_objects
- COMMON         0x800dc8a8        0xc c:/devkitPro/libogc/lib/wii\libogc.a(lwp_watchdog.o)
-                0x800dc8a8                _wd_ticks_queue
- COMMON         0x800dc8b4       0x1c c:/devkitPro/libogc/lib/wii\libogc.a(lwp_wkspace.o)
-                0x800dc8b4                __wkspace_heap
- COMMON         0x800dc8d0       0x28 c:/devkitPro/libogc/lib/wii\libogc.a(mutex.o)
-                0x800dc8d0                _lwp_mutex_objects
- *fill*         0x800dc8f8        0x8 00
- COMMON         0x800dc900       0x50 c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
-                0x800dc900                sramcntrl
- COMMON         0x800dc950       0x28 c:/devkitPro/libogc/lib/wii\libogc.a(cond.o)
-                0x800dc950                _lwp_cond_objects
- COMMON         0x800dc978       0x28 c:/devkitPro/libogc/lib/wii\libogc.a(message.o)
-                0x800dc978                _lwp_mqbox_objects
- COMMON         0x800dc9a0      0x440 c:/devkitPro/libogc/lib/wii\libogc.a(newlibc.o)
-                0x800dc9a0                libc_globl_reent
- COMMON         0x800dcde0       0x40 c:/devkitPro/libogc/lib/wii\libogc.a(lwp_priority.o)
-                0x800dcde0                _prio_bitmap
- COMMON         0x800dce20       0x3c c:/devkitPro/libogc/lib/wii\libogc.a(exception.o)
-                0x800dce20                _exceptionhandlertable
- COMMON         0x800dce5c       0x28 c:/devkitPro/libogc/lib/wii\libogc.a(semaphore.o)
-                0x800dce5c                _lwp_sema_objects
- COMMON         0x800dce84      0x100 c:/devkitPro/libogc/lib/wii\libogc.a(kprintf.o)
-                0x800dce84                __outstr
- COMMON         0x800dcf84       0xc0 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_io.o)
-                0x800dcf84                g_CardStatus
-                0x800dd004                g_CSD
-                0x800dd024                g_CID
- COMMON         0x800dd044      0x100 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-gdtoa-gethex.o)
-                0x800dd044                __hexdig
-                0x800dd160                . = ALIGN (0x20)
- *fill*         0x800dd144       0x1c 00
-                0x800dd160                PROVIDE (__bss_end, .)
-                0x800dd160                __bss_end = .
-                0x800dd160                _end = .
-                0x800dd160                PROVIDE (end, .)
+ COMMON         0x800db83c      0x100 c:/devkitPro/libogc/lib/wii\libwc24.a(wc24.o)
+                0x800db83c                wc24_nanddumpbasedir
+ *fill*         0x800db93c        0x4 00
+ COMMON         0x800db940      0xef8 c:/devkitPro/libogc/lib/wii\libogc.a(lwp_threads.o)
+                0x800db940                _lwp_thr_ready
+                0x800dc540                _lwp_wd_timeslice
+                0x800dc568                core_context
+ COMMON         0x800dc838       0x50 c:/devkitPro/libogc/lib/wii\libogc.a(lwp.o)
+                0x800dc838                _lwp_thr_objects
+                0x800dc860                _lwp_tqueue_objects
+ COMMON         0x800dc888        0xc c:/devkitPro/libogc/lib/wii\libogc.a(lwp_watchdog.o)
+                0x800dc888                _wd_ticks_queue
+ COMMON         0x800dc894       0x1c c:/devkitPro/libogc/lib/wii\libogc.a(lwp_wkspace.o)
+                0x800dc894                __wkspace_heap
+ COMMON         0x800dc8b0       0x28 c:/devkitPro/libogc/lib/wii\libogc.a(mutex.o)
+                0x800dc8b0                _lwp_mutex_objects
+ *fill*         0x800dc8d8        0x8 00
+ COMMON         0x800dc8e0       0x50 c:/devkitPro/libogc/lib/wii\libogc.a(system.o)
+                0x800dc8e0                sramcntrl
+ COMMON         0x800dc930       0x28 c:/devkitPro/libogc/lib/wii\libogc.a(cond.o)
+                0x800dc930                _lwp_cond_objects
+ COMMON         0x800dc958       0x28 c:/devkitPro/libogc/lib/wii\libogc.a(message.o)
+                0x800dc958                _lwp_mqbox_objects
+ COMMON         0x800dc980      0x440 c:/devkitPro/libogc/lib/wii\libogc.a(newlibc.o)
+                0x800dc980                libc_globl_reent
+ COMMON         0x800dcdc0       0x40 c:/devkitPro/libogc/lib/wii\libogc.a(lwp_priority.o)
+                0x800dcdc0                _prio_bitmap
+ COMMON         0x800dce00       0x3c c:/devkitPro/libogc/lib/wii\libogc.a(exception.o)
+                0x800dce00                _exceptionhandlertable
+ COMMON         0x800dce3c       0x28 c:/devkitPro/libogc/lib/wii\libogc.a(semaphore.o)
+                0x800dce3c                _lwp_sema_objects
+ COMMON         0x800dce64      0x100 c:/devkitPro/libogc/lib/wii\libogc.a(kprintf.o)
+                0x800dce64                __outstr
+ COMMON         0x800dcf64       0xc0 c:/devkitPro/libogc/lib/wii\libogc.a(sdgecko_io.o)
+                0x800dcf64                g_CardStatus
+                0x800dcfe4                g_CSD
+                0x800dd004                g_CID
+ COMMON         0x800dd024      0x100 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/../../../../powerpc-eabi/lib\libc.a(lib_a-gdtoa-gethex.o)
+                0x800dd024                __hexdig
+                0x800dd140                . = ALIGN (0x20)
+ *fill*         0x800dd124       0x1c 00
+                0x800dd140                PROVIDE (__bss_end, .)
+                0x800dd140                __bss_end = .
+                0x800dd140                _end = .
+                0x800dd140                PROVIDE (end, .)
 
-.iplt           0x800dd160        0x0
+.iplt           0x800dd140        0x0
  .iplt          0x00000000        0x0 c:/devkitpro/devkitppc/bin/../lib/gcc/powerpc-eabi/4.5.1/crtbegin.o
 
 .stab
@@ -10685,11 +10685,11 @@ Linker script and memory map
 .debug_varnames
  *(.debug_varnames)
                 0x00000000                __isIPL = 0x0
-                0x800fd160                __stack_addr = ((((__bss_start + SIZEOF (.bss)) + 0x20000) + 0x7) & 0xfffffff8)
-                0x800dd160                __stack_end = (__bss_start + SIZEOF (.bss))
-                0x80101160                __intrstack_addr = (__stack_addr + 0x4000)
-                0x800fd160                __intrstack_end = __stack_addr
-                0x80101160                __Arena1Lo = ((__intrstack_addr + 0x1f) & 0xffffffe0)
+                0x800fd140                __stack_addr = ((((__bss_start + SIZEOF (.bss)) + 0x20000) + 0x7) & 0xfffffff8)
+                0x800dd140                __stack_end = (__bss_start + SIZEOF (.bss))
+                0x80101140                __intrstack_addr = (__stack_addr + 0x4000)
+                0x800fd140                __intrstack_end = __stack_addr
+                0x80101140                __Arena1Lo = ((__intrstack_addr + 0x1f) & 0xffffffe0)
                 0x817feff0                __Arena1Hi = 0x817feff0
                 0x90002000                __Arena2Lo = 0x90002000
                 0x933e0000                __Arena2Hi = 0x933e0000
@@ -10698,11 +10698,11 @@ Linker script and memory map
                 0x93400000                __ipcbufferHi = 0x93400000
                 0x817feff0                PROVIDE (__stack, 0x817feff0)
                 [0x00000000]                PROVIDE (__isIPL, __isIPL)
-                [0x800fd160]                PROVIDE (__stack_addr, __stack_addr)
-                [0x800dd160]                PROVIDE (__stack_end, __stack_end)
-                [0x80101160]                PROVIDE (__intrstack_addr, __intrstack_addr)
-                [0x800fd160]                PROVIDE (__intrstack_end, __intrstack_end)
-                [0x80101160]                PROVIDE (__Arena1Lo, __Arena1Lo)
+                [0x800fd140]                PROVIDE (__stack_addr, __stack_addr)
+                [0x800dd140]                PROVIDE (__stack_end, __stack_end)
+                [0x80101140]                PROVIDE (__intrstack_addr, __intrstack_addr)
+                [0x800fd140]                PROVIDE (__intrstack_end, __intrstack_end)
+                [0x80101140]                PROVIDE (__Arena1Lo, __Arena1Lo)
                 [0x817feff0]                PROVIDE (__Arena1Hi, __Arena1Hi)
                 [0x90002000]                PROVIDE (__Arena2Lo, __Arena2Lo)
                 [0x933e0000]                PROVIDE (__Arena2Hi, __Arena2Hi)
