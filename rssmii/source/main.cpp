@@ -65,7 +65,7 @@ void AddJobs()
 			//Will now compose url:
 			memset(jobs[i].final_url, 0, 512);
 			//that was the old url. But now DynDNS somehow doesn't want to do what I want. So there's a new URL //snprintf(jobs[i].final_url, 511, "http://api.rssmii.diskstation.selfip.net:8000/1.1/rss_displayer.php?feedurl=%s&title=%s", jobs[i].url, jobs[i].name);
-			snprintf(jobs[i].final_url, 511, "http://api.rssmii.dd-dns.de:8000/1.1/rss_displayer.php?feedurl=%s&title=%s", jobs[i].url, jobs[i].name);
+			snprintf(jobs[i].final_url, 511, "http://api.rssmii.dd-dns.de:8000/1.2/rss_displayer.php?feedurl=%s&title=%s", jobs[i].url, jobs[i].name);
 			s32 retval = WC24_CreateRecord(&myrec, &myent, (u32)homebrewtitleid, homebrewtitleid, /*0x4842*/0x4645, WC24_TYPE_MSGBOARD, WC24_RECORD_FLAGS_DEFAULT, WC24_FLAGS_HB, which, 0x5a0, 0, jobs[i].final_url, NULL);
 			if (retval<0)
 			{
@@ -89,7 +89,7 @@ void AddJobs()
 			//Will now compose url:
 			memset(jobs[i].final_url, 0, 512);
 			//that was the old url. But now DynDNS somehow doesn't want to do what I want. So there's a new URL //snprintf(jobs[i].final_url, 511, "http://api.rssmii.diskstation.selfip.net:8000/1.1/rss_displayer.php?feedurl=%s&title=%s", jobs[i].url, jobs[i].name);
-			snprintf(jobs[i].final_url, 511, "http://api.rssmii.dd-dns.de:8000/1.1/rss_displayer.php?feedurl=%s&title=%s", jobs[i].url, jobs[i].name);
+			snprintf(jobs[i].final_url, 511, "http://api.rssmii.dd-dns.de:8000/1.2/rss_displayer.php?feedurl=%s&title=%s", jobs[i].url, jobs[i].name);
 			s32 retval = WC24_CreateRecord(&myrec, &myent, (u32)homebrewtitleid, homebrewtitleid, /*0x4842*/ 0x4645, WC24_TYPE_MSGBOARD, WC24_RECORD_FLAGS_DEFAULT, WC24_FLAGS_HB, which, 0x5a0, 0, jobs[i].final_url, NULL);
 			if (retval<0)
 			{
