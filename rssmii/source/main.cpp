@@ -25,8 +25,8 @@ void AddJobs()
 {
 	int which;
 	//u64 homebrewtitleid = 0x0001000848424D4CLL;//TitleID for wiibrew+hackmii mail: 00010008-HBML. This is only an ID used for WC24, it's not a real NAND title.
-	u64 homebrewtitleid = 0x0001000846454544LL; //TitleID for RSS-Feed mail: 00010008-FEED. 
-	if (LANG_GER) printf("WC24 initialisieren...");	
+	u64 homebrewtitleid = 0x0001000846454544LL; //TitleID for RSS-Feed mail: 00010008-FEED.
+	if (LANG_GER) printf("WC24 initialisieren...");
 	else printf("Initializing WC24...\n");
 
 	s32 retval = WC24_Init();
@@ -48,7 +48,7 @@ void AddJobs()
 	printf("\n");
 	for (int i = 0; i < ijobs; i++)
 	{
-		if (LANG_GER) 
+		if (LANG_GER)
 		{
 			printf("In welchem Zeitabstand soll auf Neuigkeiten im RSS-Feed \"%s\" geprueft werden? (A: 1 min, B: 5 min, 1: 15 min, 2: 30 min)\n", jobs[i].name);
 			which = -1;
@@ -64,8 +64,7 @@ void AddJobs()
 			printf("Record&entry erstellen...\n");
 			//Will now compose url:
 			memset(jobs[i].final_url, 0, 512);
-			//that was the old url. But now DynDNS somehow doesn't want to do what I want. So there's a new URL //snprintf(jobs[i].final_url, 511, "http://api.rssmii.diskstation.selfip.net:8000/1.1/rss_displayer.php?feedurl=%s&title=%s", jobs[i].url, jobs[i].name);
-			snprintf(jobs[i].final_url, 511, "http://api.rssmii.dd-dns.de:8000/1.2/rss_displayer.php?feedurl=%s&title=%s", jobs[i].url, jobs[i].name);
+			snprintf(jobs[i].final_url, 511, "http://rc24.xyz/cgi-bin/rss_displayer.cgi?feedurl=%s&title=%s&time=%s", jobs[i].url, jobs[i].name, which);
 			s32 retval = WC24_CreateRecord(&myrec, &myent, (u32)homebrewtitleid, homebrewtitleid, /*0x4842*/0x4645, WC24_TYPE_MSGBOARD, WC24_RECORD_FLAGS_DEFAULT, WC24_FLAGS_HB, which, 0x5a0, 0, jobs[i].final_url, NULL);
 			if (retval<0)
 			{
@@ -88,8 +87,7 @@ void AddJobs()
 			printf("Creating record&entry...\n");
 			//Will now compose url:
 			memset(jobs[i].final_url, 0, 512);
-			//that was the old url. But now DynDNS somehow doesn't want to do what I want. So there's a new URL //snprintf(jobs[i].final_url, 511, "http://api.rssmii.diskstation.selfip.net:8000/1.1/rss_displayer.php?feedurl=%s&title=%s", jobs[i].url, jobs[i].name);
-			snprintf(jobs[i].final_url, 511, "http://api.rssmii.dd-dns.de:8000/1.2/rss_displayer.php?feedurl=%s&title=%s", jobs[i].url, jobs[i].name);
+			snprintf(jobs[i].final_url, 511, "http://rc24.xyz/cgi-bin/rss_displayer.cgi?feedurl=%s&title=%s&time=%s", jobs[i].url, jobs[i].name, which);
 			s32 retval = WC24_CreateRecord(&myrec, &myent, (u32)homebrewtitleid, homebrewtitleid, /*0x4842*/ 0x4645, WC24_TYPE_MSGBOARD, WC24_RECORD_FLAGS_DEFAULT, WC24_FLAGS_HB, which, 0x5a0, 0, jobs[i].final_url, NULL);
 			if (retval<0)
 			{
@@ -115,7 +113,7 @@ void AddJobs()
 			{
 				u32 retval_download = KD_Download(KD_DOWNLOADFLAGS_MANUAL, (u16)retval, 0x0);
 				if (retval_download < 0) printf("Fehler beim Downloaden: %d\n", retval_download);
-				
+
 				//Save mail, so the mail content won't get overwritten
 				u32 retval_save = KD_SaveMail();
 				if (retval_save < 0) printf("Fehler beim Speichern: %d\n", retval_save);
@@ -134,7 +132,7 @@ void AddJobs()
 			{
 				u32 retval_download = KD_Download(KD_DOWNLOADFLAGS_MANUAL, (u16)retval, 0x0);
 				if (retval_download < 0) printf("Error while Downloading: %d\n", retval_download);
-				
+
 				//Save mail, so the mail content won't get overwritten
 				u32 retval_save = KD_SaveMail();
 				if (retval_save < 0) printf("Error while Saving: %d\n", retval_save);
@@ -266,29 +264,29 @@ int main(int argc, char **argv) {
 	ijobs = 0;
 	// Initialise the video system
 	VIDEO_Init();
-		
+
 	//Get Language
 	lang = CONF_GetLanguage();
 
 	// This function initialises the attached controllers
 	WPAD_Init();
-	
+
 	// Obtain the preferred video mode from the system
 	// This will correspond to the settings in the Wii menu
 	rmode = VIDEO_GetPreferredMode(NULL);
 
 	// Allocate memory for the display in the uncached region
 	xfb = MEM_K0_TO_K1(SYS_AllocateFramebuffer(rmode));
-	
+
 	// Initialise the console, required for printf
 	console_init(xfb,20,20,rmode->fbWidth,rmode->xfbHeight,rmode->fbWidth*VI_DISPLAY_PIX_SZ);
-	
+
 	// Set up the video registers with the chosen mode
 	VIDEO_Configure(rmode);
-	
+
 	// Tell the video hardware where our display memory is
 	VIDEO_SetNextFramebuffer(xfb);
-	
+
 	// Make the display visible
 	VIDEO_SetBlack(FALSE);
 
