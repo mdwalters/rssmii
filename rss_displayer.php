@@ -20,7 +20,7 @@ echo $wc24mimebounary . "\r\n".
 "Date: " . gmdate('D, d M Y H:i:s') . " +0000 (UTC)\r\n".
 "From: w9999999900000000@wii.com\r\n".
 "To: allusers@wii.com\r\n".
-"Subject: \r\n".
+"Subject: " . $_REQUEST["title"] . "\r\n".
 "MIME-Version: 1.0\r\n".
 "Content-Type: text/plain; charset=ISO-8859-1\r\n".
 "Content-Transfer-Encoding: 7bit\r\n".
