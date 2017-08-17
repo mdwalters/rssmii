@@ -18,8 +18,8 @@ echo "This part is ignored.\r\n\r\n\r\n";
 echo $wc24mimebounary . "\r\n".
 "Content-Type: text/plain\r\n\r\n".
 "Date: " . gmdate('D, d M Y H:i:s') . " +0000 (UTC)\r\n".
-"From: w9999999900000000@wii.com\r\n".
-"To: allusers@wii.com\r\n".
+"From: w9999999900000000@rc24.xyz\r\n".
+"To: allusers@rc24.xyz\r\n".
 "Subject: " . $_REQUEST["title"] . "\r\n".
 "MIME-Version: 1.0\r\n".
 "Content-Type: text/plain; charset=ISO-8859-1\r\n".
