@@ -44,4 +44,6 @@ foreach($feed->get_items() as $item)
 	echo "[" . (string) $link_num . "]".
 	" " . $item->get_link() . "\r\n";
 }
+
+echo "--".$wc24mimebounary."--"."\r\n";
 ?>
