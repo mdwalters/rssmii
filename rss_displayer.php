@@ -15,7 +15,7 @@ echo "--".$wc24mimebounary."\r\n";
 echo "Content-Type: text/plain\r\n\r\n";
 echo "This part is ignored.\r\n\r\n\r\n";
 
-echo $wc24mimebounary . "\r\n".
+echo "--".$wc24mimebounary . "\r\n".
 "Content-Type: text/plain\r\n\r\n".
 "Date: " . gmdate('D, d M Y H:i:s') . " +0000 (UTC)\r\n".
 "From: w9999999900000000@rc24.xyz\r\n".
