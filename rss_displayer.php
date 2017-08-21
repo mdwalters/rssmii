@@ -29,9 +29,28 @@ foreach($feed->get_items() as $item)
 	"X-Wii-AltName: " . base64_encode(mb_convert_encoding($_REQUEST["title"], "UTF-16", "auto")) . "\r\n".
 	"X-Wii-MB-NoReply: 1\r\n\r\n";
 
-	echo $item->get_title() . "\r\n\r\n".
-	$item->get_description() . '[1]' . "\r\n\r\n".
-	'[1]' . " " . $item->get_link() . "\r\n";
+	echo $item->get_title() . "\r\n\r\n";
+	
+	$description = $item->get_description();
+	
+	$urls = preg_match_all("/<a\s+href=(?:\"([^\"]+)\"|'([^']+)').*?>(.*?)<\/a>/", $description, $match);
+	
+	$j = 0;
+	
+	for ($i = 0; $i < count(urls); $i++)
+	{
+		$j++;
+		$description = str_replace($match[0][$i], $match[3][$i] . "[" . (string) $j . "]", $description);
+	}
+		
+	echo $description . "\r\n\r\n";
+	
+	for ($j = 1; $j <= count(urls); $j++)
+	{
+		echo "[" . (string) $j . "]" . " " . $match[1][$j - 1] . "\r\n";
+	}
+	
+	echo "\r\n";
 }
 
 echo "--".$wc24mimebounary."--"."\r\n";
