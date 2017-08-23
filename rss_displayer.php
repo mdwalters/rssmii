@@ -17,6 +17,8 @@ echo "This part is ignored.\r\n\r\n\r\n";
 
 foreach($feed->get_items() as $item)
 {
+	/* Create the main body text. */
+
 	echo "--".$wc24mimebounary."\r\n".
 	"Content-Type: text/plain\r\n\r\n".
 	"Date: " . gmdate('D, d M Y H:i:s') . " +0000 (UTC)\r\n".
@@ -29,7 +31,7 @@ foreach($feed->get_items() as $item)
 	"X-Wii-AltName: " . base64_encode(mb_convert_encoding($_REQUEST["title"], "UTF-16", "auto")) . "\r\n".
 	"X-Wii-MB-NoReply: 1\r\n\r\n";
 
-	echo $item->get_title() . "\r\n";
+	echo $item->get_title() . "\r\n\r\n";
 
 	$description = $item->get_description();
 
@@ -43,15 +45,30 @@ foreach($feed->get_items() as $item)
 		$description = str_replace($match[0][$i], $match[3][$i] . "[" . (string) $j . "]", $description);
 	}
 
-	echo $description . "\r\n\r\n";
+	echo $description . "\r\n";
 
 	for ($j = 1; $j <= count(urls); $j++)
 	{
 		echo "[" . (string) $j . "]" . " " . $match[1][$j - 1] . "\r\n";
 	}
 
-	echo "\r\n";
-}
+	/* Create the chjump used for opening the link in the (ew) Internet Channel. */
 
-echo "--".$wc24mimebounary."--"."\r\n";
+	echo "\r\n--".$wc24mimebounary."\r\n".
+	"Content-Type: Application/X-Wii-MsgBoard; name=internet_jump.arc\r\n".
+	"Content-Transfer-Encoding: base64\r\n".
+	"Content-Disposition: attachment; filename=internet_jump.arc\r\n\r\n";
+
+	$h = pack("H*", "43684A7000000034000000010000000000010001484144410000002000000014") . $item->get_link();
+	mkdir("./tmp");
+	$f = fopen("./tmp/chjump.bin", "wb+");
+	fwrite($f, $h);
+	$create_u8 = shell_exec("wszst CREATE tmp --u8 --no-compress");
+	$u8_output = fopen("tmp.u8", "rb"); # I wish Wiimm set the output extension to be .arc in this case. Oh well..
+	$chjump = base64_encode(fread($u8_output, filesize("tmp.u8")));
+	echo $chjump . "\r\n\r\n";
+	fclose($u8_output);
+
+	echo "--".$wc24mimebounary."--"."\r\n\r\n";
+}
 ?>
