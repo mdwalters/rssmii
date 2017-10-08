@@ -62,7 +62,7 @@ void AddJobs()
 	{
 		if (LANG_GER)
 		{
-			which = 60;
+			which = 30;
 			printf("Record&entry erstellen...\n");
 			//Will now compose url:
 			memset(jobs[i].final_url, 0, 512);
@@ -75,7 +75,7 @@ void AddJobs()
 		}
 		else if (LANG_FRE)
 		{
-			which = 60;
+			which = 30;
 			printf("Création des nouvelles entrées...\n");
 			//Will now compose url:
 			memset(jobs[i].final_url, 0, 512);
@@ -88,7 +88,7 @@ void AddJobs()
 		}
 		else if (LANG_SPA)
 		{
-			which = 60;
+			which = 30;
 			printf("Creando datos y entradas...\n");
 			//Will now compose url:
 			memset(jobs[i].final_url, 0, 512);
@@ -101,7 +101,7 @@ void AddJobs()
 		}
 		else if (LANG_DUT)
 		{
-			which = 60;
+			which = 30;
 			printf("Bezig met maken nieuwe opname en registratie...\n");
 			//Will now compose url:
 			memset(jobs[i].final_url, 0, 512);
@@ -114,7 +114,7 @@ void AddJobs()
 		}
 		else
 		{
-			which = 60;
+			which = 30;
 			printf("Creating record&entry...\n");
 			//Will now compose url:
 			memset(jobs[i].final_url, 0, 512);
@@ -437,10 +437,10 @@ int main(int argc, char **argv) {
 
 	//printf("\n\nDone.");
 	if (LANG_GER) printf("\nMit HOME zurueck zum Loader.");
-	else if (LANG_FRE) printf("\nMit HOME zurueck zum Loader.");
+	else if (LANG_FRE) printf("\nRetournez sur le loader Homebrew en appuyant sur le bouton HOME.");
 	else if (LANG_SPA) printf("\nVuelve al cargador con el botón HOME.");
 	else if (LANG_DUT) printf("\nGa terug naar jouw loader door op de HOME-knop te drukken.");
-	else printf("\nRetournez sur le loader Homebrew en appuyant sur le bouton HOME.");
+	else printf("\nGet back to the Loader with the HOME-Button.");
 
 	while (1)
 	{
