@@ -17,7 +17,7 @@ echo "This part is ignored.\r\n\r\n\r\n";
 
 foreach($feed->get_items() as $item)
 {
-	if (time() - strtotime($item->get_date(), $now = time()) <= 1800)
+	if (time() - strtotime($item->get_date(), $now = time()) <= 3600)
 	{
 		/* Create the main body text. */
 	
