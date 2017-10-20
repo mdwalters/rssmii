@@ -19,7 +19,7 @@ foreach($feed->get_items() as $item)
 {
 	if (time() - strtotime($item->get_date(), $now = time()) > 3600)
 	{
-		continue
+		continue;
 	}
 	/* Create the main body text. */
 
