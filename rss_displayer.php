@@ -17,8 +17,6 @@ echo "This part is ignored.\r\n\r\n\r\n";
 
 foreach($feed->get_items() as $item)
 {
-	if (time() - strtotime($item->get_date(), $now = time()) <= 3600)
-	{
 		/* Create the main body text. */
 	
 		echo "--".$wc24mimebounary."\r\n".
@@ -54,7 +52,6 @@ foreach($feed->get_items() as $item)
 		$chjump = base64_encode(fread($u8_output, filesize("tmp.u8")));
 		echo $chjump . "\r\n\r\n";
 		fclose($u8_output);*/
-	}
 }
 echo "--".$wc24mimebounary."--"."\r\n\r\n";
 ?>
