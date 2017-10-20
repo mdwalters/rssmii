@@ -21,6 +21,7 @@ foreach($feed->get_items() as $item)
 	{
 		continue;
 	}
+	
 	/* Create the main body text. */
 
 	echo "--".$wc24mimebounary."\r\n".
