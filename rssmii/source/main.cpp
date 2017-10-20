@@ -3,7 +3,7 @@
 #include <fat.h>
 #include <mxml.h>
 
-#define BUF_SIZE 2047
+#define BUF_SIZE 511
 
 #define msg(x) messages[lang][x]
 
@@ -187,13 +187,12 @@ char *url_encode(char *str, char *buf)
 
 void AddJobs()
 {
-	int which;
 	//u64 homebrewtitleid = 0x0001000848424D4CLL;//TitleID for wiibrew+hackmii mail: 00010008-HBML. This is only an ID used for WC24, it's not a real NAND title.
 	u64 homebrewtitleid = 0x0001000846454544LL; //TitleID for RSS-Feed mail: 00010008-FEED.
 	printf(msg(MSG_INIT));
 
 	s32 retval = WC24_Init();
-	if(retval<0)
+	if (retval < 0)
 	{
 		printf(msg(MSG_INIT_RET), retval);
 		return;
@@ -201,26 +200,22 @@ void AddJobs()
 
 	printf(msg(MSG_DEL_PREV));
 
-	while((retval=WC24_FindRecord((u32)homebrewtitleid, &myrec))!=LIBWC24_ENOENT)
-	{
+	while ((retval = WC24_FindRecord((u32)homebrewtitleid, &myrec)) != LIBWC24_ENOENT)
 		WC24_DeleteRecord((u32)retval);
-	}
 
 	printf("\n");
 	for (int i = 0; i < ijobs; i++)
 	{
+		int which = 30;
 		int offset = 0;
-		which = 30;
 		printf(msg(MSG_CREATE));
 		//Will now compose url:
 		memset(jobs[i].final_url, 0, 512);
 		offset = snprintf(jobs[i].final_url, 511, "http://rss.wii.rc24.xyz/rss_displayer.php?feedurl=%s", url_encode(jobs[i].url, _buffer));
 		snprintf(jobs[i].final_url + offset, 511, "&title=%s", url_encode(jobs[i].name, _buffer));
 		s32 retval = WC24_CreateRecord(&myrec, &myent, (u32)homebrewtitleid, homebrewtitleid, /*0x4842*/ 0x4645, WC24_TYPE_MSGBOARD, WC24_RECORD_FLAGS_DEFAULT, WC24_FLAGS_HB, which, 0x5a0, 0, jobs[i].final_url, NULL);
-		if (retval<0)
-		{
+		if (retval < 0)
 			printf(msg(MSG_CREATE_RET), retval);
-		}
 		printf("\n\n");
 	}
 	printf("\n");
@@ -237,10 +232,12 @@ void AddJobs()
 		else
 		{
 			u32 retval_download = KD_Download(KD_DOWNLOADFLAGS_MANUAL, (u16)retval, 0x0);
-			if (retval_download < 0) printf(msg(MSG_ERR_DOWNLOAD), retval_download);
+			if (retval_download < 0)
+				printf(msg(MSG_ERR_DOWNLOAD), retval_download);
 			//Save mail, so the mail content won't get overwritten
 			u32 retval_save = KD_SaveMail();
-			if (retval_save < 0) printf(msg(MSG_ERR_SAVE), retval_save);
+			if (retval_save < 0)
+				printf(msg(MSG_ERR_SAVE), retval_save);
 		}
 		printf("\n");
 	}
@@ -248,7 +245,7 @@ void AddJobs()
 	printf(msg(MSG_SHUTDOWN));
 
 	retval = WC24_Shutdown();
-	if(retval<0)
+	if (retval < 0)
 	{
 		printf(msg(MSG_SHUTDOWN_RET), retval);
 		return;
@@ -259,9 +256,9 @@ void AddJobs()
 
 int load_feeds()
 {
-	if (!fatInitDefault()) {
+	if (!fatInitDefault())
 		return -1;
-	}
+
 	mxml_node_t *tree;
 	mxml_node_t *rss;
 	mxml_node_t *node;
@@ -272,68 +269,58 @@ int load_feeds()
 		//printf("DEBUG: File-Pointer is NULL!!!\n");
 		return -2;
 	}
-	else {
-		fseek (fp , 0, SEEK_END);
-		long settings_size = ftell (fp);
-		rewind (fp);
-
-		if (settings_size > 0) {
-			tree = mxmlLoadFile(NULL, fp, MXML_OPAQUE_CALLBACK);
-			fclose(fp);
-			rss = mxmlFindElement(tree, tree, "rss", NULL, NULL, MXML_DESCEND);
-			if (rss == NULL) return -103;
-
-			for (node = mxmlFindElement(rss, rss, "feed", NULL, NULL, MXML_DESCEND); node != NULL; node = mxmlFindElement(node, rss, "feed", NULL, NULL, MXML_DESCEND))
-			{
-				const char * feedurl = node->child->value.opaque;
-				if (feedurl)
-				{
-					const char * sender = mxmlElementGetAttr(node, "name");
-					if (sender)
-					{
-						//printf("DEBUG: Valid node found!!!\n");
-						int old_length = ijobs;
-						RSS_Job * tmp = new RSS_Job[old_length];
-						for (int i = 0; i < old_length; i++)
-						{
-							//printf("DEBUG: Copying an element to the temp-Array...\n");
-							tmp[i] = jobs[i];
-						}
-						jobs = new RSS_Job[ old_length + 1 ];
-						for (int j = 0; j < old_length ; j++)
-						{
-							//printf("DEBUG: Copying an element back to the jobs-Array...\n");
-							jobs[j] = tmp[j];
-						}
-						memset(newone.url, 0, 256);
-						memset(newone.name, 0, 256);
-						snprintf(newone.url, 255, feedurl);
-						snprintf(newone.name, 255, sender);
-						jobs[old_length] = newone;
-						ijobs++;
-						//printf("DEBUG: ijobs: %i\n", ijobs);
-					}
-					else
-					{
-						//printf("DEBUG: return -102\n");
-						return -102;
-					}
-				}
-				else
-				{
-					//printf("DEBUG: return -101\n");
-					return -101;
-				}
-			}
-			mxmlDelete(tree);
-			//printf("File loaded.\n\n");
-		}
-		else {
-			fclose(fp);
-			//printf("DEBUG: return -1\n");
-			return -3;
-		}
+	fseek(fp, 0, SEEK_END);
+	long settings_size = ftell(fp);
+	if (settings_size <= 0) {
+		fclose(fp);
+		//printf("DEBUG: return -1\n");
+		return -3;
 	}
+	rewind(fp);
+
+	tree = mxmlLoadFile(NULL, fp, MXML_OPAQUE_CALLBACK);
+	fclose(fp);
+	rss = mxmlFindElement(tree, tree, "rss", NULL, NULL, MXML_DESCEND);
+	if (rss == NULL)
+		return -103;
+	for (node = mxmlFindElement(rss, rss, "feed", NULL, NULL, MXML_DESCEND); node != NULL; node = mxmlFindElement(node, rss, "feed", NULL, NULL, MXML_DESCEND))
+	{
+		const char *feedurl = node->child->value.opaque;
+		if (!feedurl)
+		{
+			//printf("DEBUG: return -101\n");
+			return -101;
+		}
+		const char *sender = mxmlElementGetAttr(node, "name");
+		if (!sender)
+		{
+			//printf("DEBUG: return -102\n");
+			return -102;
+		}
+		//printf("DEBUG: Valid node found!!!\n");
+		int old_length = ijobs;
+		RSS_Job *tmp = new RSS_Job[old_length];
+		for (int i = 0; i < old_length; i++)
+		{
+			//printf("DEBUG: Copying an element to the temp-Array...\n");
+			tmp[i] = jobs[i];
+		}
+		jobs = new RSS_Job[ old_length + 1 ];
+		for (int j = 0; j < old_length ; j++)
+		{
+			//printf("DEBUG: Copying an element back to the jobs-Array...\n");
+			jobs[j] = tmp[j];
+		}
+		memset(newone.url, 0, 256);
+		memset(newone.name, 0, 256);
+		snprintf(newone.url, 255, feedurl);
+		snprintf(newone.name, 255, sender);
+		jobs[old_length] = newone;
+		ijobs++;
+		//printf("DEBUG: ijobs: %i\n", ijobs);
+	}
+	mxmlDelete(tree);
+	//printf("File loaded.\n\n");
 	return 0;
 }
 
@@ -341,7 +328,7 @@ void end()
 {
 	// In case it's used as a Channel
 	u32 *stub = (u32 *)0x80001800;
-	if( *stub )
+	if (*stub)
 		exit(0);
 	SYS_ResetSystem(SYS_RETURNTOMENU, 0, 0);
 }
@@ -379,7 +366,7 @@ int main(int argc, char **argv) {
 	xfb = MEM_K0_TO_K1(SYS_AllocateFramebuffer(rmode));
 
 	// Initialise the console, required for printf
-	console_init(xfb,20,20,rmode->fbWidth,rmode->xfbHeight,rmode->fbWidth*VI_DISPLAY_PIX_SZ);
+	console_init(xfb, 20, 20, rmode->fbWidth, rmode->xfbHeight, rmode->fbWidth * VI_DISPLAY_PIX_SZ);
 
 	// Set up the video registers with the chosen mode
 	VIDEO_Configure(rmode);
@@ -395,30 +382,29 @@ int main(int argc, char **argv) {
 
 	// Wait for Video setup to complete
 	VIDEO_WaitVSync();
-	if(rmode->viTVMode&VI_NON_INTERLACE) VIDEO_WaitVSync();
+	if (rmode->viTVMode & VI_NON_INTERLACE)
+		VIDEO_WaitVSync();
 
 	printf("\x1b[2;0H");
 	printf(msg(MSG_WELCOME));
 
 	int retval = load_feeds();
 	if (retval != 0)
-	{
 		fail(retval);
-	}
 
 	printf(msg(MSG_RSS_FEEDS));
 	for (int i = 0; i < ijobs; i++)
-	{
 		printf("   %s\n", jobs[i].name);
-	}
 
 	printf(msg(MSG_SURE));
 
 	while (1)
 	{
 		WPAD_ScanPads();
-		if (WPAD_ButtonsDown(0) & WPAD_BUTTON_HOME) end();
-		if (WPAD_ButtonsDown(0) & WPAD_BUTTON_A) break;
+		if (WPAD_ButtonsDown(0) & WPAD_BUTTON_HOME)
+			end();
+		if (WPAD_ButtonsDown(0) & WPAD_BUTTON_A)
+			break;
 	}
 
 	AddJobs();
@@ -429,7 +415,8 @@ int main(int argc, char **argv) {
 	while (1)
 	{
 		WPAD_ScanPads();
-		if (WPAD_ButtonsDown(0) & WPAD_BUTTON_HOME) break;
+		if (WPAD_ButtonsDown(0) & WPAD_BUTTON_HOME)
+			break;
 	}
 	end();
 	//return 0;
