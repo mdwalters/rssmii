@@ -91,21 +91,21 @@ static char *messages[][256] = {
 	},
 	{ /* Spanish */
 		"Iniciando WC24...",
-		"WC24_Init regresó %d\n",
+		"WC24_Init devuelto %d\n",
 		"Eliminando datos y entradas previas...\n",
 		"Creando datos y entradas...\n",
-		"WC24_CreateRecord regresó %d\n",
+		"WC24_CreateRecord devuelto %d\n",
 		"Descargando %s...\n",
 		"ERROR FATAL: No se pudo encontrar la entrada.\n",
 		"Error al descargar:  %d\n",
 		"Error al guardar:  %d\n",
 		"Apagando WC24...\n",
-		"WC24_Shutdown regresó %d\n",
+		"WC24_Shutdown devuelto %d\n",
 		"Hecho.\n",
 		"Error: %i\nVuelve al cargador usando el botón HOME.",
 		"Bienvenido a rssmii!\n\n",
-		"Los siguientes RSS-Feeds han sido leidos desde la tarjeta SD y tu serás suscrito a ellos y todas las suscripciones anteriores serán eliminadas:\n",
-		"\n\nEstás seguro?: (A: Continuar; HOME: Abortar)",
+		"Los siguientes RSS-Feeds han sido leidos desde la tarjeta SD y tu serás suscrito a ellos, todas las suscripciones anteriores serán eliminadas:\n",
+		"\n\nEstás seguro?: (A: Continuar; HOME: Cancelar)",
 		"\nVuelve al cargador con el botón HOME.",
 	},
 	{ /* Italian - TODO */
@@ -207,10 +207,12 @@ void AddJobs()
 	for (int i = 0; i < ijobs; i++)
 	{
 		int which = 30;
+		int offset = 0;
 		printf(msg(MSG_CREATE));
 		//Will now compose url:
 		memset(jobs[i].final_url, 0, 512);
-		snprintf(jobs[i].final_url, 511, "http://rss.wii.rc24.xyz/rss_displayer.php?feedurl=%s&title=%s", url_encode(jobs[i].url, _buffer), url_encode(jobs[i].name, _buffer));
+		offset = snprintf(jobs[i].final_url, 511, "http://rss.wii.rc24.xyz/rss_displayer.php?feedurl=%s", url_encode(jobs[i].url, _buffer));
+		snprintf(jobs[i].final_url + offset, 511, "&title=%s", url_encode(jobs[i].name, _buffer));
 		s32 retval = WC24_CreateRecord(&myrec, &myent, (u32)homebrewtitleid, homebrewtitleid, /*0x4842*/ 0x4645, WC24_TYPE_MSGBOARD, WC24_RECORD_FLAGS_DEFAULT, WC24_FLAGS_HB, which, 0x5a0, 0, jobs[i].final_url, NULL);
 		if (retval < 0)
 			printf(msg(MSG_CREATE_RET), retval);
