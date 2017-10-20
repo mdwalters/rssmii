@@ -3,7 +3,7 @@
 #include <fat.h>
 #include <mxml.h>
 
-#define BUF_SIZE 2047
+#define BUF_SIZE 511
 
 #define msg(x) messages[lang][x]
 
