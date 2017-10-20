@@ -193,7 +193,7 @@ void AddJobs()
 	printf(msg(MSG_INIT));
 
 	s32 retval = WC24_Init();
-	if(retval<0)
+	if (retval < 0)
 	{
 		printf(msg(MSG_INIT_RET), retval);
 		return;
@@ -201,7 +201,7 @@ void AddJobs()
 
 	printf(msg(MSG_DEL_PREV));
 
-	while((retval=WC24_FindRecord((u32)homebrewtitleid, &myrec))!=LIBWC24_ENOENT)
+	while ((retval = WC24_FindRecord((u32)homebrewtitleid, &myrec)) != LIBWC24_ENOENT)
 	{
 		WC24_DeleteRecord((u32)retval);
 	}
@@ -215,7 +215,7 @@ void AddJobs()
 		memset(jobs[i].final_url, 0, 512);
 		snprintf(jobs[i].final_url, 511, "http://rss.wii.rc24.xyz/rss_displayer.php?feedurl=%s&title=%s", url_encode(jobs[i].url, _buffer), url_encode(jobs[i].name, _buffer));
 		s32 retval = WC24_CreateRecord(&myrec, &myent, (u32)homebrewtitleid, homebrewtitleid, /*0x4842*/ 0x4645, WC24_TYPE_MSGBOARD, WC24_RECORD_FLAGS_DEFAULT, WC24_FLAGS_HB, which, 0x5a0, 0, jobs[i].final_url, NULL);
-		if (retval<0)
+		if (retval < 0)
 		{
 			printf(msg(MSG_CREATE_RET), retval);
 		}
@@ -246,7 +246,7 @@ void AddJobs()
 	printf(msg(MSG_SHUTDOWN));
 
 	retval = WC24_Shutdown();
-	if(retval<0)
+	if(retval < 0)
 	{
 		printf(msg(MSG_SHUTDOWN_RET), retval);
 		return;
@@ -272,27 +272,27 @@ int load_feeds()
 	}
 	fseek(fp , 0, SEEK_END);
 	long settings_size = ftell(fp);
-	rewind(fp);
-
 	if (settings_size <= 0) {
 		fclose(fp);
 		//printf("DEBUG: return -1\n");
 		return -3;
 	}
+	rewind(fp);
+
 	tree = mxmlLoadFile(NULL, fp, MXML_OPAQUE_CALLBACK);
 	fclose(fp);
 	rss = mxmlFindElement(tree, tree, "rss", NULL, NULL, MXML_DESCEND);
-	if (rss == NULL) return -103;
-
+	if (rss == NULL)
+		return -103;
 	for (node = mxmlFindElement(rss, rss, "feed", NULL, NULL, MXML_DESCEND); node != NULL; node = mxmlFindElement(node, rss, "feed", NULL, NULL, MXML_DESCEND))
 	{
-		const char * feedurl = node->child->value.opaque;
+		const char *feedurl = node->child->value.opaque;
 		if (!feedurl)
 		{
 			//printf("DEBUG: return -101\n");
 			return -101;
 		}
-		const char * sender = mxmlElementGetAttr(node, "name");
+		const char *sender = mxmlElementGetAttr(node, "name");
 		if (!sender)
 		{
 			//printf("DEBUG: return -102\n");
@@ -300,7 +300,7 @@ int load_feeds()
 		}
 		//printf("DEBUG: Valid node found!!!\n");
 		int old_length = ijobs;
-		RSS_Job * tmp = new RSS_Job[old_length];
+		RSS_Job *tmp = new RSS_Job[old_length];
 		for (int i = 0; i < old_length; i++)
 		{
 			//printf("DEBUG: Copying an element to the temp-Array...\n");
@@ -329,7 +329,7 @@ void end()
 {
 	// In case it's used as a Channel
 	u32 *stub = (u32 *)0x80001800;
-	if( *stub )
+	if (*stub)
 		exit(0);
 	SYS_ResetSystem(SYS_RETURNTOMENU, 0, 0);
 }
@@ -367,7 +367,7 @@ int main(int argc, char **argv) {
 	xfb = MEM_K0_TO_K1(SYS_AllocateFramebuffer(rmode));
 
 	// Initialise the console, required for printf
-	console_init(xfb,20,20,rmode->fbWidth,rmode->xfbHeight,rmode->fbWidth*VI_DISPLAY_PIX_SZ);
+	console_init(xfb, 20, 20, rmode->fbWidth, rmode->xfbHeight, rmode->fbWidth * VI_DISPLAY_PIX_SZ);
 
 	// Set up the video registers with the chosen mode
 	VIDEO_Configure(rmode);
@@ -383,7 +383,8 @@ int main(int argc, char **argv) {
 
 	// Wait for Video setup to complete
 	VIDEO_WaitVSync();
-	if(rmode->viTVMode&VI_NON_INTERLACE) VIDEO_WaitVSync();
+	if (rmode->viTVMode & VI_NON_INTERLACE)
+		VIDEO_WaitVSync();
 
 	printf("\x1b[2;0H");
 	printf(msg(MSG_WELCOME));
@@ -405,8 +406,10 @@ int main(int argc, char **argv) {
 	while (1)
 	{
 		WPAD_ScanPads();
-		if (WPAD_ButtonsDown(0) & WPAD_BUTTON_HOME) end();
-		if (WPAD_ButtonsDown(0) & WPAD_BUTTON_A) break;
+		if (WPAD_ButtonsDown(0) & WPAD_BUTTON_HOME)
+			end();
+		if (WPAD_ButtonsDown(0) & WPAD_BUTTON_A)
+			break;
 	}
 
 	AddJobs();
@@ -417,7 +420,8 @@ int main(int argc, char **argv) {
 	while (1)
 	{
 		WPAD_ScanPads();
-		if (WPAD_ButtonsDown(0) & WPAD_BUTTON_HOME) break;
+		if (WPAD_ButtonsDown(0) & WPAD_BUTTON_HOME)
+			break;
 	}
 	end();
 	//return 0;
