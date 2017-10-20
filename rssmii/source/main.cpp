@@ -270,7 +270,7 @@ int load_feeds()
 		//printf("DEBUG: File-Pointer is NULL!!!\n");
 		return -2;
 	}
-	fseek(fp , 0, SEEK_END);
+	fseek(fp, 0, SEEK_END);
 	long settings_size = ftell(fp);
 	if (settings_size <= 0) {
 		fclose(fp);
