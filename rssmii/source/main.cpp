@@ -270,68 +270,58 @@ int load_feeds()
 		//printf("DEBUG: File-Pointer is NULL!!!\n");
 		return -2;
 	}
-	else {
-		fseek (fp , 0, SEEK_END);
-		long settings_size = ftell (fp);
-		rewind (fp);
+	fseek(fp , 0, SEEK_END);
+	long settings_size = ftell(fp);
+	rewind(fp);
 
-		if (settings_size > 0) {
-			tree = mxmlLoadFile(NULL, fp, MXML_OPAQUE_CALLBACK);
-			fclose(fp);
-			rss = mxmlFindElement(tree, tree, "rss", NULL, NULL, MXML_DESCEND);
-			if (rss == NULL) return -103;
-
-			for (node = mxmlFindElement(rss, rss, "feed", NULL, NULL, MXML_DESCEND); node != NULL; node = mxmlFindElement(node, rss, "feed", NULL, NULL, MXML_DESCEND))
-			{
-				const char * feedurl = node->child->value.opaque;
-				if (feedurl)
-				{
-					const char * sender = mxmlElementGetAttr(node, "name");
-					if (sender)
-					{
-						//printf("DEBUG: Valid node found!!!\n");
-						int old_length = ijobs;
-						RSS_Job * tmp = new RSS_Job[old_length];
-						for (int i = 0; i < old_length; i++)
-						{
-							//printf("DEBUG: Copying an element to the temp-Array...\n");
-							tmp[i] = jobs[i];
-						}
-						jobs = new RSS_Job[ old_length + 1 ];
-						for (int j = 0; j < old_length ; j++)
-						{
-							//printf("DEBUG: Copying an element back to the jobs-Array...\n");
-							jobs[j] = tmp[j];
-						}
-						memset(newone.url, 0, 256);
-						memset(newone.name, 0, 256);
-						snprintf(newone.url, 255, feedurl);
-						snprintf(newone.name, 255, sender);
-						jobs[old_length] = newone;
-						ijobs++;
-						//printf("DEBUG: ijobs: %i\n", ijobs);
-					}
-					else
-					{
-						//printf("DEBUG: return -102\n");
-						return -102;
-					}
-				}
-				else
-				{
-					//printf("DEBUG: return -101\n");
-					return -101;
-				}
-			}
-			mxmlDelete(tree);
-			//printf("File loaded.\n\n");
-		}
-		else {
-			fclose(fp);
-			//printf("DEBUG: return -1\n");
-			return -3;
-		}
+	if (settings_size <= 0) {
+		fclose(fp);
+		//printf("DEBUG: return -1\n");
+		return -3;
 	}
+	tree = mxmlLoadFile(NULL, fp, MXML_OPAQUE_CALLBACK);
+	fclose(fp);
+	rss = mxmlFindElement(tree, tree, "rss", NULL, NULL, MXML_DESCEND);
+	if (rss == NULL) return -103;
+
+	for (node = mxmlFindElement(rss, rss, "feed", NULL, NULL, MXML_DESCEND); node != NULL; node = mxmlFindElement(node, rss, "feed", NULL, NULL, MXML_DESCEND))
+	{
+		const char * feedurl = node->child->value.opaque;
+		if (!feedurl)
+		{
+			//printf("DEBUG: return -101\n");
+			return -101;
+		}
+		const char * sender = mxmlElementGetAttr(node, "name");
+		if (!sender)
+		{
+			//printf("DEBUG: return -102\n");
+			return -102;
+		}
+		//printf("DEBUG: Valid node found!!!\n");
+		int old_length = ijobs;
+		RSS_Job * tmp = new RSS_Job[old_length];
+		for (int i = 0; i < old_length; i++)
+		{
+			//printf("DEBUG: Copying an element to the temp-Array...\n");
+			tmp[i] = jobs[i];
+		}
+		jobs = new RSS_Job[ old_length + 1 ];
+		for (int j = 0; j < old_length ; j++)
+		{
+			//printf("DEBUG: Copying an element back to the jobs-Array...\n");
+			jobs[j] = tmp[j];
+		}
+		memset(newone.url, 0, 256);
+		memset(newone.name, 0, 256);
+		snprintf(newone.url, 255, feedurl);
+		snprintf(newone.name, 255, sender);
+		jobs[old_length] = newone;
+		ijobs++;
+		//printf("DEBUG: ijobs: %i\n", ijobs);
+	}
+	mxmlDelete(tree);
+	//printf("File loaded.\n\n");
 	return 0;
 }
 
