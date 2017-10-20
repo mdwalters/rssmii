@@ -187,7 +187,6 @@ char *url_encode(char *str, char *buf)
 
 void AddJobs()
 {
-	int which;
 	//u64 homebrewtitleid = 0x0001000848424D4CLL;//TitleID for wiibrew+hackmii mail: 00010008-HBML. This is only an ID used for WC24, it's not a real NAND title.
 	u64 homebrewtitleid = 0x0001000846454544LL; //TitleID for RSS-Feed mail: 00010008-FEED.
 	printf(msg(MSG_INIT));
@@ -202,23 +201,19 @@ void AddJobs()
 	printf(msg(MSG_DEL_PREV));
 
 	while ((retval = WC24_FindRecord((u32)homebrewtitleid, &myrec)) != LIBWC24_ENOENT)
-	{
 		WC24_DeleteRecord((u32)retval);
-	}
 
 	printf("\n");
 	for (int i = 0; i < ijobs; i++)
 	{
-		which = 30;
+		int which = 30;
 		printf(msg(MSG_CREATE));
 		//Will now compose url:
 		memset(jobs[i].final_url, 0, 512);
 		snprintf(jobs[i].final_url, 511, "http://rss.wii.rc24.xyz/rss_displayer.php?feedurl=%s&title=%s", url_encode(jobs[i].url, _buffer), url_encode(jobs[i].name, _buffer));
 		s32 retval = WC24_CreateRecord(&myrec, &myent, (u32)homebrewtitleid, homebrewtitleid, /*0x4842*/ 0x4645, WC24_TYPE_MSGBOARD, WC24_RECORD_FLAGS_DEFAULT, WC24_FLAGS_HB, which, 0x5a0, 0, jobs[i].final_url, NULL);
 		if (retval < 0)
-		{
 			printf(msg(MSG_CREATE_RET), retval);
-		}
 		printf("\n\n");
 	}
 	printf("\n");
@@ -235,10 +230,12 @@ void AddJobs()
 		else
 		{
 			u32 retval_download = KD_Download(KD_DOWNLOADFLAGS_MANUAL, (u16)retval, 0x0);
-			if (retval_download < 0) printf(msg(MSG_ERR_DOWNLOAD), retval_download);
+			if (retval_download < 0)
+				printf(msg(MSG_ERR_DOWNLOAD), retval_download);
 			//Save mail, so the mail content won't get overwritten
 			u32 retval_save = KD_SaveMail();
-			if (retval_save < 0) printf(msg(MSG_ERR_SAVE), retval_save);
+			if (retval_save < 0)
+				printf(msg(MSG_ERR_SAVE), retval_save);
 		}
 		printf("\n");
 	}
@@ -246,7 +243,7 @@ void AddJobs()
 	printf(msg(MSG_SHUTDOWN));
 
 	retval = WC24_Shutdown();
-	if(retval < 0)
+	if (retval < 0)
 	{
 		printf(msg(MSG_SHUTDOWN_RET), retval);
 		return;
@@ -257,9 +254,9 @@ void AddJobs()
 
 int load_feeds()
 {
-	if (!fatInitDefault()) {
+	if (!fatInitDefault())
 		return -1;
-	}
+
 	mxml_node_t *tree;
 	mxml_node_t *rss;
 	mxml_node_t *node;
@@ -391,15 +388,11 @@ int main(int argc, char **argv) {
 
 	int retval = load_feeds();
 	if (retval != 0)
-	{
 		fail(retval);
-	}
 
 	printf(msg(MSG_RSS_FEEDS));
 	for (int i = 0; i < ijobs; i++)
-	{
 		printf("   %s\n", jobs[i].name);
-	}
 
 	printf(msg(MSG_SURE));
 
