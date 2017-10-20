@@ -103,7 +103,7 @@ static char *messages[][256] = {
 		"Error: %i\nVuelve al cargador usando el botón HOME.",
 		"Bienvenido a rssmii!\n\n",
 		"Los siguientes RSS-Feeds han sido leidos desde la tarjeta SD y tu serás suscrito a ellos, todas las suscripciones anteriores serán eliminadas:\n",
-		"\n\nEstás seguro?: (A: Continuar; HOME: Cancel)",
+		"\n\nEstás seguro?: (A: Continuar; HOME: Cancelar)",
 		"\nVuelve al cargador con el botón HOME.",
 	},
 	{ /* Italian - TODO */
