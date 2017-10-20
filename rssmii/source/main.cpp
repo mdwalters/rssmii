@@ -3,11 +3,148 @@
 #include <fat.h>
 #include <mxml.h>
 
-#define LANG_GER lang == 2
-#define LANG_FRE lang == 3
-#define LANG_SPA lang == 4
-#define LANG_DUT lang == 6
+#define msg(x) messages[lang][x]
+
 int lang;
+
+enum {MSG_INIT, MSG_INIT_RET, MSG_DEL_PREV, MSG_CREATE, MSG_CREATE_RET, MSG_DOWNLOAD, MSG_ERR_FATAL, MSG_ERR_DOWNLOAD, MSG_ERR_SAVE,
+	MSG_SHUTDOWN, MSG_SHUTDOWN_RET, MSG_DONE, MSG_ERR_GO_BACK, MSG_WELCOME, MSG_RSS_FEEDS, MSG_SURE, MSG_GO_BACK};
+
+static char *messages[][256] = {
+	{ /* Japanese - TODO */
+		"Initializing WC24...\n",
+		"WC24_Init returned %d\n",
+		"Deleting previous records&entries...\n",
+		"Creating record&entry...\n",
+		"WC24_CreateRecord returned %d\n",
+		"Downloading %s...\n",
+		"FATAL ERROR: Couldn't find entry\n",
+		"Error while Downloading: %d\n",
+		"Error while Saving: %d\n",
+		"Shutting down WC24...\n",
+		"WC24_Shutdown returned %d\n",
+		"Done.\n",
+		"Error: %i\nGet back to the Loader by pressing the HOME-Button.",
+		"Welcome to rssmii!\n\n",
+		"The following RSS-Feeds were read from the SD-Card and you will subscribe to them while all previous subscriptions will be deleted:\n",
+		"\n\nAre you sure? (A: Continue; HOME: Abort)",
+		"\nGet back to the Loader with the HOME-Button."
+	},
+	{ /* English */
+		"Initializing WC24...\n",
+		"WC24_Init returned %d\n",
+		"Deleting previous records&entries...\n",
+		"Creating record&entry...\n",
+		"WC24_CreateRecord returned %d\n",
+		"Downloading %s...\n",
+		"FATAL ERROR: Couldn't find entry\n",
+		"Error while Downloading: %d\n",
+		"Error while Saving: %d\n",
+		"Shutting down WC24...\n",
+		"WC24_Shutdown returned %d\n",
+		"Done.\n",
+		"Error: %i\nGet back to the Loader by pressing the HOME-Button.",
+		"Welcome to rssmii!\n\n",
+		"The following RSS-Feeds were read from the SD-Card and you will subscribe to them while all previous subscriptions will be deleted:\n",
+		"\n\nAre you sure? (A: Continue; HOME: Abort)",
+		"\nGet back to the Loader with the HOME-Button."
+	},
+	{ /* German */
+		"WC24 initialisieren...",
+		"WC24_Init returned %d\n",
+		"Vorherige records&entries loeschen...\n",
+		"Record&entry erstellen...\n",
+		"WC24_CreateRecord ergab %d\n",
+		"%s herunterladen...\n",
+		"SCHWERWIEGENDER FEHLER: entry konnte nicht gefunden werden\n",
+		"Fehler beim Downloaden: %d\n",
+		"Fehler beim Speichern: %d\n",
+		"WC24 herunterfahren...\n",
+		"WC24_Shutdown ergab %d\n",
+		"Fertig.\n",
+		"Fehler: %i\nMit HOME zurueck zum Loader.",
+		"Willkommen bei rssmii!\n\n",
+		"Die folgenden RSS-Feeds wurden von der SD-Karte gelesen und werden abonniert und alle vorherigen Abonnements werden geloescht:\n",
+		"\n\nSind sie sicher? (A: Fortsetzen; HOME: Abbrechen)",
+		"\nMit HOME zurueck zum Loader.",
+	},
+	{ /* French */
+		"Initialisation de WiiConnect24...",
+		"WC24_Init a retourné %d\n",
+		"Suppression des anciennes entrées...\n",
+		"Création des nouvelles entrées...\n",
+		"WC24_CreateRecord a retourné %d\n",
+		"Téléchargement de %s...\n",
+		"ERREUR FATALE: Entrée introuvable\n",
+		"Erreur lors du téléchargement :  %d\n",
+		"Erreur lors de la sauvegarde :  %d\n",
+		"Arrêt de WiiConnect24...\n",
+		"WC24_Shutdown a retourné %d\n",
+		"Terminé.\n",
+		"Erreur : %i\nRetournez sur le loader Homebrew en appuyant sur le bouton HOME.",
+		"Bienvenue sur rssmii !\n\n",
+		"Les flux RSS suivants ont été lus depuis la carte SD et vous allez vous abonnez à ces dernières tandis que les anciens abonnements seront supprimés :\n",
+		"\n\nÊtes-vous sûr ? (A: Continuer; HOME: Annuler)",
+		"\nRetournez sur le loader Homebrew en appuyant sur le bouton HOME.",
+	},
+	{ /* Spanish */
+		"Iniciando WC24...",
+		"WC24_Init regresó %d\n",
+		"Eliminando datos y entradas previas...\n",
+		"Creando datos y entradas...\n",
+		"WC24_CreateRecord regresó %d\n",
+		"Descargando %s...\n",
+		"ERROR FATAL: No se pudo encontrar la entrada.\n",
+		"Error al descargar:  %d\n",
+		"Error al guardar:  %d\n",
+		"Apagando WC24...\n",
+		"WC24_Shutdown regresó %d\n",
+		"Hecho.\n",
+		"Error: %i\nVuelve al cargador usando el botón HOME.",
+		"Bienvenido a rssmii!\n\n",
+		"Los siguientes RSS-Feeds han sido leidos desde la tarjeta SD y tu serás suscrito a ellos y todas las suscripciones anteriores serán eliminadas:\n",
+		"\n\nEstás seguro?: (A: Continuar; HOME: Abortar)",
+		"\nVuelve al cargador con el botón HOME.",
+	},
+	{ /* Italian - TODO */
+		"Initializing WC24...\n",
+		"WC24_Init returned %d\n",
+		"Deleting previous records&entries...\n",
+		"Creating record&entry...\n",
+		"WC24_CreateRecord returned %d\n",
+		"Downloading %s...\n",
+		"FATAL ERROR: Couldn't find entry\n",
+		"Error while Downloading: %d\n",
+		"Error while Saving: %d\n",
+		"Shutting down WC24...\n",
+		"WC24_Shutdown returned %d\n",
+		"Done.\n",
+		"Error: %i\nGet back to the Loader by pressing the HOME-Button.",
+		"Welcome to rssmii!\n\n",
+		"The following RSS-Feeds were read from the SD-Card and you will subscribe to them while all previous subscriptions will be deleted:\n",
+		"\n\nAre you sure? (A: Continue; HOME: Abort)",
+		"\nGet back to the Loader with the HOME-Button."
+	},
+	{ /* Dutch */
+		"WC24 aan het opstarten...",
+		"WC24_Init meldde %d\n",
+		"Bezig met verwijderen vorige opnames en registraties...\n",
+		"Bezig met maken nieuwe opname en registratie...\n",
+		"WC24_CreateRecord meldde %d\n",
+		"Downloaden %s...\n",
+		"KRITIEKE FOUT: Kon registratie niet vinden\n",
+		"Fout tijdens het downloaden:  %d\n",
+		"Fout tijdens het opslaan:  %d\n",
+		"WC24 aan het afsluiten...\n",
+		"WC24_Shutdown meldde %d\n",
+		"Klaar.\n",
+		"Fout: %i\nKeer terug naar de Loader door op de HOME-knop te drukken.",
+		"Welkom bij rssmii!\n\n",
+		"De volgende RSS-feeds zijn afkomstig van jouw SD-kaart en je zal geabboneerd worden op die feeds, terwijl alle vorige abbonementen worden verwijderd:\n",
+		"\n\nWeet je het zeker? (A: Verder gaan; HOME: Afsluiten)",
+		"\nGa terug naar jouw loader door op de HOME-knop te drukken.",
+	}
+};
 
 static void *xfb = NULL;
 static GXRModeObj *rmode = NULL;
@@ -29,28 +166,16 @@ void AddJobs()
 	int which;
 	//u64 homebrewtitleid = 0x0001000848424D4CLL;//TitleID for wiibrew+hackmii mail: 00010008-HBML. This is only an ID used for WC24, it's not a real NAND title.
 	u64 homebrewtitleid = 0x0001000846454544LL; //TitleID for RSS-Feed mail: 00010008-FEED.
-	if (LANG_GER) printf("WC24 initialisieren...");
-	else if (LANG_FRE) printf("Initialisation de WiiConnect24...");
-	else if (LANG_SPA) printf("Iniciando WC24...");
-	else if (LANG_DUT) printf("WC24 aan het opstarten...");
-	else printf("Initializing WC24...\n");
+	printf(msg(MSG_INIT));
 
 	s32 retval = WC24_Init();
 	if(retval<0)
 	{
-		if (LANG_GER) printf("WC24_Init returned %d\n", retval);
-		else if (LANG_FRE) printf("WC24_Init a retourné %d\n", retval);
-		else if (LANG_SPA) printf("WC24_Init regresó %d\n", retval);
-		else if (LANG_DUT) printf("WC24_Init meldde %d\n", retval);
-		else printf("WC24_Init returned %d\n", retval);
+		printf(msg(MSG_INIT_RET), retval);
 		return;
 	}
 
-	if (LANG_GER) printf("Vorherige records&entries loeschen...\n");
-	else if (LANG_FRE) printf("Suppression des anciennes entrées...\n");
-	else if (LANG_SPA) printf("Eliminando datos y entradas previas...\n");
-	else if (LANG_DUT) printf("Bezig met verwijderen vorige opnames en registraties...\n");
-	else printf("Deleting previous records&entries...\n");
+	printf(msg(MSG_DEL_PREV));
 
 	while((retval=WC24_FindRecord((u32)homebrewtitleid, &myrec))!=LIBWC24_ENOENT)
 	{
@@ -60,70 +185,15 @@ void AddJobs()
 	printf("\n");
 	for (int i = 0; i < ijobs; i++)
 	{
-		if (LANG_GER)
+		which = 30;
+		printf(msg(MSG_CREATE));
+		//Will now compose url:
+		memset(jobs[i].final_url, 0, 512);
+		snprintf(jobs[i].final_url, 511, "http://rss.wii.rc24.xyz/rss_displayer.php?feedurl=%s&title=%s", jobs[i].url, jobs[i].name);
+		s32 retval = WC24_CreateRecord(&myrec, &myent, (u32)homebrewtitleid, homebrewtitleid, /*0x4842*/ 0x4645, WC24_TYPE_MSGBOARD, WC24_RECORD_FLAGS_DEFAULT, WC24_FLAGS_HB, which, 0x5a0, 0, jobs[i].final_url, NULL);
+		if (retval<0)
 		{
-			which = 30;
-			printf("Record&entry erstellen...\n");
-			//Will now compose url:
-			memset(jobs[i].final_url, 0, 512);
-			snprintf(jobs[i].final_url, 511, "http://rss.wii.rc24.xyz/rss_displayer.php?feedurl=%s&title=%s", jobs[i].url, jobs[i].name);
-			s32 retval = WC24_CreateRecord(&myrec, &myent, (u32)homebrewtitleid, homebrewtitleid, /*0x4842*/0x4645, WC24_TYPE_MSGBOARD, WC24_RECORD_FLAGS_DEFAULT, WC24_FLAGS_HB, which, 0x5a0, 0, jobs[i].final_url, NULL);
-			if (retval<0)
-			{
-				printf("WC24_CreateRecord ergab %d\n", retval);
-			}
-		}
-		else if (LANG_FRE)
-		{
-			which = 30;
-			printf("Création des nouvelles entrées...\n");
-			//Will now compose url:
-			memset(jobs[i].final_url, 0, 512);
-			snprintf(jobs[i].final_url, 511, "http://rss.wii.rc24.xyz/rss_displayer.php?feedurl=%s&title=%s", jobs[i].url, jobs[i].name);
-			s32 retval = WC24_CreateRecord(&myrec, &myent, (u32)homebrewtitleid, homebrewtitleid, /*0x4842*/0x4645, WC24_TYPE_MSGBOARD, WC24_RECORD_FLAGS_DEFAULT, WC24_FLAGS_HB, which, 0x5a0, 0, jobs[i].final_url, NULL);
-			if (retval<0)
-			{
-				printf("WC24_CreateRecord a retourné %d\n", retval);
-			}
-		}
-		else if (LANG_SPA)
-		{
-			which = 30;
-			printf("Creando datos y entradas...\n");
-			//Will now compose url:
-			memset(jobs[i].final_url, 0, 512);
-			snprintf(jobs[i].final_url, 511, "http://rss.wii.rc24.xyz/rss_displayer.php?feedurl=%s&title=%s", jobs[i].url, jobs[i].name);
-			s32 retval = WC24_CreateRecord(&myrec, &myent, (u32)homebrewtitleid, homebrewtitleid, /*0x4842*/0x4645, WC24_TYPE_MSGBOARD, WC24_RECORD_FLAGS_DEFAULT, WC24_FLAGS_HB, which, 0x5a0, 0, jobs[i].final_url, NULL);
-			if (retval<0)
-			{
-				printf("WC24_CreateRecord regresó %d\n", retval);
-			}
-		}
-		else if (LANG_DUT)
-		{
-			which = 30;
-			printf("Bezig met maken nieuwe opname en registratie...\n");
-			//Will now compose url:
-			memset(jobs[i].final_url, 0, 512);
-			snprintf(jobs[i].final_url, 511, "http://rss.wii.rc24.xyz/rss_displayer.php?feedurl=%s&title=%s", jobs[i].url, jobs[i].name);
-			s32 retval = WC24_CreateRecord(&myrec, &myent, (u32)homebrewtitleid, homebrewtitleid, /*0x4842*/0x4645, WC24_TYPE_MSGBOARD, WC24_RECORD_FLAGS_DEFAULT, WC24_FLAGS_HB, which, 0x5a0, 0, jobs[i].final_url, NULL);
-			if (retval<0)
-			{
-				printf("WC24_CreateRecord meldde %d\n", retval);
-			}
-		}
-		else
-		{
-			which = 30;
-			printf("Creating record&entry...\n");
-			//Will now compose url:
-			memset(jobs[i].final_url, 0, 512);
-			snprintf(jobs[i].final_url, 511, "http://rss.wii.rc24.xyz/rss_displayer.php?feedurl=%s&title=%s", jobs[i].url, jobs[i].name);
-			s32 retval = WC24_CreateRecord(&myrec, &myent, (u32)homebrewtitleid, homebrewtitleid, /*0x4842*/ 0x4645, WC24_TYPE_MSGBOARD, WC24_RECORD_FLAGS_DEFAULT, WC24_FLAGS_HB, which, 0x5a0, 0, jobs[i].final_url, NULL);
-			if (retval<0)
-			{
-				printf("WC24_CreateRecord returned %d\n", retval);
-			}
+			printf(msg(MSG_CREATE_RET), retval);
 		}
 		printf("\n\n");
 	}
@@ -131,126 +201,34 @@ void AddJobs()
 
 	for (int i = 0; i < ijobs; i++)
 	{
-		if (LANG_GER)
+		printf(msg(MSG_DOWNLOAD), jobs[i].name);
+
+		s32 retval = WC24_FindEntry((u32)homebrewtitleid, jobs[i].final_url, &myent, 0);
+		if (retval < 0)
 		{
-			printf("%s herunterladen...\n", jobs[i].name);
-
-			s32 retval = WC24_FindEntry((u32)homebrewtitleid, jobs[i].final_url, &myent, 0);
-			if (retval < 0)
-			{
-				printf("SCHWERWIEGENDER FEHLER: entry konnte nicht gefunden werden\n");
-			}
-			else
-			{
-				u32 retval_download = KD_Download(KD_DOWNLOADFLAGS_MANUAL, (u16)retval, 0x0);
-				if (retval_download < 0) printf("Fehler beim Downloaden: %d\n", retval_download);
-
-				//Save mail, so the mail content won't get overwritten
-				u32 retval_save = KD_SaveMail();
-				if (retval_save < 0) printf("Fehler beim Speichern: %d\n", retval_save);
-			}
-		}
-		else if (LANG_FRE)
-		{
-			printf("Téléchargement de %s...\n", jobs[i].name);
-
-			s32 retval = WC24_FindEntry((u32)homebrewtitleid, jobs[i].final_url, &myent, 0);
-			if (retval < 0)
-			{
-				printf("ERREUR FATALE: Entrée introuvable\n");
-			}
-			else
-			{
-				u32 retval_download = KD_Download(KD_DOWNLOADFLAGS_MANUAL, (u16)retval, 0x0);
-				if (retval_download < 0) printf("Erreur lors du téléchargement :  %d\n", retval_download);
-
-				//Save mail, so the mail content won't get overwritten
-				u32 retval_save = KD_SaveMail();
-				if (retval_save < 0) printf("Erreur lors de la sauvegarde :  %d\n", retval_save);
-			}
-		}
-		else if (LANG_SPA)
-		{
-			printf("Descargando %s...\n", jobs[i].name);
-
-			s32 retval = WC24_FindEntry((u32)homebrewtitleid, jobs[i].final_url, &myent, 0);
-			if (retval < 0)
-			{
-				printf("ERROR FATAL: No se pudo encontrar la entrada.\n");
-			}
-			else
-			{
-				u32 retval_download = KD_Download(KD_DOWNLOADFLAGS_MANUAL, (u16)retval, 0x0);
-				if (retval_download < 0) printf("Error al descargar:  %d\n", retval_download);
-
-				//Save mail, so the mail content won't get overwritten
-				u32 retval_save = KD_SaveMail();
-				if (retval_save < 0) printf("Error al guardar:  %d\n", retval_save);
-			}
-		}
-		else if (LANG_DUT)
-		{
-			printf("Downloaden %s...\n", jobs[i].name);
-
-			s32 retval = WC24_FindEntry((u32)homebrewtitleid, jobs[i].final_url, &myent, 0);
-			if (retval < 0)
-			{
-				printf("KRITIEKE FOUT: Kon registratie niet vinden\n");
-			}
-			else
-			{
-				u32 retval_download = KD_Download(KD_DOWNLOADFLAGS_MANUAL, (u16)retval, 0x0);
-				if (retval_download < 0) printf("Fout tijdens het downloaden:  %d\n", retval_download);
-
-				//Save mail, so the mail content won't get overwritten
-				u32 retval_save = KD_SaveMail();
-				if (retval_save < 0) printf("Fout tijdens het opslaan:  %d\n", retval_save);
-			}
+			printf(msg(MSG_ERR_FATAL));
 		}
 		else
 		{
-			printf("Downloading %s...\n", jobs[i].name);
-
-			s32 retval = WC24_FindEntry((u32)homebrewtitleid, jobs[i].final_url, &myent, 0);
-			if (retval < 0)
-			{
-				printf("FATAL ERROR: Couldn't find entry\n");
-			}
-			else
-			{
-				u32 retval_download = KD_Download(KD_DOWNLOADFLAGS_MANUAL, (u16)retval, 0x0);
-				if (retval_download < 0) printf("Error while Downloading: %d\n", retval_download);
-
-				//Save mail, so the mail content won't get overwritten
-				u32 retval_save = KD_SaveMail();
-				if (retval_save < 0) printf("Error while Saving: %d\n", retval_save);
-			}
+			u32 retval_download = KD_Download(KD_DOWNLOADFLAGS_MANUAL, (u16)retval, 0x0);
+			if (retval_download < 0) printf(msg(MSG_ERR_DOWNLOAD), retval_download);
+			//Save mail, so the mail content won't get overwritten
+			u32 retval_save = KD_SaveMail();
+			if (retval_save < 0) printf(msg(MSG_ERR_SAVE), retval_save);
 		}
 		printf("\n");
 	}
 
-	if (LANG_GER) printf("WC24 herunterfahren...\n");
-	else if (LANG_FRE) printf("Arrêt de WiiConnect24...\n");
-	else if (LANG_SPA) printf("Apagando WC24...\n");
-	else if (LANG_DUT) printf("WC24 aan het afsluiten...\n");
-	else printf("Shutting down WC24...\n");
+	printf(msg(MSG_SHUTDOWN));
 
 	retval = WC24_Shutdown();
 	if(retval<0)
 	{
-		if (LANG_GER) printf("WC24_Shutdown ergab %d\n", retval);
-		else if (LANG_FRE) printf("WC24_Shutdown a retourné %d\n", retval);
-		else if (LANG_SPA) printf("WC24_Shutdown regresó %d\n", retval);
-		else if (LANG_DUT) printf("WC24_Shutdown meldde %d\n", retval);
-		else printf("WC24_Shutdown returned %d\n", retval);
+		printf(msg(MSG_SHUTDOWN_RET), retval);
 		return;
 	}
 	printf("\n\n");
-	if (LANG_GER) printf("Fertig.\n");
-	else if (LANG_FRE) printf("Terminé.\n");
-	else if (LANG_SPA) printf("Hecho.\n");
-	else if (LANG_DUT) printf("Klaar.\n");
-	else printf("Done.\n");
+	printf(msg(MSG_DONE));
 }
 
 int load_feeds()
@@ -344,11 +322,7 @@ void end()
 
 void fail(int val)
 {
-	if (LANG_GER) printf("Fehler: %i\nMit HOME zurueck zum Loader.", val);
-	else if (LANG_FRE) printf("Erreur : %i\nRetournez sur le loader Homebrew en appuyant sur le bouton HOME.", val);
-	else if (LANG_SPA) printf("Error: %i\nVuelve al cargador usando el botón HOME.", val);
-	else if (LANG_DUT) printf("Fout: %i\nKeer terug naar de Loader door op de HOME-knop te drukken.", val);
-	else printf("Error: %i\nGet back to the Loader by pressing the HOME-Button.", val);
+	printf(msg(MSG_ERR_GO_BACK), val);
 	while (1)
 	{
 		WPAD_ScanPads();
@@ -398,11 +372,7 @@ int main(int argc, char **argv) {
 	if(rmode->viTVMode&VI_NON_INTERLACE) VIDEO_WaitVSync();
 
 	printf("\x1b[2;0H");
-	if (LANG_GER) printf("Willkommen bei rssmii!\n\n");
-	else if (LANG_FRE) printf("Bienvenue sur rssmii !\n\n");
-	else if (LANG_SPA) printf("Bienvenido a rssmii!\n\n");
-	else if (LANG_DUT) printf("Welkom bij rssmii!\n\n");
-	else printf("Welcome to rssmii!\n\n");
+	printf(msg(MSG_WELCOME));
 
 	int retval = load_feeds();
 	if (retval != 0)
@@ -410,21 +380,13 @@ int main(int argc, char **argv) {
 		fail(retval);
 	}
 
-	if(LANG_GER) printf("Die folgenden RSS-Feeds wurden von der SD-Karte gelesen und werden abonniert und alle vorherigen Abonnements werden geloescht:\n");
-	else if(LANG_FRE) printf("Les flux RSS suivants ont été lus depuis la carte SD et vous allez vous abonnez à ces dernières tandis que les anciens abonnements seront supprimés :\n");
-	else if(LANG_SPA) printf("Los siguientes RSS-Feeds han sido leidos desde la tarjeta SD y tu serás suscrito a ellos y todas las suscripciones anteriores serán eliminadas:\n");
-	else if(LANG_DUT) printf("De volgende RSS-feeds zijn afkomstig van jouw SD-kaart en je zal geabboneerd worden op die feeds, terwijl alle vorige abbonementen worden verwijderd:\n");
-	else printf("The following RSS-Feeds were read from the SD-Card and you will subscribe to them while all previous subscriptions will be deleted:\n");
+	printf(msg(MSG_RSS_FEEDS));
 	for (int i = 0; i < ijobs; i++)
 	{
 		printf("   %s\n", jobs[i].name);
 	}
 
-	if (LANG_GER) printf("\n\nSind sie sicher? (A: Fortsetzen; HOME: Abbrechen)");
-	else if (LANG_FRE) printf("\n\nÊtes-vous sûr ? (A: Continuer; HOME: Annuler)");
-	else if (LANG_SPA) printf("\n\nEstás seguro?: (A: Continuar; HOME: Abortar)");
-	else if (LANG_DUT) printf("\n\nWeet je het zeker? (A: Verder gaan; HOME: Afsluiten)");
-	else printf("\n\nAre you sure? (A: Continue; HOME: Abort");
+	printf(msg(MSG_SURE));
 
 	while (1)
 	{
@@ -436,11 +398,7 @@ int main(int argc, char **argv) {
 	AddJobs();
 
 	//printf("\n\nDone.");
-	if (LANG_GER) printf("\nMit HOME zurueck zum Loader.");
-	else if (LANG_FRE) printf("\nRetournez sur le loader Homebrew en appuyant sur le bouton HOME.");
-	else if (LANG_SPA) printf("\nVuelve al cargador con el botón HOME.");
-	else if (LANG_DUT) printf("\nGa terug naar jouw loader door op de HOME-knop te drukken.");
-	else printf("\nGet back to the Loader with the HOME-Button.");
+	printf(msg(MSG_GO_BACK));
 
 	while (1)
 	{
