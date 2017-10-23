@@ -2,7 +2,7 @@
 require getcwd() . '/vendor/autoload.php'; // Composer
 
 header("Last-Modified: " . gmdate('D, d M Y H:i:s') . " GMT");
-header("Content-Type: text/plain; charset=ISO-8859-1");
+header("Content-Type: text/plain; charset=utf-8");
 
 $feed = new SimplePie();
 $feed->set_feed_url(str_replace("]]", "", str_replace("![CDATA[", "", $_REQUEST["feedurl"])));
