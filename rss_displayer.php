@@ -31,9 +31,9 @@ foreach($feed->get_items() as $item)
 	"To: allusers@rc24.xyz\r\n".
 	"Subject: \r\n".
 	"MIME-Version: 1.0\r\n".
-	"Content-Type: text/plain; charset=utf-8\r\n".
+	"Content-Type: text/plain; charset=ISO-8859-1\r\n".
 	"Content-Transfer-Encoding: 7bit\r\n".
-	"X-Wii-AltName: " . base64_encode(mb_convert_encoding($_REQUEST["title"], "UTF-8", "auto")) . "\r\n".
+	"X-Wii-AltName: " . base64_encode(mb_convert_encoding($_REQUEST["title"], "UTF-16", "auto")) . "\r\n".
 	"X-Wii-MB-NoReply: 1\r\n\r\n";
 
 	$raw_description = new \Html2Text\Html2Text($item->get_description());
