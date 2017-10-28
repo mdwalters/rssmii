@@ -2,7 +2,7 @@
 @echo off
 :: ===========================================================================
 :: RSMii feed.xml creator for Windows
-set version=1.0.0
+set version=1.0.1
 :: AUTHORS: KcrPL
 :: ***************************************************************************
 :: Copyright (c) 2017 RiiConnect24, and it's (Lead) Developers
@@ -17,12 +17,12 @@ set /a copyingsdcard=0
 
 :: Window Title
 title RSSMii Feeds Creator v.%version%  Created by KcrPL.
-set last_build=2017/10/22
-set at=20:21
+set last_build=2017/10/28
+set at=18:31
 
 set /a Update_Activate=1
 set /a offlinestorage=0
-set FilesHostedOn=https://kcrpl.github.io/Patchers_Auto_Update/RSSMiiCreator
+set FilesHostedOn=https://raw.githubusercontent.com/KcrPL/KcrPL.github.io/master/Patchers_Auto_Update/RSSMiiCreator
 set MainFolder=%appdata%\RSSMiiCreator
 set TempStorage=%appdata%\RSSMiiCreator\internet\temp
 
