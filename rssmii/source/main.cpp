@@ -3,7 +3,7 @@
 #include <fat.h>
 #include <mxml.h>
 
-#define BUF_SIZE 511
+#define MAX_BUF 511
 
 #define msg(x) messages[lang][x]
 
@@ -12,7 +12,7 @@ int lang;
 enum {MSG_INIT, MSG_INIT_RET, MSG_DEL_PREV, MSG_CREATE, MSG_CREATE_RET, MSG_DOWNLOAD, MSG_ERR_FATAL, MSG_ERR_DOWNLOAD, MSG_ERR_SAVE,
 	MSG_SHUTDOWN, MSG_SHUTDOWN_RET, MSG_DONE, MSG_ERR_GO_BACK, MSG_WELCOME, MSG_RSS_FEEDS, MSG_SURE, MSG_GO_BACK};
 
-static char *messages[][256] = {
+static const char *messages[][256] = {
 	{ /* Japanese - TODO */
 		"Initializing WC24...\n",
 		"WC24_Init returned %d\n",
@@ -148,8 +148,8 @@ static char *messages[][256] = {
 	}
 };
 
-static char _buffer[BUF_SIZE + 1];
-static char *_hex = "0123456789abcdef";
+static char _buffer[MAX_BUF + 1];
+static const char *_hex = "0123456789abcdef";
 
 static void *xfb = NULL;
 static GXRModeObj *rmode = NULL;
@@ -160,30 +160,36 @@ nwc24dl_entry myent;
 struct RSS_Job {
 	char url[256];
 	char name[256];
-	char final_url[512];
+	char final_url[MAX_BUF + 1];
 } newone;
 
-RSS_Job * jobs;
+RSS_Job *jobs;
 int ijobs;
 
-char *url_encode(char *str, char *buf)
+char *url_encode(char *str, char *buf, int max)
 {
 	int c;
 	char *result = buf;
-	for (; c = *str; str++) {
+	while (max > 0) {
+		c = *str++;
+		if (!c)
+			break;
 		if (('a' <= c && c <= 'z')
 		    || ('A' <= c && c <= 'Z')
-		    || ('0' <= c && c <= '9'))
+		    || ('0' <= c && c <= '9')) {
 			*buf++ = c;
-		else {
+			max--;
+		} else {
 			*buf++ ='%';
 			*buf++ = _hex[c >> 4];
 			*buf++ = _hex[c & 15];
+			max -= 3;
 		}
 	}
 	*buf = '\0';
 	return result;
 }
+
 
 void AddJobs()
 {
@@ -210,9 +216,9 @@ void AddJobs()
 		int offset = 0;
 		printf(msg(MSG_CREATE));
 		//Will now compose url:
-		memset(jobs[i].final_url, 0, 512);
-		offset = snprintf(jobs[i].final_url, 511, "http://rss.wii.rc24.xyz/rss_displayer.php?feedurl=%s", url_encode(jobs[i].url, _buffer));
-		snprintf(jobs[i].final_url + offset, 511, "&title=%s", url_encode(jobs[i].name, _buffer));
+		memset(jobs[i].final_url, 0, MAX_BUF + 1);
+		offset = snprintf(jobs[i].final_url, MAX_BUF, "http://rss.wii.rc24.xyz/rss_displayer.php?feedurl=%s", url_encode(jobs[i].url, _buffer, MAX_BUF));
+		snprintf(jobs[i].final_url + offset, MAX_BUF - offset, "&title=%s", url_encode(jobs[i].name, _buffer, MAX_BUF));
 		s32 retval = WC24_CreateRecord(&myrec, &myent, (u32)homebrewtitleid, homebrewtitleid, /*0x4842*/ 0x4645, WC24_TYPE_MSGBOARD, WC24_RECORD_FLAGS_DEFAULT, WC24_FLAGS_HB, which, 0x5a0, 0, jobs[i].final_url, NULL);
 		if (retval < 0)
 			printf(msg(MSG_CREATE_RET), retval);
