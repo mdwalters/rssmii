@@ -9,6 +9,10 @@ $feed->set_feed_url(str_replace("]]", "", str_replace("![CDATA[", "", $_REQUEST[
 $feed->init();
 $feed->handle_content_type();
 
+use DataDog\DogStatsd;
+
+$statsd = new DogStatsd();
+
 $wc24mimebounary = "BoundaryForDL" . date("YmdHi") . "/" . rand(1000000, 9999999);
 
 echo "--".$wc24mimebounary."\r\n";
@@ -61,5 +65,5 @@ foreach($feed->get_items() as $item)
 }
 echo "--".$wc24mimebounary."--"."\r\n\r\n";
 
-DataDogStatsD::increment(rss.feeds_processed);
+$statsd->increment(rss.feeds_processed);
 ?>
