@@ -21,7 +21,7 @@ foreach($feed->get_items() as $item)
 	{
 		continue;
 	}
-	
+
 	/* Create the main body text. */
 
 	echo "--".$wc24mimebounary."\r\n".
@@ -60,4 +60,6 @@ foreach($feed->get_items() as $item)
 
 }
 echo "--".$wc24mimebounary."--"."\r\n\r\n";
+
+DataDogStatsD::increment(rss.feeds_processed);
 ?>
