@@ -1,5 +1,4 @@
 # RSSMii
-[![License](https://img.shields.io/github/license/riiconnect24/rssmii.svg?style=flat-square)](http://www.gnu.org/licenses/agpl-3.0)
 ![Production List](https://img.shields.io/discord/206934458954153984.svg?style=flat-square)
 ![Version Badge](https://img.shields.io/github/release/riiconnect24/rssmii.svg?style=flat-square)
 
