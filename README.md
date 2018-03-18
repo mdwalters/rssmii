@@ -1,4 +1,7 @@
 # RSSMii
+[![License](https://img.shields.io/github/license/riiconnect24/rssmii.svg?style=flat-square)](http://www.gnu.org/licenses/agpl-3.0)
+![Production List](https://img.shields.io/discord/206934458954153984.svg?style=flat-square)
+![Version Badge](https://img.shields.io/github/release/riiconnect24/rssmii.svg?style=flat-square)
 
 RSSMii allows you to get updates from RSS feeds straight to your Wii. You will get the updates on your Wii Message Board.
 
