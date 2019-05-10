@@ -23,7 +23,7 @@ You can create a feeds.xml with the [Feeds.xml Creator](https://github.com/RiiCo
 ```
 
 ## Compilation
-1. Run `make` and `make install` in [this libwc24 fork](https://github.com/WiiDatabase/wmb-asm/tree/master/libwc24)
+1. Run `make` and `make install` in [this libwc24 fork](https://github.com/WiiDatabase/wmb-asm/tree/master/libwc24/libwc24)
 2. Install mxml from the devkitPro Pacman repository
 3. Run `make` in this repository
 
@@ -31,5 +31,5 @@ You can create a feeds.xml with the [Feeds.xml Creator](https://github.com/RiiCo
 - [ ] Change server URL through feeds.xml
 
 ## Credits
-* Modified by [Brawl345](https://github.com/WiiDatabase/RSSMii) of WiiDatabase.de
+* Modified by [Brawl345](https://github.com/WiiDatabase/RSSMii) of WiiDatabase.de and the RiiConnect24 team
 * Original written by [main()](https://github.com/Gamer125/rssmii/tree/master/rssmii)
