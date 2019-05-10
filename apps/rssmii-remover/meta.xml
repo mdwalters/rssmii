@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<app version="1">
+  <name>RSSMii Remover</name>
+  <coder>WiiDatabase.de</coder>
+  <version>1.0</version>
+  <release_date>20190509000000</release_date>
+  <short_description>Remove RSSMii</short_description>
+  <long_description>Removes all RSSMii entries from your Wii.</long_description>
+</app>
