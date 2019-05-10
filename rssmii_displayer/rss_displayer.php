@@ -44,7 +44,7 @@ foreach($feed->get_items() as $item) {
     $description = mb_convert_encoding($item->get_title(), "UTF-8", "auto") . "\r\n";
     $description .= mb_convert_encoding($raw_description, "UTF-8", "auto");
 
-    echo $description . "\r\n\r\n" . "-- " . $item->get_link() . "\r\n\r\n";
+    echo $description . "\r\n\r\n-- " . $item->get_link() . "\r\n\r\n";
     
     /* Create the chjump used for opening the link in the Internet Channel. */
 
@@ -68,7 +68,7 @@ foreach($feed->get_items() as $item) {
     }
 
 }
-echo "--".$wc24mimebounary."--"."\r\n\r\n";
+echo "--".$wc24mimebounary."--\r\n\r\n";
 
 $statsd->increment(rss.feeds_processed);
 ?>
