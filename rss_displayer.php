@@ -40,11 +40,15 @@ foreach($feed->get_items() as $item) {
     "X-Wii-AltName: " . base64_encode(mb_convert_encoding($_REQUEST["title"], "UTF-16", "auto")) . "\r\n".
     "X-Wii-MB-NoReply: 1\r\n\r\n";
 
-    $raw_description = \Soundasleep\Html2Text::convert($item->get_content(), array("drop_links" => true));
+	$raw_description = \Soundasleep\Html2Text::convert($item->get_content(), array("drop_links" => true));
     $description = mb_convert_encoding($item->get_title(), "UTF-8", "auto") . "\r\n";
-    $description .= mb_convert_encoding($raw_description, "UTF-8", "auto");
+    $description .= "-- " . $item->get_link() . "\r\n\r\n";
+	$description .= mb_convert_encoding($raw_description, "UTF-8", "auto");
 
-    echo $description . "\r\n\r\n-- " . $item->get_link() . "\r\n\r\n";
+    // Message text can't be longer than ~3000 characters
+    $description = strlen($description) > 2900 ? substr($description,0,2900)."[...]" : $description;
+
+	echo $description . "\r\n\r\n";
     
     /* Create the chjump used for opening the link in the Internet Channel. */
 
