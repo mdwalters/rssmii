@@ -137,7 +137,7 @@ void AddJobs() {
     printf("\n");
     
     for (int i = 0; i < ijobs; i++) {
-        printf("Select check interval for \"%s\": (A: 5 min, B: 10 min, 1: 15 min, 2: 30 min, UP: 60 min, RIGHT: 90 min, DOWN: 120 min, LEFT: 180 min)\n", jobs[i].name);
+        printf("Select check interval for \"%s\": (A: 5 min, B: 10 min, 1: 15 min, 2: 30 min, UP: 1 hrs, RIGHT: 1.5 hrs, DOWN: 2 hrs, LEFT: 3 hrs)\n", jobs[i].name);
         which = -1;
         while (which == -1) {
             WPAD_ScanPads();
