@@ -66,6 +66,7 @@ int load_feeds() {
         fclose(fp);
         return -2;
     }
+    
     fseek(fp, 0, SEEK_END);
     long settings_size = ftell (fp);
     rewind(fp);
@@ -139,6 +140,7 @@ void AddJobs() {
     for (int i = 0; i < ijobs; i++) {
         printf("Select check interval for \"%s\": (A: 5 min, B: 10 min, 1: 15 min, 2: 30 min, UP: 1 hrs, RIGHT: 1.5 hrs, DOWN: 2 hrs, LEFT: 3 hrs)\n", jobs[i].name);
         which = -1;
+
         while (which == -1) {
             WPAD_ScanPads();
             u32 pressed = WPAD_ButtonsDown(0);
@@ -151,6 +153,7 @@ void AddJobs() {
             if (pressed & WPAD_BUTTON_DOWN) which = 120;
             if (pressed & WPAD_BUTTON_LEFT) which = 180;
         }
+
         printf("Creating entry...\n");
         memset(jobs[i].final_url, 0, MAX_BUF + 1);
         int offset = 0;
