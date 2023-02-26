@@ -173,7 +173,7 @@ void AddJobs() {
             u32 ret_dl = KD_Download(KD_DOWNLOADFLAGS_MANUAL, (u16)ret, 0x0);
             if (ret_dl < 0) printf("ERROR while downloading: %d\n", ret_dl);
             
-            //Save mail, so the mail content won't get overwritten
+            // Save mail, so the mail content won't get overwritten
             u32 ret_save = KD_SaveMail();
             if (ret_save < 0) printf("ERROR while saving: %d\n", ret_save);
         }
@@ -238,8 +238,7 @@ int main(int argc, char **argv) {
     
     jobs = new RSS_Job[0];
     int ret = load_feeds();
-    if (ret != 0)
-    {
+    if (ret != 0) {
         fail(ret);
     }
     
