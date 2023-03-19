@@ -18,6 +18,7 @@ nwc24dl_entry nwc24entry;
 struct RSS_Job {
     char url[256];
     char name[256];
+    char interval[256];
     char final_url[MAX_BUF + 1];
 } rssjob;
 
@@ -114,8 +115,10 @@ int load_feeds() {
         
         memset(rssjob.url, 0, 256);
         memset(rssjob.name, 0, 256);
+        memset(rssjob.interval, 0, 256);
         snprintf(rssjob.url, 255, feedurl);
         snprintf(rssjob.name, 255, name);
+        snprintf(rssjob.interval, 255, interval);
         jobs[old_length] = rssjob;
         ijobs++;
     }
@@ -147,14 +150,20 @@ void AddJobs() {
         while (which == -1) {
             WPAD_ScanPads();
             u32 pressed = WPAD_ButtonsDown(0);
-            if (pressed & WPAD_BUTTON_A) which = 5;
-            if (pressed & WPAD_BUTTON_B) which = 10;
-            if (pressed & WPAD_BUTTON_1) which = 15;
-            if (pressed & WPAD_BUTTON_2) which = 30;
-            if (pressed & WPAD_BUTTON_UP) which = 60;
-            if (pressed & WPAD_BUTTON_RIGHT) which = 90;
-            if (pressed & WPAD_BUTTON_DOWN) which = 120;
-            if (pressed & WPAD_BUTTON_LEFT) which = 180;
+
+            if (jobs[i].interval != NULL) {
+                string s(1, jobs[i].interval);
+                which = stoi(s);
+            } else {
+                if (pressed & WPAD_BUTTON_A) which = 5;
+                if (pressed & WPAD_BUTTON_B) which = 10;
+                if (pressed & WPAD_BUTTON_1) which = 15;
+                if (pressed & WPAD_BUTTON_2) which = 30;
+                if (pressed & WPAD_BUTTON_UP) which = 60;
+                if (pressed & WPAD_BUTTON_RIGHT) which = 90;
+                if (pressed & WPAD_BUTTON_DOWN) which = 120;
+                if (pressed & WPAD_BUTTON_LEFT) which = 180;
+            }
         }
 
         printf("Creating entry...\n");
@@ -164,7 +173,7 @@ void AddJobs() {
         snprintf(jobs[i].final_url + offset, MAX_BUF - offset, "&title=%s", url_encode(jobs[i].name, _buffer, MAX_BUF));
         ret = WC24_CreateRecord(&nwc24record, &nwc24entry, (u32)rssmiititleid, rssmiititleid, 0x4645, WC24_TYPE_MSGBOARD, WC24_RECORD_FLAGS_DEFAULT, WC24_FLAGS_HB, which, 0x5a0, 32767, jobs[i].final_url, NULL);
         if (ret < 0) {
-                printf("ERROR: WC24_CreateRecord returned %d\n", ret);
+            printf("ERROR: WC24_CreateRecord returned %d\n", ret);
         }
         printf("\n");
     }
