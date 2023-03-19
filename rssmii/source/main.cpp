@@ -3,6 +3,7 @@
 #include <wiiuse/wpad.h>
 #include <fat.h>
 #include <mxml.h>
+#include <string>
 
 #include "wc24/wc24.h"
 
@@ -94,6 +95,8 @@ int load_feeds() {
         if (name == NULL) {
             return -102;
         }
+
+        const char * interval = mxmlElementGetAttr(node, "interval");
         
         int old_length = ijobs;
         RSS_Job * tmp = new RSS_Job[old_length];
