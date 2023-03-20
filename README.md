@@ -5,7 +5,7 @@ It reads a `feeds.xml` file on your SD Card root to subscribe you to each feed l
 
 ## Installation
 1. Grab the ZIP from the [releases page](https://github.com/RiiConnect24/RSSMii/releases)
-2. Extract it to the root of your SD card, so that you have the path sd://apps/rssmii/boot.dol`
+2. Extract it to the root of your SD card, so that you have the path `sd://apps/rssmii/boot.dol`
 3. Create a `feeds.xml` on the root of your SD card (see below)
 4. Run the homebrew through the homebrew channel and follow the on-screen instructions
 
