@@ -1,13 +1,12 @@
-RSSMii
-======
+# RSSMii
 RSSMii allows you to get updates from RSS feeds straight to your Wii. You will get the updates on your Wii Message Board.
 
-It reads a "feeds.xml" file on your SD Card root to subscribe you to each feed listed. So you can update it at any time, then launch RSSMii again and it'll update your subscriptions. You can change the interval in which updates are checked inside the program on a per-feed basis.
+It reads a `feeds.xml` file on your SD Card root to subscribe you to each feed listed. So you can update it at any time, then launch RSSMii again and it'll update your subscriptions. You can change the interval in which updates are checked inside the program on a per-feed basis.
 
 ## Installation
 1. Grab the ZIP from the [releases page](https://github.com/RiiConnect24/RSSMii/releases)
-2. Extract it to the root of your SD card, so that you have the path "SD://apps/rssmii/boot.dol"
-3. Create a "feeds.xml" on the root of your SD card (see below)
+2. Extract it to the root of your SD card, so that you have the path sd://apps/rssmii/boot.dol`
+3. Create a `feeds.xml` on the root of your SD card (see below)
 4. Run the homebrew through the homebrew channel and follow the on-screen instructions
 
 To remove everything, just run the RSSMii Remover. You can also check out the instructions on [wii.guide](https://wii.guide/rssmii).
