@@ -12,7 +12,7 @@ It reads a `feeds.xml` file on your SD Card root to subscribe you to each feed l
 To remove everything, just run the RSSMii Remover. You can also check out the instructions on [wii.guide](https://wii.guide/rssmii).
 
 ### feeds.xml
-You can create a feeds.xml with the [Feeds.xml Creator](https://github.com/RiiConnect24/rssmii/releases).
+You can create a feeds.xml with the [Feeds.xml Creator](https://github.com/RiiConnect24/rssmii/releases) if you are using Windows. If not, you can run the [Python version](https://github.com/mdwalters/rssmii/blob/master/RSSFeedsCreator.py).
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <rss>
